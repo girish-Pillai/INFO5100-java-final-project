@@ -10,4 +10,18 @@ package finalprojectBackend.Enterprises.DonorBank;
  */
 public class Kidney {
     
+    private String organname;
+    
+    public Kidney() {
+        this.organname = "Kidney";
+    }
+    
+    public String getOrganname() {
+        return organname;
+    }
+
+//    public void setOrganname(String organname) {
+//        this.organname = organname;
+//    }
+    
 }
