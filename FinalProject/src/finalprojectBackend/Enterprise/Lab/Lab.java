@@ -4,10 +4,29 @@
  */
 package finalprojectBackend.Enterprise.Lab;
 
+import finalprojectBackend.Enterprises.Enterprise;
+import java.util.ArrayList;
+
 /**
  *
- * @author giris
+ * @author girish
  */
-public class Lab {
+public class Lab extends Enterprise{
+    
+    private ArrayList<Technician> techdirectory;
+    
+    public Lab(String enterpriseName, String registeryNumber, String address, String username, String password) {
+        super(enterpriseName, registeryNumber, address, username, password);
+        this.techdirectory = new ArrayList();
+    }
+
+    public ArrayList<Technician> getTechdirectory() {
+        return techdirectory;
+    }
+
+    public void setTechdirectory(ArrayList<Technician> techdirectory) {
+        this.techdirectory = techdirectory;
+    }
     
 }
+
