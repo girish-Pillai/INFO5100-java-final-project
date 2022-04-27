@@ -55,13 +55,11 @@ public class MainJpanel extends javax.swing.JPanel {
 
         lbUsername.setBackground(new java.awt.Color(0, 0, 0));
         lbUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbUsername.setForeground(new java.awt.Color(0, 0, 0));
         lbUsername.setText("Username:");
         jPanel1.add(lbUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 90, 30));
 
         lbBostonHospital.setBackground(new java.awt.Color(0, 0, 0));
         lbBostonHospital.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        lbBostonHospital.setForeground(new java.awt.Color(0, 0, 0));
         lbBostonHospital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbBostonHospital.setText("Boston Hospital");
         jPanel1.add(lbBostonHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 240, 60));
@@ -69,13 +67,11 @@ public class MainJpanel extends javax.swing.JPanel {
 
         lbPassword.setBackground(new java.awt.Color(0, 0, 0));
         lbPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbPassword.setForeground(new java.awt.Color(0, 0, 0));
         lbPassword.setText("Password:");
         jPanel1.add(lbPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 80, 30));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 220, 40));
 
         btLogin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btLogin.setForeground(new java.awt.Color(0, 0, 0));
         btLogin.setText("Login");
         btLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +81,6 @@ public class MainJpanel extends javax.swing.JPanel {
         jPanel1.add(btLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 220, 40));
 
         btSignUp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btSignUp.setForeground(new java.awt.Color(0, 0, 0));
         btSignUp.setText("Sign Up");
         btSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,9 +91,10 @@ public class MainJpanel extends javax.swing.JPanel {
 
         lbRole.setBackground(new java.awt.Color(0, 0, 0));
         lbRole.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbRole.setForeground(new java.awt.Color(0, 0, 0));
         lbRole.setText("RoleName");
         jPanel1.add(lbRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 170, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/AdobeStock_279753293.jpeg")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

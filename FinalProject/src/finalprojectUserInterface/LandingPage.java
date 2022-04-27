@@ -38,7 +38,7 @@ public class LandingPage extends javax.swing.JPanel {
         lbl_role = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        LandingPage.setBackground(new java.awt.Color(110, 89, 222));
+        LandingPage.setBackground(new java.awt.Color(255, 153, 153));
         LandingPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmb_Role.setEditable(true);
@@ -49,23 +49,29 @@ public class LandingPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        LandingPage.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 197, -1));
+        LandingPage.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 197, -1));
 
-        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_username.setText("Username:");
-        LandingPage.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, -1));
+        LandingPage.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
 
-        lbl_Hosptitle.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lbl_Hosptitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_Hosptitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_Hosptitle.setText("Boston Hospital");
         lbl_Hosptitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LandingPage.add(lbl_Hosptitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 290, 90));
-        LandingPage.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 197, -1));
 
-        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsernameActionPerformed(evt);
+            }
+        });
+        LandingPage.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 200, -1));
+
+        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setText("Password:");
-        LandingPage.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
-        LandingPage.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 197, -1));
+        LandingPage.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
+        LandingPage.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btn_login.setText("Login");
@@ -74,7 +80,7 @@ public class LandingPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        LandingPage.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
+        LandingPage.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 100, 40));
 
         btnSignin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -83,12 +89,14 @@ public class LandingPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        LandingPage.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, -1, -1));
+        LandingPage.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 379, 100, 40));
 
-        lbl_role.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_role.setText("Role:");
-        LandingPage.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 140, -1));
-        LandingPage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1210, 1110));
+        LandingPage.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 60, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/1282794.jpg")); // NOI18N
+        LandingPage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1040));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -225,6 +233,10 @@ public class LandingPage extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_btnSigninActionPerformed
+
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsernameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
