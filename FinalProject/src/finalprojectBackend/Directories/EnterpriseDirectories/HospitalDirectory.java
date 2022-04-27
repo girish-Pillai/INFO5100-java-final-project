@@ -11,13 +11,11 @@ import java.util.ArrayList;
  *
  * @author girish
  */
-public class HospitalDir {
+public class HospitalDirectory {
     
     private ArrayList<Hospital> listOfHospitals;
-
-    
-
-    public HospitalDirectory() {
+ 
+    public HospitalDirectory(){
         listOfHospitals = new ArrayList();
     }
 
@@ -32,7 +30,6 @@ public class HospitalDir {
                 listOfHospitals.remove(hosp);
             }
         }
-
     }
     
     public ArrayList<Hospital> getListOfHospitals() {
