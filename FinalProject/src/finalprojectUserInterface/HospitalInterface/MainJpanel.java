@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author giris
+ * @author girish
  */
 public class MainJpanel extends javax.swing.JPanel {
 
