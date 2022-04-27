@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package finalprojectBackend.Enterprises;
+package finalprojectBackend.Enterprise;
 
-import finalprojectBackend.BasicInfo.MainClass;
+import finalprojectBackend.Components.Address;
 /**
  *
  * @author girish
