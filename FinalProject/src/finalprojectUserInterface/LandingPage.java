@@ -95,7 +95,7 @@ public class LandingPage extends javax.swing.JPanel {
         lbl_role.setText("Role:");
         LandingPage.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 60, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/1282794.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/1282794.jpg")); // NOI18N
         LandingPage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1040));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

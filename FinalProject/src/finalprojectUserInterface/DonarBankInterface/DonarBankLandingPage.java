@@ -98,7 +98,7 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         });
         jPanel1.add(Signinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 470, 150, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/donarblood2.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/donarblood2.jpeg")); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setMaximumSize(new java.awt.Dimension(1200, 1080));
         jLabel2.setMinimumSize(new java.awt.Dimension(1920, 1080));

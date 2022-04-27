@@ -94,7 +94,7 @@ public class MainJpanel extends javax.swing.JPanel {
         lbRole.setText("RoleName");
         jPanel1.add(lbRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 170, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/AdobeStock_279753293.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
