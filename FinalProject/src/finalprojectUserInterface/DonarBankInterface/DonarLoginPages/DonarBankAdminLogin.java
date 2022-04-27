@@ -26,19 +26,126 @@ public class DonarBankAdminLogin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel1 = new javax.swing.JPanel();
+        btn_donateOrgan = new javax.swing.JButton();
+        btn_logout = new javax.swing.JButton();
+        btn_transplant1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+
+        btn_donateOrgan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_donateOrgan.setText("Donate Organ");
+        btn_donateOrgan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_donateOrganActionPerformed(evt);
+            }
+        });
+
+        btn_logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_logout.setText("Logout");
+        btn_logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_logoutActionPerformed(evt);
+            }
+        });
+
+        btn_transplant1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_transplant1.setText("Transplant");
+        btn_transplant1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_transplant1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_donateOrgan)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(btn_logout))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(btn_transplant1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(btn_donateOrgan)
+                .addGap(102, 102, 102)
+                .addComponent(btn_transplant1)
+                .addGap(119, 119, 119)
+                .addComponent(btn_logout)
+                .addContainerGap(162, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setLeftComponent(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 782, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 612, Short.MAX_VALUE)
+        );
+
+        jSplitPane1.setRightComponent(jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 949, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_donateOrganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_donateOrganActionPerformed
+        // TODO add your handling code here:
+        DonorAdminDonateOrgan dado = new DonorAdminDonateOrgan(mainScreen, dB4OUtil, ecoSystem, donbank);
+        jSplitPane1.setRightComponent(dado);
+    }//GEN-LAST:event_btn_donateOrganActionPerformed
+
+    private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
+        // TODO add your handling code here:
+        MainFrameForm suc = new MainFrameForm();
+        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+        suc.setVisible(true);
+    }//GEN-LAST:event_btn_logoutActionPerformed
+
+    private void btn_transplant1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_transplant1ActionPerformed
+        // TODO add your handling code here:
+        DonorAdminTransplant dat = new DonorAdminTransplant(mainScreen, dB4OUtil, ecoSystem, donbank);
+        jSplitPane1.setRightComponent(dat);
+    }//GEN-LAST:event_btn_transplant1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_donateOrgan;
+    private javax.swing.JButton btn_logout;
+    private javax.swing.JButton btn_transplant1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

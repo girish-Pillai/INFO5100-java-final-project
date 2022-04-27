@@ -33,67 +33,67 @@
                       <EmptySpace min="242" pref="242" max="-2" attributes="0"/>
                       <Component id="uname_lbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtUsrName" min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="Usernametxt" min="-2" pref="209" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
-                      <Component id="lbl_pswd" min="-2" max="-2" attributes="0"/>
+                      <Component id="pswd_lbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="txtPass" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
-                      <Component id="lbl_address" min="-2" max="-2" attributes="0"/>
+                      <Component id="addrlbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtAdd" min="-2" pref="210" max="-2" attributes="0"/>
+                      <Component id="Addtxt" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="285" pref="285" max="-2" attributes="0"/>
-                      <Component id="txt_City" min="-2" max="-2" attributes="0"/>
+                      <Component id="Citylbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Component id="txtCity" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="275" pref="275" max="-2" attributes="0"/>
-                      <Component id="txt_state" min="-2" max="-2" attributes="0"/>
+                      <Component id="Statelbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Component id="txtState" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="258" pref="258" max="-2" attributes="0"/>
-                      <Component id="txt_Zip" min="-2" max="-2" attributes="0"/>
+                      <Component id="Ziplbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Component id="txtZip" min="-2" pref="210" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="253" pref="253" max="-2" attributes="0"/>
-                      <Component id="lbl_gender" min="-2" max="-2" attributes="0"/>
+                      <Component id="genderlbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="cmb_gender" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="gendercmb" min="-2" pref="220" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="240" pref="240" max="-2" attributes="0"/>
-                      <Component id="lbl_telenum" min="-2" max="-2" attributes="0"/>
+                      <Component id="telenumlbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txt_telenum" min="-2" pref="214" max="-2" attributes="0"/>
+                      <Component id="telenumtxt" min="-2" pref="214" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="223" pref="223" max="-2" attributes="0"/>
-                      <Component id="lbl_dob" min="-2" max="-2" attributes="0"/>
+                      <Component id="doblbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txt_dob" min="-2" pref="214" max="-2" attributes="0"/>
+                      <Component id="dobtxt" min="-2" pref="214" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="229" pref="229" max="-2" attributes="0"/>
-                      <Component id="lbl_donorbnkname" min="-2" max="-2" attributes="0"/>
+                      <Component id="donorbnknamelbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="cmb_donorbnkname" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="donorbnknamecmb" min="-2" pref="220" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="274" pref="274" max="-2" attributes="0"/>
-                      <Component id="btn_back" min="-2" pref="87" max="-2" attributes="0"/>
+                      <Component id="backbtn" min="-2" pref="87" max="-2" attributes="0"/>
                       <EmptySpace min="84" pref="84" max="-2" attributes="0"/>
-                      <Component id="btn_signup" min="-2" max="-2" attributes="0"/>
+                      <Component id="signupbtn" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="318" max="-2" attributes="0"/>
@@ -123,26 +123,26 @@
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
                       <Component id="uname_lbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txtUsrName" min="-2" max="-2" attributes="0"/>
+                  <Component id="Usernametxt" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="lbl_pswd" min="-2" max="-2" attributes="0"/>
+                      <Component id="pswd_lbl" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txtPass" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtAdd" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Addtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="addrlbl" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="txt_City" min="-2" max="-2" attributes="0"/>
+                      <Component id="Citylbl" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txtCity" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -150,7 +150,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="txt_state" min="-2" max="-2" attributes="0"/>
+                      <Component id="Statelbl" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txtState" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -158,7 +158,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="txt_Zip" min="-2" max="-2" attributes="0"/>
+                      <Component id="Ziplbl" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txtZip" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -166,39 +166,40 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="lbl_gender" min="-2" max="-2" attributes="0"/>
+                      <Component id="genderlbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="cmb_gender" min="-2" max="-2" attributes="0"/>
+                  <Component id="gendercmb" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="lbl_telenum" min="-2" max="-2" attributes="0"/>
+                      <Component id="telenumlbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txt_telenum" min="-2" max="-2" attributes="0"/>
+                  <Component id="telenumtxt" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="lbl_dob" min="-2" max="-2" attributes="0"/>
+                      <Component id="doblbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txt_dob" min="-2" max="-2" attributes="0"/>
+                  <Component id="dobtxt" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="lbl_donorbnkname" min="-2" max="-2" attributes="0"/>
+                      <Component id="donorbnknamelbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="cmb_donorbnkname" min="-2" max="-2" attributes="0"/>
+                  <Component id="donorbnknamecmb" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btn_back" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_signup" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="backbtn" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="signupbtn" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -207,7 +208,7 @@
     <Component class="javax.swing.JLabel" name="lbl_admintitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="18" style="1"/>
+          <Font name="Times New Roman" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Create Donor Profile"/>
       </Properties>
@@ -234,12 +235,12 @@
         <Property name="text" type="java.lang.String" value="Username:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUsrName">
+    <Component class="javax.swing.JTextField" name="Usernametxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsrNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UsernametxtActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_pswd">
+    <Component class="javax.swing.JLabel" name="pswd_lbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -252,7 +253,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPassActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_address">
+    <Component class="javax.swing.JLabel" name="addrlbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -260,13 +261,13 @@
         <Property name="text" type="java.lang.String" value="Address:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtAdd">
+    <Component class="javax.swing.JTextField" name="Addtxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAddActionPerformed"/>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddKeyReleased"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddtxtActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="AddtxtKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="txt_City">
+    <Component class="javax.swing.JLabel" name="Citylbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -280,7 +281,7 @@
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCityKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="txt_state">
+    <Component class="javax.swing.JLabel" name="Statelbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -294,7 +295,7 @@
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtStateKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="txt_Zip">
+    <Component class="javax.swing.JLabel" name="Ziplbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -308,7 +309,7 @@
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtZipKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_back">
+    <Component class="javax.swing.JButton" name="backbtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -316,10 +317,10 @@
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_backActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_signup">
+    <Component class="javax.swing.JButton" name="signupbtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -327,10 +328,10 @@
         <Property name="text" type="java.lang.String" value="Sign Up"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_signupActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signupbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_gender">
+    <Component class="javax.swing.JLabel" name="genderlbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -338,7 +339,7 @@
         <Property name="text" type="java.lang.String" value="Gender:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmb_gender">
+    <Component class="javax.swing.JComboBox" name="gendercmb">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="1"/>
@@ -355,7 +356,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_telenum">
+    <Component class="javax.swing.JLabel" name="telenumlbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -363,13 +364,13 @@
         <Property name="text" type="java.lang.String" value="Phone no.:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_telenum">
+    <Component class="javax.swing.JTextField" name="telenumtxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_telenumActionPerformed"/>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_telenumKeyReleased"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="telenumtxtActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="telenumtxtKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_dob">
+    <Component class="javax.swing.JLabel" name="doblbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -377,13 +378,13 @@
         <Property name="text" type="java.lang.String" value="Date of Birth:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_dob">
+    <Component class="javax.swing.JTextField" name="dobtxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dobActionPerformed"/>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dobKeyReleased"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dobtxtActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="dobtxtKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_donorbnkname">
+    <Component class="javax.swing.JLabel" name="donorbnknamelbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -391,7 +392,7 @@
         <Property name="text" type="java.lang.String" value="Donor Bank:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmb_donorbnkname">
+    <Component class="javax.swing.JComboBox" name="donorbnknamecmb">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="1"/>
@@ -400,6 +401,9 @@
           <StringArray count="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="donorbnknamecmbActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
