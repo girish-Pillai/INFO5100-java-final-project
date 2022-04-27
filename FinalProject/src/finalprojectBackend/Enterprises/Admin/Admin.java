@@ -4,10 +4,15 @@
  */
 package finalprojectBackend.Enterprises.Admin;
 
+import finalprojectBackend.Enterprises.Enterprise;
+
 /**
  *
  * @author prasa
  */
-public class Admin {
+public class Admin extends Enterprise {
+    public Admin(String enterpriseName, String registeryNumber, String address, String username, String password) {
+        super(enterpriseName, registeryNumber, address, username, password);
+    }
     
 }
