@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package finalprojectBackend.BasicInfo;
+package finalprojectBackend.Components;
 
 /**
  *
  * @author girish
  */
-public class MainClass {
+public class Address {
     private String Address1;
     private String Address2;
     private int AptNum;
@@ -16,7 +16,7 @@ public class MainClass {
     private String State;
     private int Zip;
 
-    public MainClass(String Address1, String Address2, int AptNum, String City, String State, int Zip) {
+    public Address(String Address1, String Address2, int AptNum, String City, String State, int Zip) {
         this.Address1 = Address1;
         this.Address2 = Address2;
         this.AptNum = AptNum;

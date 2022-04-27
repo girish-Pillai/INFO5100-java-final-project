@@ -5,7 +5,7 @@
 package finalprojectBackend.Organization;
 
 import java.util.Date;
-import finalprojectBackend.BasicInfo.MainClass;
+import finalprojectBackend.Components.Address;
 
 
 /**

@@ -34,69 +34,69 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        lbl_role = new javax.swing.JLabel();
-        cmb_Role = new javax.swing.JComboBox<>();
-        lbl_username = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        lbl_pswd = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JPasswordField();
-        btn_login = new javax.swing.JButton();
-        btnSignin = new javax.swing.JButton();
+        DonarjLabel1 = new javax.swing.JLabel();
+        RoleLabel = new javax.swing.JLabel();
+        RoleCmb = new javax.swing.JComboBox<>();
+        UsernameLabel = new javax.swing.JLabel();
+        UsernameTxt = new javax.swing.JTextField();
+        passwordLbl = new javax.swing.JLabel();
+        PassTxt = new javax.swing.JPasswordField();
+        Login_btn = new javax.swing.JButton();
+        Signinbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("DONOR BANK");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
+        DonarjLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        DonarjLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        DonarjLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        DonarjLabel1.setText("DONOR BANK");
+        jPanel1.add(DonarjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
 
-        lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_role.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_role.setText("Role:");
-        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 70, 20));
+        RoleLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        RoleLabel.setForeground(new java.awt.Color(255, 255, 255));
+        RoleLabel.setText("Role:");
+        jPanel1.add(RoleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 70, 20));
 
-        cmb_Role.setEditable(true);
-        cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cmb_Role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Donor","Donor Admin"}));
-        cmb_Role.addActionListener(new java.awt.event.ActionListener() {
+        RoleCmb.setEditable(true);
+        RoleCmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        RoleCmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Donor","Donor Admin"}));
+        RoleCmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmb_RoleActionPerformed(evt);
+                RoleCmbActionPerformed(evt);
             }
         });
-        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 197, -1));
+        jPanel1.add(RoleCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 197, -1));
 
-        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_username.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_username.setText("Username:");
-        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 197, -1));
+        UsernameLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        UsernameLabel.setText("Username:");
+        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        jPanel1.add(UsernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 197, -1));
 
-        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_pswd.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_pswd.setText("Password:");
-        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 197, -1));
+        passwordLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        passwordLbl.setForeground(new java.awt.Color(255, 255, 255));
+        passwordLbl.setText("Password:");
+        jPanel1.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
+        jPanel1.add(PassTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 197, -1));
 
-        btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_login.setText("Login");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
+        Login_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Login_btn.setText("Login");
+        Login_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
+                Login_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 140, 30));
+        jPanel1.add(Login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 140, 30));
 
-        btnSignin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSignin.setText("Sign Up");
-        btnSignin.addActionListener(new java.awt.event.ActionListener() {
+        Signinbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Signinbtn.setText("Sign Up");
+        Signinbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSigninActionPerformed(evt);
+                SigninbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 470, 150, 30));
+        jPanel1.add(Signinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 470, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/donarblood2.jpeg")); // NOI18N
         jLabel2.setText("jLabel2");
@@ -122,21 +122,21 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmb_RoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_RoleActionPerformed
+    private void RoleCmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoleCmbActionPerformed
         // TODO add your handling code here:
-        System.out.println(cmb_Role.getSelectedItem().toString());
-        if (cmb_Role.getSelectedItem().toString() == "Admin") {
-            btnSignin.setEnabled(false);
+        System.out.println(RoleCmb.getSelectedItem().toString());
+        if (RoleCmb.getSelectedItem().toString() == "Admin") {
+            Signinbtn.setEnabled(false);
         } else {
-            btnSignin.setEnabled(true);
+            Signinbtn.setEnabled(true);
         }
-    }//GEN-LAST:event_cmb_RoleActionPerformed
+    }//GEN-LAST:event_RoleCmbActionPerformed
 
-    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+    private void Login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_btnActionPerformed
         // TODO add your handling code here:
 
-        if (cmb_Role.getSelectedItem().toString() == "Donor Admin") {
-            DonorBank donbank = (DonorBank) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+        if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
+            DonorBank donbank = (DonorBank) ecoSystem.loginCheck(UsernameTxt.getText(), PassTxt.getText());
             if(donbank == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
@@ -148,8 +148,8 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
             }
         }
 
-        if (cmb_Role.getSelectedItem().toString() == "Donor") {
-            Donor don = (Donor) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+        if (RoleCmb.getSelectedItem().toString() == "Donor") {
+            Donor don = (Donor) ecoSystem.loginCheck(UsernameTxt.getText(), PassTxt.getText());
             if(don == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
@@ -215,12 +215,12 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 //                JOptionPane.showMessageDialog(this, "Incorrect credential");
                 //            }
             //        }
-    }//GEN-LAST:event_btn_loginActionPerformed
+    }//GEN-LAST:event_Login_btnActionPerformed
 
-    private void btnSigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSigninActionPerformed
+    private void SigninbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninbtnActionPerformed
         // TODO add your handling code here:
 
-        if (cmb_Role.getSelectedItem().toString() == "Donor") {
+        if (RoleCmb.getSelectedItem().toString() == "Donor") {
 
             SignUpDonor signdon = new SignUpDonor(mainScreen, dB4OUtil, ecoSystem);
             //
@@ -233,7 +233,7 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
 
         }
 
-        if (cmb_Role.getSelectedItem().toString() == "Donor Admin") {
+        if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
             // System.out.println("Hospital");
             SignUpDonorAdmin s = new SignUpDonorAdmin(mainScreen, dB4OUtil, ecoSystem);
 
@@ -245,20 +245,20 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
             mainScreen.validate();
 
         }
-    }//GEN-LAST:event_btnSigninActionPerformed
+    }//GEN-LAST:event_SigninbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSignin;
-    private javax.swing.JButton btn_login;
-    private javax.swing.JComboBox<String> cmb_Role;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel DonarjLabel1;
+    private javax.swing.JButton Login_btn;
+    private javax.swing.JPasswordField PassTxt;
+    private javax.swing.JComboBox<String> RoleCmb;
+    private javax.swing.JLabel RoleLabel;
+    private javax.swing.JButton Signinbtn;
+    private javax.swing.JLabel UsernameLabel;
+    private javax.swing.JTextField UsernameTxt;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lbl_pswd;
-    private javax.swing.JLabel lbl_role;
-    private javax.swing.JLabel lbl_username;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JLabel passwordLbl;
     // End of variables declaration//GEN-END:variables
 }
