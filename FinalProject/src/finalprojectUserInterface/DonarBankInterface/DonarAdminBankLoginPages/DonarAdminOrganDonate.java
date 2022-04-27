@@ -26,54 +26,54 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_title = new javax.swing.JLabel();
-        lbl_donorname = new javax.swing.JLabel();
-        lbl_enttype = new javax.swing.JLabel();
-        txt_entname = new javax.swing.JTextField();
-        cmb_enttype = new javax.swing.JComboBox<>();
-        lbl_entname = new javax.swing.JLabel();
-        lbl_bldgrp = new javax.swing.JLabel();
-        txt_bldgrp = new javax.swing.JTextField();
-        lbl_status = new javax.swing.JLabel();
-        cmb_status = new javax.swing.JComboBox<>();
-        btn_save = new javax.swing.JButton();
-        donlist = new javax.swing.JComboBox<>();
+        titlelbl = new javax.swing.JLabel();
+        donornamelbl = new javax.swing.JLabel();
+        enttypelbl = new javax.swing.JLabel();
+        entnametxt = new javax.swing.JTextField();
+        enttypecmb = new javax.swing.JComboBox<>();
+        entnamelbl = new javax.swing.JLabel();
+        bldgrplbl = new javax.swing.JLabel();
+        bldgrptxt = new javax.swing.JTextField();
+        statuslbl = new javax.swing.JLabel();
+        statuscmb = new javax.swing.JComboBox<>();
+        savebtn = new javax.swing.JButton();
+        listdon = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 204, 102));
 
-        lbl_title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lbl_title.setText("Add Entity Details");
+        titlelbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        titlelbl.setText("Add Entity Details");
 
-        lbl_donorname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_donorname.setText("Donor Name:");
+        donornamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        donornamelbl.setText("Donor Name:");
 
-        lbl_enttype.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_enttype.setText("Entity Type:");
+        enttypelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        enttypelbl.setText("Entity Type:");
 
-        cmb_enttype.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        cmb_enttype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood", "Organ" }));
+        enttypecmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        enttypecmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood", "Organ" }));
 
-        lbl_entname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_entname.setText("Entity Name:");
+        entnamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        entnamelbl.setText("Entity Name:");
 
-        lbl_bldgrp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_bldgrp.setText("Blood Group:");
+        bldgrplbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        bldgrplbl.setText("Blood Group:");
 
-        lbl_status.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_status.setText("Status:");
+        statuslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        statuslbl.setText("Status:");
 
-        cmb_status.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        cmb_status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Not Available" }));
+        statuscmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        statuscmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Not Available" }));
 
-        btn_save.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btn_save.setText("Save");
-        btn_save.addActionListener(new java.awt.event.ActionListener() {
+        savebtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        savebtn.setText("Save");
+        savebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_saveActionPerformed(evt);
+                savebtnActionPerformed(evt);
             }
         });
 
-        donlist.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        listdon.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -85,94 +85,94 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(1, 1, 1)
-                            .addComponent(lbl_bldgrp)
+                            .addComponent(bldgrplbl)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt_bldgrp, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bldgrptxt, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_title)
+                            .addComponent(titlelbl)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl_donorname)
-                                    .addComponent(lbl_enttype)
-                                    .addComponent(lbl_entname))
+                                    .addComponent(donornamelbl)
+                                    .addComponent(enttypelbl)
+                                    .addComponent(entnamelbl))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txt_entname)
-                                    .addComponent(donlist, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cmb_enttype, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(entnametxt)
+                                    .addComponent(listdon, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(enttypecmb, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_status)
+                        .addComponent(statuslbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_save)
-                            .addComponent(cmb_status, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(savebtn)
+                            .addComponent(statuscmb, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(343, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(lbl_title)
+                .addComponent(titlelbl)
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_donorname)
-                    .addComponent(donlist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(donornamelbl)
+                    .addComponent(listdon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_enttype)
-                    .addComponent(cmb_enttype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(enttypelbl)
+                    .addComponent(enttypecmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_entname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_entname))
+                    .addComponent(entnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(entnamelbl))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_bldgrp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_bldgrp))
+                    .addComponent(bldgrptxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bldgrplbl))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_status)
-                    .addComponent(cmb_status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(statuslbl)
+                    .addComponent(statuscmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(64, 64, 64)
-                .addComponent(btn_save)
+                .addComponent(savebtn)
                 .addContainerGap(87, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+    private void savebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebtnActionPerformed
         // TODO add your handling code here:
 
         DonateEntity de = new DonateEntity();
-        de.setEntityName(txt_entname.getText().toString());
+        de.setEntityName(entnametxt.getText().toString());
         de.setDonorEnterprise(donbank);
         Random rand = new Random();
         de.setId( String.format("%04d", rand.nextInt(10000)));
-        de.setBloodGroup(txt_bldgrp.getText().toString());
-        de.setType(cmb_enttype.getSelectedItem().toString());
+        de.setBloodGroup(bldgrptxt.getText().toString());
+        de.setType(enttypecmb.getSelectedItem().toString());
         //de.setDonorDoctor(ecoSystem.findDoctorByUserName(doctorList.getSelectedItem().toString()));
-        de.setDonorPatient(ecoSystem.findPatientByUserName(donlist.getSelectedItem().toString()));
-        de.setStatus(cmb_status.getSelectedItem().toString());
+        de.setDonorPatient(ecoSystem.findPatientByUserName(listdon.getSelectedItem().toString()));
+        de.setStatus(statuscmb.getSelectedItem().toString());
         //        System.out.println("dede: "+de.getDonorDoctor().getName());
         ecoSystem.addDonateEntity(de);
 
         dB4OUtil.storeSystem(ecoSystem);
 
         JOptionPane.showMessageDialog(this, "Entity details added.");
-    }//GEN-LAST:event_btn_saveActionPerformed
+    }//GEN-LAST:event_savebtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_save;
-    private javax.swing.JComboBox<String> cmb_enttype;
-    private javax.swing.JComboBox<String> cmb_status;
-    private javax.swing.JComboBox<String> donlist;
-    private javax.swing.JLabel lbl_bldgrp;
-    private javax.swing.JLabel lbl_donorname;
-    private javax.swing.JLabel lbl_entname;
-    private javax.swing.JLabel lbl_enttype;
-    private javax.swing.JLabel lbl_status;
-    private javax.swing.JLabel lbl_title;
-    private javax.swing.JTextField txt_bldgrp;
-    private javax.swing.JTextField txt_entname;
+    private javax.swing.JLabel bldgrplbl;
+    private javax.swing.JTextField bldgrptxt;
+    private javax.swing.JLabel donornamelbl;
+    private javax.swing.JLabel entnamelbl;
+    private javax.swing.JTextField entnametxt;
+    private javax.swing.JComboBox<String> enttypecmb;
+    private javax.swing.JLabel enttypelbl;
+    private javax.swing.JComboBox<String> listdon;
+    private javax.swing.JButton savebtn;
+    private javax.swing.JComboBox<String> statuscmb;
+    private javax.swing.JLabel statuslbl;
+    private javax.swing.JLabel titlelbl;
     // End of variables declaration//GEN-END:variables
 }
