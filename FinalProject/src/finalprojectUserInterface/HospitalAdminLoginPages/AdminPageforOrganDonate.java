@@ -27,65 +27,65 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        doctorlbl = new javax.swing.JLabel();
         doctorList = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
+        patientlbl = new javax.swing.JLabel();
         patList = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        type = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        bg = new javax.swing.JTextField();
-        entity = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        typelbl = new javax.swing.JLabel();
+        Bldgrp_lbl = new javax.swing.JLabel();
+        txtType = new javax.swing.JTextField();
+        entitylbl = new javax.swing.JLabel();
+        Bldgrp_txt = new javax.swing.JTextField();
+        entityTxt = new javax.swing.JTextField();
+        AddDntbtn = new javax.swing.JButton();
+        DonateTitle = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Doctor:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
+        doctorlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        doctorlbl.setText("Doctor:");
+        jPanel1.add(doctorlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
 
         doctorList.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
         jPanel1.add(doctorList, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 131, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Patient:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
+        patientlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        patientlbl.setText("Patient:");
+        jPanel1.add(patientlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
 
         patList.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
         jPanel1.add(patList, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 131, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Type:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, -1, -1));
+        typelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        typelbl.setText("Type:");
+        jPanel1.add(typelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Blood Group:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
-        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 131, -1));
+        Bldgrp_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Bldgrp_lbl.setText("Blood Group:");
+        jPanel1.add(Bldgrp_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
+        jPanel1.add(txtType, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 131, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Entity Name:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, 20));
-        jPanel1.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 131, -1));
-        jPanel1.add(entity, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 131, -1));
+        entitylbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        entitylbl.setText("Entity Name:");
+        jPanel1.add(entitylbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, 20));
+        jPanel1.add(Bldgrp_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 131, -1));
+        jPanel1.add(entityTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 131, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setText("Add Donation Entity");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        AddDntbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        AddDntbtn.setText("Add Donation Entity");
+        AddDntbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AddDntbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 409, 188, 40));
+        jPanel1.add(AddDntbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 409, 188, 40));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Add to Organ Donation");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+        DonateTitle.setBackground(new java.awt.Color(255, 255, 255));
+        DonateTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        DonateTitle.setText("Addition to Organ Donation");
+        jPanel1.add(DonateTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
         jLabel7.setText("jLabel7");
@@ -103,16 +103,16 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void AddDntbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDntbtnActionPerformed
         // TODO add your handling code here:
 
         DonateEntity de = new DonateEntity();
-        de.setEntityName(entity.getText().toString());
+        de.setEntityName(entityTxt.getText().toString());
         Random rand = new Random();
         de.setId( String.format("%04d", rand.nextInt(10000)));
         de.setDonorEnterprise(hospital);
-        de.setBloodGroup(bg.getText().toString());
-        de.setType(type.getText().toString());
+        de.setBloodGroup(Bldgrp_txt.getText().toString());
+        de.setType(txtType.getText().toString());
         de.setDonorDoctor(ecoSystem.findDoctorByUserName(doctorList.getSelectedItem().toString()));
         de.setDonorPatient(ecoSystem.findPatientByUserName(patList.getSelectedItem().toString()));
         de.setStatus("available");
@@ -122,23 +122,23 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         JOptionPane.showMessageDialog(this, "Entity added!");
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_AddDntbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField bg;
+    private javax.swing.JButton AddDntbtn;
+    private javax.swing.JLabel Bldgrp_lbl;
+    private javax.swing.JTextField Bldgrp_txt;
+    private javax.swing.JLabel DonateTitle;
     private javax.swing.JComboBox<String> doctorList;
-    private javax.swing.JTextField entity;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel doctorlbl;
+    private javax.swing.JTextField entityTxt;
+    private javax.swing.JLabel entitylbl;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> patList;
-    private javax.swing.JTextField type;
+    private javax.swing.JLabel patientlbl;
+    private javax.swing.JTextField txtType;
+    private javax.swing.JLabel typelbl;
     // End of variables declaration//GEN-END:variables
 }
