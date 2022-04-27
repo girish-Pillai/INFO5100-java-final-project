@@ -48,14 +48,15 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("STIXGeneral", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DONOR BANK");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_role.setForeground(new java.awt.Color(255, 255, 255));
         lbl_role.setText("Role:");
-        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 189, 70, 20));
+        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 70, 20));
 
         cmb_Role.setEditable(true);
         cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -65,17 +66,19 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 215, 197, -1));
+        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_username.setForeground(new java.awt.Color(255, 255, 255));
         lbl_username.setText("Username:");
-        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 252, -1, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 278, 197, -1));
+        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(255, 255, 255));
         lbl_pswd.setText("Password:");
-        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 322, -1, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 348, 197, -1));
+        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_login.setText("Login");
@@ -84,7 +87,7 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 411, 86, -1));
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 140, 30));
 
         btnSignin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -93,32 +96,29 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 411, -1, -1));
+        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 470, 150, 30));
 
-        jLabel2.setBackground(new java.awt.Color(255, 204, 204));
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/istockphoto-1256555401-612x612.jpg")); // NOI18N
-        jLabel2.setLabelFor(jLabel2);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 670));
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/donarblood2.jpeg")); // NOI18N
+        jLabel2.setText("jLabel2");
+        jLabel2.setMaximumSize(new java.awt.Dimension(1200, 1080));
+        jLabel2.setMinimumSize(new java.awt.Dimension(1920, 1080));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 800));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 749, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
