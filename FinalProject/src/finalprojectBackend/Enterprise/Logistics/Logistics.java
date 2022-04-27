@@ -4,6 +4,9 @@
  */
 package finalprojectBackend.Enterprise.Logistics;
 
+import finalprojectBackend.Enterprises.Enterprise;
+import java.util.ArrayList;
+
 /**
  *
  * @author girish

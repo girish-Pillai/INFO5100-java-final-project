@@ -4,9 +4,8 @@
  */
 package finalprojectBackend.Enterprise.Hospital;
 
-import finalprojectBackend.Components.Address;
-import finalprojectBackend.Organization.User;
-import finalprojectBackend.Enterprise.Enterprise;
+
+import finalprojectBackend.Enterprises.Enterprise;
 import java.util.ArrayList;
 
 /**

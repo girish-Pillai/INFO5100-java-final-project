@@ -4,6 +4,9 @@
  */
 package finalprojectBackend.Enterprise.Logistics;
 
+import finalprojectBackend.Organization.User;
+import java.util.Date;
+
 /**
  *
  * @author girish
