@@ -4,10 +4,9 @@
  */
 package finalprojectBackend.Enterprises;
 
-import finalprojectBackend.BasicInfo.MainClass;
 /**
  *
- * @author girish
+ * @author prasa
  */
 public class Enterprise {
     private String enterpriseName;

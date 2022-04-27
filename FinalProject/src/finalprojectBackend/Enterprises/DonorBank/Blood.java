@@ -10,4 +10,16 @@ package finalprojectBackend.Enterprises.DonorBank;
  */
 public class Blood {
     
+    private String bloodgrp;
+
+    public Blood() {
+    }
+    
+    public String getBloodgrp() {
+        return bloodgrp;
+    }
+
+    public void setBloodgrp(String bloodgrp) {
+        this.bloodgrp = bloodgrp;
+    }
 }

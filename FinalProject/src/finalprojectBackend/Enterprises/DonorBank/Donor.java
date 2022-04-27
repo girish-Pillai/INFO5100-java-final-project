@@ -3,11 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package finalprojectBackend.Enterprises.DonorBank;
+import finalprojectBackend.Organization.User;
+import java.util.Date;
 
 /**
  *
  * @author prasa
  */
-public class Donor {
+public class Donor extends User {
     
+    private String dbname;
+    
+    public Donor(String uname, String pswd, String id, String name, String add, String gender, String telenum, Date dob,String dbname) {
+        super(uname, pswd, id, name, add, gender, telenum, dob);
+        this.dbname = dbname;
+    }
+
+    public String getDbname() {
+        return dbname;
+    }
+
+    public void setDbname(String dbname) {
+        this.dbname = dbname;
+    }
 }
