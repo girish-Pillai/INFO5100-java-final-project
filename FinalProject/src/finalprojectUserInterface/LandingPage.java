@@ -93,7 +93,7 @@ public class LandingPage extends javax.swing.JPanel {
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_role.setText("Role:");
-        LandingPage.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 60, -1));
+        LandingPage.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 60, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Downloads/1282794.jpg")); // NOI18N
         LandingPage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1040));
