@@ -31,8 +31,8 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         tb1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         tb2 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        titlelbl = new javax.swing.JLabel();
+        reqbtn = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tb3 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
@@ -43,10 +43,10 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        doc = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        recPat = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
+        DocCmb = new javax.swing.JComboBox<>();
+        Doclbl = new javax.swing.JLabel();
+        Patcmb = new javax.swing.JComboBox<>();
+        patlbl = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,19 +81,19 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 333, 585, 126));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Search and Receive organ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
+        titlelbl.setBackground(new java.awt.Color(255, 255, 255));
+        titlelbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titlelbl.setText("Search and Receive organ");
+        jPanel1.add(titlelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setText("Generate request");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        reqbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reqbtn.setText("Generate request");
+        reqbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                reqbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 659, -1, 40));
+        jPanel1.add(reqbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 659, -1, 40));
 
         tb3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -186,17 +186,17 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 239, -1, -1));
 
-        jPanel1.add(doc, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 649, 118, -1));
+        jPanel1.add(DocCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 649, 118, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Doctor:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 653, -1, -1));
+        Doclbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Doclbl.setText("Doctor:");
+        jPanel1.add(Doclbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 653, -1, -1));
 
-        jPanel1.add(recPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 689, 118, -1));
+        jPanel1.add(Patcmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 689, 118, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setText("Patient:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 693, -1, -1));
+        patlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        patlbl.setText("Patient:");
+        jPanel1.add(patlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 693, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1300, 910));
@@ -223,7 +223,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void reqbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reqbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow1 = tb1.getSelectedRow();
         int selectedRow2 = tb2.getSelectedRow();
@@ -244,13 +244,13 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         String tech = model3.getValueAt(selectedRow3, 0).toString();
         System.out.println(" " + donateEntity + " " + handler + " " + tech);
 
-        ecoSystem.generateRequesting(donateEntity, handler, tech, hospital, doc.getSelectedItem().toString(), recPat.getSelectedItem().toString());
+        ecoSystem.generateRequesting(donateEntity, handler, tech, hospital, DocCmb.getSelectedItem().toString(), Patcmb.getSelectedItem().toString());
         dB4OUtil.storeSystem(ecoSystem);
-        String mail = "Request generated for id: " + donateEntity + " for patient user name: " + recPat.getSelectedItem().toString() + ". Please login and update the required details.";
+        String mail = "Request generated for id: " + donateEntity + " for patient user name: " + Patcmb.getSelectedItem().toString() + ". Please login and update the required details.";
 
         JOptionPane.showMessageDialog(this, "Request generated & Mail sent successfully.");
         sendMail(mail);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_reqbtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -269,17 +269,15 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> DocCmb;
+    private javax.swing.JLabel Doclbl;
+    private javax.swing.JComboBox<String> Patcmb;
     private javax.swing.JTextField blood;
-    private javax.swing.JComboBox<String> doc;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -287,9 +285,11 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField name;
-    private javax.swing.JComboBox<String> recPat;
+    private javax.swing.JLabel patlbl;
+    private javax.swing.JButton reqbtn;
     private javax.swing.JTable tb1;
     private javax.swing.JTable tb2;
     private javax.swing.JTable tb3;
+    private javax.swing.JLabel titlelbl;
     // End of variables declaration//GEN-END:variables
 }
