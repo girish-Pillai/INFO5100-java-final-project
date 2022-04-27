@@ -4,7 +4,7 @@
  */
 package finalprojectBackend.Enterprise.Lab;
 
-import finalprojectBackend.Enterprises.Enterprise;
+import finalprojectBackend.Enterprise.Enterprise;
 import java.util.ArrayList;
 
 /**

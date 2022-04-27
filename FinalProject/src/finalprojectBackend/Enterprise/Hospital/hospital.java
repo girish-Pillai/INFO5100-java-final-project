@@ -5,13 +5,13 @@
 package finalprojectBackend.Enterprise.Hospital;
 
 
-import finalprojectBackend.Enterprises.Enterprise;
+import finalprojectBackend.Enterprise.Enterprise;
 import java.util.ArrayList;
 
 /**
  *
  * @author girish
- */
+ */  
 public class Hospital extends Enterprise{
 
     private ArrayList<Doctor> doctordirectory;

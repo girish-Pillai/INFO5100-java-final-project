@@ -3,9 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package finalprojectBackend.Enterprise.DonorBank;
-
+import finalprojectBackend.Enterprise.Enterprise;
 import finalprojectBackend.Enterprises.DonorBank.Donor;
-import finalprojectBackend.Enterprises.Enterprise;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +15,7 @@ public class DonorBank extends Enterprise {
     
     private ArrayList<Donor> donordirectory;
     private ArrayList<Blood> blooddirectory;
-    private ArrayList<Kidney> organdirectory;
+    private ArrayList<Organ> organdirectory;
 
     public DonorBank(String enterpriseName, String registeryNumber, String address, String username, String password) {
         super(enterpriseName, registeryNumber, address, username, password);

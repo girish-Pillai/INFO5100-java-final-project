@@ -4,7 +4,7 @@
  */
 package finalprojectBackend.Enterprise.Admin;
 
-import finalprojectBackend.Enterprises.Enterprise;
+import finalprojectBackend.Enterprise.Enterprise;
 
 /**
  *

@@ -8,11 +8,11 @@ package finalprojectBackend.Enterprise.DonorBank;
  *
  * @author prasa
  */
-public class Kidney {
+public class Organ {
     
     private String organname;
     
-    public Kidney() {
+    public Organ() {
         this.organname = "Kidney";
     }
     
