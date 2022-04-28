@@ -10,7 +10,7 @@ package finalprojectBackend.OperatingSystem;
  */
 public class SystemConfig {
     public static OperatingSystem configure(){
-        OperatingSystem system = OperatingSystem.getInstance();
-        return system;
+        OperatingSystem os = OperatingSystem.getInstance();
+        return os;
     }
 }

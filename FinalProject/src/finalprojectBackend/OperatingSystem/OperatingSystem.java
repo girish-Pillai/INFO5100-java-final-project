@@ -49,6 +49,13 @@ public class OperatingSystem {
         this.vehicleDirectory = new ArrayList();
         this.technicianDirectory = new ArrayList();
     }
+    
+    public static OperatingSystem getInstance() {
+        if (os == null) {
+            os = new OperatingSystem();
+        }
+        return os;
+    }
 
     public static OperatingSystem getOs() {
         return os;
