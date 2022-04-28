@@ -251,7 +251,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 closelblMouseClicked(evt);
             }
         });
-        jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 58, 51));
+        jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 58, 51));
 
         gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalprojectUserInterface/UserInterfaceMainpage/image_processing20210413-17906-14nj7li.gif"))); // NOI18N
         jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 1020, 780));
