@@ -36,7 +36,7 @@ public class DonarBankAdminLogin extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 153, 153));
 
         btn_donateOrgan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_donateOrgan.setText("Donate Organ");
+        btn_donateOrgan.setText("Organ Donar");
         btn_donateOrgan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_donateOrganActionPerformed(evt);
