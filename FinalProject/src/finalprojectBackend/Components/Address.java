@@ -8,7 +8,7 @@ package finalprojectBackend.Components;
  *
  * @author girish
  */
-public class userAddress {
+public class Address {
     private String addressLine1;
     private String addressLine2;
     private int apartmentNo;
@@ -64,7 +64,7 @@ public class userAddress {
         this.apartmentNo = apartmentNo;
     }
 
-    public userAddress(String addressLine1, String addressLine2, int apartmentNo, String city, String state, int zip) {
+    public Address(String addressLine1, String addressLine2, int apartmentNo, String city, String state, int zip) {
         this.addressLine1 = addressLine1;
         this.addressLine2 = addressLine2;
         this.apartmentNo = apartmentNo;
