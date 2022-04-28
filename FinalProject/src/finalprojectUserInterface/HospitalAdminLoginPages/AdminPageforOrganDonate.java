@@ -85,7 +85,7 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         DonateTitle.setBackground(new java.awt.Color(255, 255, 255));
         DonateTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         DonateTitle.setText("Addition to Organ Donation");
-        jPanel1.add(DonateTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+        jPanel1.add(DonateTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
         jLabel7.setText("jLabel7");
