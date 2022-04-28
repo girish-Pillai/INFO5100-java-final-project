@@ -7,22 +7,21 @@ package finalprojectBackend.Enterprise.DonorBank;
 /**
  *
  * @author prasad
+ This Class holds all the functionalities for the Kidney Component
  */
-public class Organ {
+public class Kidney {
     
     private String organ;
     
-    public void setOrgan(String organ) {
-        this.organ = organ;
+    public Kidney() {
+        this.organ = "Kidney";
     }
+    
+//    public void setOrgan(String organ) {
+//        this.organ = "Kidney";
+//    }
 
     public String getOrgan() {
         return organ;
-    }
-
-
-//    public void setOrganname(String organ) {
-//        this.organ = organ;
-//    }
-    
+    }    
 }

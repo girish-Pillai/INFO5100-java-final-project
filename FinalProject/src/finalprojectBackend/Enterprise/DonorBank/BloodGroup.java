@@ -7,6 +7,7 @@ package finalprojectBackend.Enterprise.DonorBank;
 /**
  *
  * @author prasad
+ * This Class holds all the functionalities for the Blood Group 
  */
 public class BloodGroup {
     
