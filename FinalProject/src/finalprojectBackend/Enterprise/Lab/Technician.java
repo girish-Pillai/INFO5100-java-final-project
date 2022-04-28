@@ -13,20 +13,19 @@ import java.util.Date;
  */
 public class Technician extends User {
     
-    private String labname;
+    private String laboratoryName;
     
-    public Technician(String uname, String pswd, String id, String name, String add, String gender, String telenum, Date dob,String labname) {
-        super(uname, pswd, id, name, add, gender, telenum, dob);
-        this.labname = labname;
+    public Technician(String userName, String password, String userId, String PersonName, String address, String gender, String phoneNumber, Date dateOfBirth, String laboratoryName) {
+        super(userName, password, userId, PersonName, address, gender, phoneNumber, dateOfBirth);
+        this.laboratoryName = laboratoryName;
     }
 
-    public String getLabname() {
-        return labname;
+    public String getLaboratoryName() {
+        return laboratoryName;
     }
 
-    public void setLabname(String labname) {
-        this.labname = labname;
+    public void setLaboratoryName(String laboratoryName) {
+        this.laboratoryName = laboratoryName;
     }
-    
-    
 }
+
