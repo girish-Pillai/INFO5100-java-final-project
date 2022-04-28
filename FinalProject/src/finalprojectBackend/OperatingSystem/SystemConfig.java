@@ -9,5 +9,8 @@ package finalprojectBackend.OperatingSystem;
  * @author prasa
  */
 public class SystemConfig {
-    
+    public static OperatingSystem configure(){
+        OperatingSystem system = OperatingSystem.getInstance();
+        return system;
+    }
 }
