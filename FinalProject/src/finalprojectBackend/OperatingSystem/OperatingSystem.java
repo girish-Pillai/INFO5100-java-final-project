@@ -197,7 +197,36 @@ public class OperatingSystem {
             e.printStackTrace();
         }
     }
+    
+    public void addHandler(Handler newHandler) {
+        try {
+            handlerDirectory.add(newHandler);
+        } catch (Exception e) {
+            this.handlerDirectory = new ArrayList();
+            handlerDirectory.add(newHandler);
 
+        }
+    }
+
+    public void addVehicle(Vehicle newVehicle) {
+        try {
+            vehicleDirectory.add(newVehicle);
+        } catch (Exception e) {
+            this.vehicleDirectory = new ArrayList();
+            vehicleDirectory.add(newVehicle);
+
+        }
+    }
+
+    public void addTechnician(Technician newTechnician) {
+        try {
+            technicianDirectory.add(newTechnician);
+        } catch (Exception e) {
+            this.technicianDirectory = new ArrayList();
+            technicianDirectory.add(newTechnician);
+        }
+    }
+    
     
     public Object loginAuthentication(String userId, String password) {
 
@@ -275,4 +304,12 @@ public class OperatingSystem {
         }
     }
     
+    public Doc getDoctorByUserName(String userName) {
+        for (Doc d : doctorDirectory) {
+            if (d.getUserName().equals(userName)) {
+                return d;
+            }
+        }
+        return null;
+    }
 }
