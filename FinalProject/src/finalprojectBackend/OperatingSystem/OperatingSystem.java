@@ -168,6 +168,37 @@ public class OperatingSystem {
         }
     }
     
+    public void addDonationAssignment(DonationAssignment newDonationAssignment) {
+        try {
+            donationAssignmentList.add(newDonationAssignment);
+
+        } catch (Exception e) {
+            this.donationAssignmentList = new ArrayList();
+            donationAssignmentList.add(newDonationAssignment);
+        }
+    }
+
+    public void addDonor(DonorUser newDonor) {
+        try {
+            donorUserDirectory.add(newDonor);
+        } catch (Exception e) {
+            this.donorUserDirectory = new ArrayList();
+            donorUserDirectory.add(newDonor);
+
+        }
+    }
+
+    public void addDonorBank(DonorBank newDonorBank) {
+        try {
+            donorBankDirectory.add(newDonorBank);
+        } catch (Exception e) {
+            this.donorBankDirectory = new ArrayList();
+            donorBankDirectory.add(newDonorBank);
+            e.printStackTrace();
+        }
+    }
+
+    
     public Object loginAuthentication(String userId, String password) {
 
         for (Doc d : doctorDirectory) {
