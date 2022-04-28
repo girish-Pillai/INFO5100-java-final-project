@@ -227,7 +227,6 @@ public class OperatingSystem {
         }
     }
     
-    
     public Object loginAuthentication(String userId, String password) {
 
         for (Doc d : doctorDirectory) {
@@ -304,6 +303,53 @@ public class OperatingSystem {
         }
     }
     
+    public void deleteDonorByUserName(String doctorUserName) {
+        for (DonorUser n : donorUserDirectory) {
+            if (n.getUserName().equals(doctorUserName)) {
+                donorUserDirectory.remove(n);
+                return;
+            }
+        }
+    }
+    
+    public void deleteDonorBank(String donorBankUName) {
+        for (DonorBank n : donorBankDirectory) {
+            System.out.println("donorb " + n.getUserName());
+            if (n.getUserName().equals(donorBankUName)) {
+                System.out.println("found");
+                donorBankDirectory.remove(n);
+                return;
+            }
+        }
+    }
+    
+    public void deleteDonor(String donorName) {
+        for (DonorUser n : donorUserDirectory) {
+            if (n.getUserName().equals(donorName)) {
+                donorUserDirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deleteHandler(String HUname) {
+        for (Handler n : handlerDirectory) {
+            if (n.getUserName().equals(HUname)) {
+                handlerDirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deleteVehicle(String vNumber) {
+        for (Vehicle n : vehicleDirectory) {
+            if (n.getVehiclenum().equals(vNumber)) {
+                vehicleDirectory.remove(n);
+                return;
+            }
+        }
+    }
+    
     public Doc getDoctorByUserName(String userName) {
         for (Doc d : doctorDirectory) {
             if (d.getUserName().equals(userName)) {
@@ -312,4 +358,68 @@ public class OperatingSystem {
         }
         return null;
     }
+
+    public User getPatientByUserName(String patientUserName) {
+        for (Patient p : patientDirectory) {
+            if (p.getUserName().equals(patientUserName)) {
+                return p;
+            }
+        }
+        for (DonorUser p : donorUserDirectory) {
+            if (p.getUserName().equals(patientUserName)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public Vehicle getVehicleByNumber(String vehicleNo) {
+        for (Vehicle v : vehicleDirectory) {
+            if (v.getVehiclenum().matches(vehicleNo.substring(0, vehicleNo.indexOf("|")))) {
+                return v;
+            }
+        }
+        return null;
+    }
+    
+    private Handler getHandlerByUserName(String handlerUserName) {
+        for (Handler d : handlerDirectory) {
+            if (d.getUserName().toLowerCase().equals(handlerUserName.toLowerCase())) {
+                return d;
+            }
+        }
+        return null;
+    }
+
+    private Technician getTechnicianByUserName(String technicianUserName) {
+        for (Technician d : technicianDirectory) {
+            if (d.getUserName().equals(technicianUserName)) {
+                return d;
+            }
+        }
+        return null;
+    } 
+    
+    public void generateRequesting(String donateEntity, String handler, String tech, Hospital rec, String doc, String recPat) {
+        Handler h = getHandlerByUserName(handler);
+        Technician t = getTechnicianByUserName(tech);
+        Doc d = getDoctorByUserName(doc);
+        Patient p = (Patient) getPatientByUserName(recPat);
+        for (DonationAssignment da : donationAssignmentList) {
+            try {
+                if (da.getId().equals(donateEntity)) {
+                    da.setHandler(h);
+                    da.setTechnician(t);
+                    da.setRecEnterprise(rec);
+                    da.setRecDoctor(d);
+                    da.setRecPatient(p);
+                    da.setDonationStatus("Requested");
+                    return;
+                }
+            } catch (Exception e) {
+                System.out.print(e.getMessage());
+            }
+        }
+    }
+    
 }
