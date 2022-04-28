@@ -35,6 +35,19 @@ public class OperatingSystem {
     private ArrayList<Handler> handlerDirectory;
     private ArrayList<Vehicle> vehicleDirectory;
     private ArrayList<Technician> technicianDirectory;
+    
+    public OperatingSystem() {
+        this.hospitalDirectory = new HospitalDirectory();
+        this.doctorDirectory = new ArrayList();
+        this.donorUserDirectory = new ArrayList();
+        this.donorbankDirectory = new ArrayList();
+        this.nurseDirectory = new ArrayList();
+        this.patientdirectory = new ArrayList();
+        this.donationAssignmentList = new ArrayList();
+        this.handlerDirectory = new ArrayList();
+        this.vehicleDirectory = new ArrayList();
+        this.technicianDirectory = new ArrayList();
+    }
 
     public static OperatingSystem getOs() {
         return os;
@@ -123,4 +136,5 @@ public class OperatingSystem {
     public void setTechnicianDirectory(ArrayList<Technician> technicianDirectory) {
         this.technicianDirectory = technicianDirectory;
     }
+    
 }
