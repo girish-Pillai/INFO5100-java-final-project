@@ -24,13 +24,14 @@ import java.util.ArrayList;
  * This is class for all functional methods of the Application
  */
 public class OperatingSystem {
+    
     private static OperatingSystem os;
     private HospitalDirectory hospitalDirectory;
     private ArrayList<Doc> doctorDirectory;
     private ArrayList<DonorUser> donorUserDirectory;
-    private ArrayList<DonorBank> donorbankDirectory;
+    private ArrayList<DonorBank> donorBankDirectory;
     private ArrayList<Nurse> nurseDirectory;
-    private ArrayList<Patient> patientdirectory;
+    private ArrayList<Patient> patientDirectory;
     private ArrayList<DonationAssignment> donationAssignmentList;
     private ArrayList<Handler> handlerDirectory;
     private ArrayList<Vehicle> vehicleDirectory;
@@ -40,9 +41,9 @@ public class OperatingSystem {
         this.hospitalDirectory = new HospitalDirectory();
         this.doctorDirectory = new ArrayList();
         this.donorUserDirectory = new ArrayList();
-        this.donorbankDirectory = new ArrayList();
+        this.donorBankDirectory = new ArrayList();
         this.nurseDirectory = new ArrayList();
-        this.patientdirectory = new ArrayList();
+        this.patientDirectory = new ArrayList();
         this.donationAssignmentList = new ArrayList();
         this.handlerDirectory = new ArrayList();
         this.vehicleDirectory = new ArrayList();
@@ -81,12 +82,12 @@ public class OperatingSystem {
         this.donorUserDirectory = donorUserDirectory;
     }
 
-    public ArrayList<DonorBank> getDonorbankDirectory() {
-        return donorbankDirectory;
+    public ArrayList<DonorBank> getDonorBankDirectory() {
+        return donorBankDirectory;
     }
 
-    public void setDonorbankDirectory(ArrayList<DonorBank> donorbankDirectory) {
-        this.donorbankDirectory = donorbankDirectory;
+    public void setDonorBankDirectory(ArrayList<DonorBank> donorBankDirectory) {
+        this.donorBankDirectory = donorBankDirectory;
     }
 
     public ArrayList<Nurse> getNurseDirectory() {
@@ -97,12 +98,12 @@ public class OperatingSystem {
         this.nurseDirectory = nurseDirectory;
     }
 
-    public ArrayList<Patient> getPatientdirectory() {
-        return patientdirectory;
+    public ArrayList<Patient> getPatientDirectory() {
+        return patientDirectory;
     }
 
-    public void setPatientdirectory(ArrayList<Patient> patientdirectory) {
-        this.patientdirectory = patientdirectory;
+    public void setPatientDirectory(ArrayList<Patient> patientDirectory) {
+        this.patientDirectory = patientDirectory;
     }
 
     public ArrayList<DonationAssignment> getDonationAssignmentList() {
@@ -135,6 +136,112 @@ public class OperatingSystem {
 
     public void setTechnicianDirectory(ArrayList<Technician> technicianDirectory) {
         this.technicianDirectory = technicianDirectory;
+    }
+    
+    public void addDoctor(Doc doc) {
+        try {
+            doctorDirectory.add(doc);
+        } catch (Exception e) {
+            this.doctorDirectory = new ArrayList();
+            doctorDirectory.add(doc);
+            e.printStackTrace();
+        }
+    }
+
+    public void addNurse(Nurse nur) {
+        try {
+            nurseDirectory.add(nur);
+        } catch (Exception e) {
+            this.nurseDirectory = new ArrayList();
+            nurseDirectory.add(nur);
+            e.printStackTrace();
+        }
+    }
+
+    public void addPatient(Patient pat) {
+        try {
+            patientDirectory.add(pat);
+        } catch (Exception e) {
+            this.patientDirectory = new ArrayList();
+            patientDirectory.add(pat);
+            e.printStackTrace();
+        }
+    }
+    
+    public Object loginAuthentication(String userId, String password) {
+
+        for (Doc d : doctorDirectory) {
+            System.out.println("LoginCheck(doc): " + d.getUserName() + " " + d.getPassword());
+            if (d.getUserName().equals(userId) && d.getPassword().equals(password)) {
+                return d;
+            }
+        }
+         for (Hospital ho : hospitalDirectory.getListOfHospitals()) {
+            System.out.println("LoginCheck(ho): " + ho.getUserName() + " " + ho.getPwd());
+            if (ho.getUserName().equals(userId) && ho.getPwd().equals(password)) {
+                System.out.println("LoginCheck(): matched");
+                return ho;
+            }
+        }
+
+        for (Patient p : patientDirectory) {
+            System.out.println("LoginCheck(doc): " + p.getUserName() + " " + p.getPassword());
+            if (p.getUserName().equals(userId) && p.getPassword().equals(password)) {
+                return p;
+            }
+        }
+
+       
+        for (DonorBank don : donorBankDirectory) {
+            if (don.getUserName().equals(userId) && don.getPwd().equals(password)) {
+                return don;
+            }
+        }
+        for (Handler don : handlerDirectory) {
+            if (don.getUserName().equals(userId) && don.getPassword().equals(password)) {
+                return don;
+            }
+        }
+
+        for (Technician tech : technicianDirectory) {
+            if (tech.getUserName().equals(userId) && tech.getPassword().equals(password)) {
+                return tech;
+            }
+        }
+
+        for (DonorUser don : donorUserDirectory) {
+            if (don.getUserName().equals(userId) && don.getPassword().equals(password)) {
+                return don;
+            }
+        }
+        return null;
+    }
+
+    public void deleteDoctorUser(String doctorUserName) {
+        for (Doc d : doctorDirectory) {
+            if (d.getUserName().equals(doctorUserName)) {
+                doctorDirectory.remove(d);
+                return;
+            }
+        }
+    }
+
+    public void deleteNurseUser(String NurseUserName) {
+        for (Nurse n : nurseDirectory) {
+            if (n.getUserName().equals(NurseUserName)) {
+                nurseDirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deletePatient(String PatientUserName) {
+        for (Patient p : patientDirectory) {
+            if (p.getUserName().equals(PatientUserName)) {
+                patientDirectory.remove(p);
+                return;
+            }
+        }
     }
     
 }
