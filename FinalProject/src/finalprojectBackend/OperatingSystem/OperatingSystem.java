@@ -137,4 +137,34 @@ public class OperatingSystem {
         this.technicianDirectory = technicianDirectory;
     }
     
+    public void addDoctor(Doc doc) {
+        try {
+            doctorDirectory.add(doc);
+        } catch (Exception e) {
+            this.doctorDirectory = new ArrayList();
+            doctorDirectory.add(doc);
+            e.printStackTrace();
+        }
+    }
+
+    public void addNurse(Nurse nur) {
+        try {
+            nurseDirectory.add(nur);
+        } catch (Exception e) {
+            this.nurseDirectory = new ArrayList();
+            nurseDirectory.add(nur);
+            e.printStackTrace();
+        }
+    }
+
+    public void addPatient(Patient pat) {
+        try {
+            patientdirectory.add(pat);
+        } catch (Exception e) {
+            this.patientdirectory = new ArrayList();
+            patientdirectory.add(pat);
+            e.printStackTrace();
+        }
+    }
+   
 }
