@@ -4,7 +4,6 @@
  */
 package finalprojectBackend.Enterprise.DonorBank;
 import finalprojectBackend.Enterprise.Enterprise;
-import finalprojectBackend.Enterprises.DonorBank.Donor;
 import java.util.ArrayList;
 
 /**
@@ -13,40 +12,40 @@ import java.util.ArrayList;
  */
 public class DonorBank extends Enterprise {
     
-    private ArrayList<Donor> donordirectory;
-    private ArrayList<Blood> blooddirectory;
-    private ArrayList<Organ> organdirectory;
+    private ArrayList<Donor> donor;
+    private ArrayList<BloodGroup> bloodgroup;
+    private ArrayList<Organ> organ;
 
-    public DonorBank(String enterpriseName, String registeryNumber, String address, String username, String password) {
-        super(enterpriseName, registeryNumber, address, username, password);
+    public DonorBank(String address, String userName, String pwd, String enterpriseName, String regNumber) {
+        super(address, userName, pwd, enterpriseName, regNumber);
 
-        this.donordirectory = new ArrayList();
-        this.blooddirectory = new ArrayList();
-        this.organdirectory = new ArrayList();
+        this.donor = new ArrayList();
+        this.bloodgroup = new ArrayList();
+        this.organ = new ArrayList();
     }
 
-    public ArrayList<Donor> getDonordirectory() {
-        return donordirectory;
+    public ArrayList<Donor> getDonor() {
+        return donor;
     }
 
-    public void setDonordirectory(ArrayList<Donor> donordirectory) {
-        this.donordirectory = donordirectory;
+    public void setDonor(ArrayList<Donor> donor) {
+        this.donor = donor;
     }
 
-    public ArrayList<Blood> getBlooddirectory() {
-        return blooddirectory;
+    public ArrayList<BloodGroup> getBloodgroup() {
+        return bloodgroup;
     }
 
-    public void setBlooddirectory(ArrayList<Blood> blooddirectory) {
-        this.blooddirectory = blooddirectory;
+    public void setBloodgroup(ArrayList<BloodGroup> bloodgroup) {
+        this.bloodgroup = bloodgroup;
     }
 
-    public ArrayList<Organ> getOrgandirectory() {
-        return organdirectory;
+    public ArrayList<Organ> getOrgan() {
+        return organ;
     }
 
-    public void setOrgandirectory(ArrayList<Organ> organdirectory) {
-        this.organdirectory = organdirectory;
+    public void setOrgan(ArrayList<Organ> organ) {
+        this.organ = organ;
     }
 
 }
