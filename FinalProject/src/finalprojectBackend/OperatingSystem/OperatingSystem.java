@@ -24,6 +24,7 @@ import java.util.ArrayList;
  * This is class for all functional methods of the Application
  */
 public class OperatingSystem {
+    
     private static OperatingSystem os;
     private HospitalDirectory hospitalDirectory;
     private ArrayList<Doc> doctorDirectory;
@@ -216,5 +217,31 @@ public class OperatingSystem {
         return null;
     }
 
-   
+    public void deleteDoctorUser(String doctorUserName) {
+        for (Doc d : doctorDirectory) {
+            if (d.getUserName().equals(doctorUserName)) {
+                doctorDirectory.remove(d);
+                return;
+            }
+        }
+    }
+
+    public void deleteNurseUser(String NurseUserName) {
+        for (Nurse n : nurseDirectory) {
+            if (n.getUserName().equals(NurseUserName)) {
+                nurseDirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deletePatient(String PatientUserName) {
+        for (Patient p : patientDirectory) {
+            if (p.getUserName().equals(PatientUserName)) {
+                patientDirectory.remove(p);
+                return;
+            }
+        }
+    }
+    
 }
