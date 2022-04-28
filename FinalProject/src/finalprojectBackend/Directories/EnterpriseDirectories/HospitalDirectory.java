@@ -23,14 +23,24 @@ public class HospitalDirectory {
         listOfHospitals.add(hospital);
     }
 
-    public void removeHospital(String id) {
+    public void removeHospital(String hosId) {
 
-        for (Hospital hosp : listOfHospitals) {
-            if (hosp.getRegisteryNumber() == id) {
-                listOfHospitals.remove(hosp);
+        for (Hospital hos : listOfHospitals) {
+            if (hos.getRegNumber() == hosId) {
+                listOfHospitals.remove(hos);
             }
         }
     }
+    
+    public Hospital findHospital(String hosName) {
+        System.out.println("SearchHospital() "+hosName);
+        for (Hospital Hos : listOfHospitals) {
+            if (Hos.getEnterpriseName() == hosName) {
+                return Hos;
+            }
+        }
+        return null;
+    } 
     
     public ArrayList<Hospital> getListOfHospitals() {
         return listOfHospitals;
@@ -39,14 +49,5 @@ public class HospitalDirectory {
     public void setListOfHospitals(ArrayList<Hospital> listOfHospitals) {
         this.listOfHospitals = listOfHospitals;
     }
-
-    public Hospital findHospital(String hospitalName) {
-        System.out.println("findHospital() "+hospitalName);
-        for (Hospital hosp : listOfHospitals) {
-            if (hosp.getEnterpriseName() == hospitalName) {
-                return hosp;
-            }
-        }
-        return null;
-    }   
+  
 }
