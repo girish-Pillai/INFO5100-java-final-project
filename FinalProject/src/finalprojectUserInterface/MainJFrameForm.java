@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package finalprojectUserInterface.UserInterfaceMainpage;
+package finalprojectUserInterface;
 
+import finalprojectUserInterface.UserInterfaceMainpage.*;
 import finalprojectUserInterface.*;
 
 /**
@@ -56,6 +57,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LogisticsPanel.setBackground(new java.awt.Color(85, 65, 118));
+        LogisticsPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 204)));
         LogisticsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LogisticsPaneljPanel4MouseClicked(evt);
@@ -76,7 +78,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 .addComponent(Logicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Log_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 237, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         LogisticsPanelLayout.setVerticalGroup(
             LogisticsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,6 +94,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.add(LogisticsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 370, 50));
 
         donorPanel.setBackground(new java.awt.Color(85, 65, 118));
+        donorPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 255)));
         donorPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 donorPanelMouseClicked(evt);
@@ -112,7 +115,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 .addComponent(Donobankicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DonorBank_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 198, Short.MAX_VALUE))
+                .addGap(0, 196, Short.MAX_VALUE))
         );
         donorPanelLayout.setVerticalGroup(
             donorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,6 +131,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.add(donorPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 370, -1));
 
         LabPanel.setBackground(new java.awt.Color(85, 65, 118));
+        LabPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 204)));
         LabPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabPanelMouseClicked(evt);
@@ -148,7 +152,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 .addComponent(labicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Lab_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addGap(0, 194, Short.MAX_VALUE))
         );
         LabPanelLayout.setVerticalGroup(
             LabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,6 +168,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.add(LabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 370, 50));
 
         AdminPanel.setBackground(new java.awt.Color(85, 65, 118));
+        AdminPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 204)));
         AdminPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminPanelMouseClicked(evt);
@@ -184,7 +189,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 .addComponent(Adminicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Admin_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 201, Short.MAX_VALUE))
+                .addGap(0, 199, Short.MAX_VALUE))
         );
         AdminPanelLayout.setVerticalGroup(
             AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,6 +203,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.add(AdminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 370, 50));
 
         HospitalPanel.setBackground(new java.awt.Color(85, 65, 118));
+        HospitalPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 204)));
         HospitalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HospitalPanelMouseClicked(evt);
@@ -221,7 +227,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 .addComponent(Hosicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Hospital_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addGap(0, 194, Short.MAX_VALUE))
         );
         HospitalPanelLayout.setVerticalGroup(
             HospitalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,6 +252,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 460, 58));
 
         closelbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-close-50.png")); // NOI18N
+        closelbl.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 0, 204), null));
         closelbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 closelblMouseClicked(evt);
@@ -337,6 +344,8 @@ public class MainJFrameForm extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainJFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

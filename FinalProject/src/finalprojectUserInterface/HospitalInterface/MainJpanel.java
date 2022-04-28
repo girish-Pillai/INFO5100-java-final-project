@@ -37,7 +37,7 @@ public class MainJpanel extends javax.swing.JPanel {
         txtPassword = new javax.swing.JPasswordField();
         btLogin = new javax.swing.JButton();
         btSignUp = new javax.swing.JButton();
-        lbRole = new javax.swing.JLabel();
+        lbRoleName = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(110, 89, 222));
@@ -89,10 +89,10 @@ public class MainJpanel extends javax.swing.JPanel {
         });
         jPanel1.add(btSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 220, 40));
 
-        lbRole.setBackground(new java.awt.Color(0, 0, 0));
-        lbRole.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbRole.setText("RoleName");
-        jPanel1.add(lbRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 170, 30));
+        lbRoleName.setBackground(new java.awt.Color(0, 0, 0));
+        lbRoleName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbRoleName.setText("RoleName");
+        jPanel1.add(lbRoleName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 170, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1110));
@@ -242,7 +242,7 @@ public class MainJpanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbBostonHospital;
     private javax.swing.JLabel lbPassword;
-    private javax.swing.JLabel lbRole;
+    private javax.swing.JLabel lbRoleName;
     private javax.swing.JLabel lbUsername;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
