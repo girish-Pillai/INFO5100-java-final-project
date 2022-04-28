@@ -8,11 +8,11 @@ import finalprojectBackend.Enterprise.Enterprise;
 
 /**
  *
- * @author prasa
+ * @author prasad
  */
 public class Admin extends Enterprise {
-    public Admin(String enterpriseName, String registeryNumber, String address, String username, String password) {
-        super(enterpriseName, registeryNumber, address, username, password);
+    public Admin(String address, String userName, String pwd, String enterpriseName, String regNumber) {
+        super(address, userName, pwd, enterpriseName, regNumber);
     }
     
 }
