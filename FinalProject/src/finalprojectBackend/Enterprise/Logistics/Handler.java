@@ -15,8 +15,8 @@ public class Handler extends User {
     
     private Vehicle vehicle;
     
-    public Handler(String uname, String pswd, String id, String name, String add, String gender, String telenum, Date dob,Vehicle vehicle) {
-        super(uname, pswd, id, name, add, gender, telenum, dob);
+    public Handler(String userName, String password, String userId, String PersonName, String address, String gender, String phoneNumber, Date dateOfBirth, Vehicle vehicle) {
+        super(userName, password, userId, PersonName, address, gender, phoneNumber, dateOfBirth);
         this.vehicle = vehicle;
     }
 
@@ -27,7 +27,4 @@ public class Handler extends User {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
-  
-    
-    
 }

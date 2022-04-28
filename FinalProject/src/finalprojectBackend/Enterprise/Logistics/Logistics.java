@@ -13,28 +13,26 @@ import java.util.ArrayList;
  */
 public class Logistics extends Enterprise {
     
-    private ArrayList<Handler> handlerdirectory;
-    private ArrayList<Vehicle> vehicledirectory;
+    private ArrayList<Handler> handler;
+    private ArrayList<Vehicle> vehicle;
 
-    public Logistics(String enterpriseName, String registeryNumber, String address, String username, String password) {
-        super(enterpriseName, registeryNumber, address, username, password);
+    public Logistics(String address, String userName, String pwd, String enterpriseName, String regNumber) {
+        super(address, userName, pwd, enterpriseName, regNumber);
     }
 
-    public ArrayList<Handler> getHandlerdirectory() {
-        return handlerdirectory;
+    public ArrayList<Handler> getHandler() {
+        return handler;
     }
 
-    public void setHandlerdirectory(ArrayList<Handler> handlerdirectory) {
-        this.handlerdirectory = handlerdirectory;
+    public void setHandler(ArrayList<Handler> handler) {
+        this.handler = handler;
     }
 
-    public ArrayList<Vehicle> getVehicledirectory() {
-        return vehicledirectory;
+    public ArrayList<Vehicle> getVehicle() {
+        return vehicle;
     }
 
-    public void setVehicledirectory(ArrayList<Vehicle> vehicledirectory) {
-        this.vehicledirectory = vehicledirectory;
+    public void setVehicle(ArrayList<Vehicle> vehicle) {
+        this.vehicle = vehicle;
     }
-    
-    
 }

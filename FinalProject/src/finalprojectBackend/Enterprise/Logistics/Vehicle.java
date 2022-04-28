@@ -9,48 +9,49 @@ package finalprojectBackend.Enterprise.Logistics;
  * @author girish
  */
 public class Vehicle {
-    private String vehname;
-    private String vehnum;
-    private String vtype;
-    private String description;
+    private String vehiclename;
+    private String vehiclenum;
+    private String vehicletype;
+    private String vehicaldescription;
 
-    public Vehicle(String vehname, String vehnum, String vtype, String description) {
-        this.vehname = vehname;
-        this.vehnum = vehnum;
-        this.vtype = vtype;
-        this.description = description;
+    public String getVehiclename() {
+        return vehiclename;
     }
 
-    public String getVehname() {
-        return vehname;
+    public void setVehiclename(String vehiclename) {
+        this.vehiclename = vehiclename;
     }
 
-    public void setVehname(String vehname) {
-        this.vehname = vehname;
+    public String getVehiclenum() {
+        return vehiclenum;
     }
 
-    public String getVehnum() {
-        return vehnum;
+    public void setVehiclenum(String vehiclenum) {
+        this.vehiclenum = vehiclenum;
     }
 
-    public void setVehnum(String vehnum) {
-        this.vehnum = vehnum;
+    public String getVehicletype() {
+        return vehicletype;
     }
 
-    public String getVtype() {
-        return vtype;
+    public void setVehicletype(String vehicletype) {
+        this.vehicletype = vehicletype;
     }
 
-    public void setVtype(String vtype) {
-        this.vtype = vtype;
+    public String getVehicaldescription() {
+        return vehicaldescription;
     }
 
-    public String getDescription() {
-        return description;
+    public void setVehicaldescription(String vehicaldescription) {
+        this.vehicaldescription = vehicaldescription;
     }
+    
+    
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Vehicle(String vehiclename, String vehiclenum, String vehicletype, String vehicaldescription) {
+        this.vehiclename = vehiclename;
+        this.vehiclenum = vehiclenum;
+        this.vehicletype = vehicletype;
+        this.vehicaldescription = vehicaldescription;
     }
-
 }
