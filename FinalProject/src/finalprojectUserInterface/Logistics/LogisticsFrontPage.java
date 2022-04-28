@@ -44,11 +44,11 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
 
         Logisticstitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Logisticstitle.setText("Logistics");
-        jPanel1.add(Logisticstitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 49, -1, -1));
+        jPanel1.add(Logisticstitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, -1));
 
         Rolelbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Rolelbl.setText("Role:");
-        jPanel1.add(Rolelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
+        jPanel1.add(Rolelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, -1));
 
         cmb_role.setEditable(true);
         cmb_role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -58,23 +58,23 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
                 cmb_roleActionPerformed(evt);
             }
         });
-        jPanel1.add(cmb_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 197, -1));
+        jPanel1.add(cmb_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, 197, -1));
 
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         username_lbl.setText("Username:");
-        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
+        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
 
         usrname_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usrname_txtActionPerformed(evt);
             }
         });
-        jPanel1.add(usrname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 197, -1));
+        jPanel1.add(usrname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, 197, -1));
 
         pswd_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         pswd_lbl.setText("Password:");
-        jPanel1.add(pswd_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
-        jPanel1.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 197, -1));
+        jPanel1.add(pswd_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
+        jPanel1.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, 197, -1));
 
         loginBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         loginBtn.setText("Login");
@@ -83,7 +83,7 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
                 loginBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 339, 86, 40));
+        jPanel1.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 86, 40));
 
         signinBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         signinBtn.setText("Sign Up");
@@ -92,10 +92,10 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
                 signinBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(signinBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 339, -1, 40));
+        jPanel1.add(signinBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, -1, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/express-delivery-concept-checking-delivery-service-app-on-mobile-phone-delivery-scooter-motorcycle-with-cardboard-box-on-mobile-phone-and-city-background-vector.jpg")); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -340, 2640, 1130));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -340, 2640, 1250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

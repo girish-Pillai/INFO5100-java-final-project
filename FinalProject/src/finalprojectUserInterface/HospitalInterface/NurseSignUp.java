@@ -215,7 +215,7 @@ public class NurseSignUp extends javax.swing.JPanel {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 222, -1, -1));
         jPanel1.add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 216, 216, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 1130));
 

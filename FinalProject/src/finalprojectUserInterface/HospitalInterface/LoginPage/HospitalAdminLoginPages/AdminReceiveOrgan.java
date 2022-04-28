@@ -198,7 +198,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         patlbl.setText("Patient:");
         jPanel1.add(patlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 693, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1300, 910));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

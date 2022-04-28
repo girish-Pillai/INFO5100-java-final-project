@@ -199,7 +199,7 @@ public class DoctorSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(txt_spc, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 250, 216, 27));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, -4, 1420, 1190));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

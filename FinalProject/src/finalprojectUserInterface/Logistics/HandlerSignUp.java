@@ -233,7 +233,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
         vehicle_cmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jPanel1.add(vehicle_cmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 600, 216, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/express-delivery-concept-checking-delivery-service-app-on-mobile-phone-delivery-scooter-motorcycle-with-cardboard-box-on-mobile-phone-and-city-background-vector.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -250, 2310, 1300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

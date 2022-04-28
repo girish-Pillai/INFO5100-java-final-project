@@ -104,7 +104,7 @@
                 <Component class="javax.swing.JLabel" name="Logicon_lbl">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-progress-indicator-50.png"/>
+                      <Image iconType="3" name="/Backgrounds/icons8-progress-indicator-50.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -172,7 +172,7 @@
                 <Component class="javax.swing.JLabel" name="Donobankicon_lbl">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-add-to-favorites-50.png"/>
+                      <Image iconType="3" name="/Backgrounds/icons8-add-to-favorites-50.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -240,7 +240,7 @@
                 <Component class="javax.swing.JLabel" name="labicon_lbl">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-wait-50.png"/>
+                      <Image iconType="3" name="/Backgrounds/icons8-wait-50.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -305,7 +305,7 @@
                 <Component class="javax.swing.JLabel" name="Adminicon_lbl">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-approval-50.png"/>
+                      <Image iconType="3" name="/Backgrounds/icons8-approval-50.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -370,7 +370,7 @@
                 <Component class="javax.swing.JLabel" name="Hosicon_lbl">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-heart-plus-50.png"/>
+                      <Image iconType="3" name="/Backgrounds/icons8-heart-plus-50.png"/>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[48, 48]"/>
@@ -427,14 +427,14 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="290" y="60" width="460" height="58"/>
+                  <AbsoluteConstraints x="280" y="50" width="460" height="58"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="closelbl">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-close-50.png"/>
+                  <Image iconType="3" name="/Backgrounds/icons8-close-50.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -456,12 +456,12 @@
             <Component class="javax.swing.JLabel" name="gifLbl">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/finalprojectUserInterface/UserInterfaceMainpage/image_processing20210413-17906-14nj7li.gif"/>
+                  <Image iconType="3" name="/Backgrounds/image201.gif"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="80" width="1020" height="780"/>
+                  <AbsoluteConstraints x="90" y="30" width="1020" height="780"/>
                 </Constraint>
               </Constraints>
             </Component>

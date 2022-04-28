@@ -53,7 +53,7 @@ public class AdminTransplant extends javax.swing.JPanel {
         TransplantTitle.setText("Manage Transplants");
         jPanel1.add(TransplantTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1330, 920));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
