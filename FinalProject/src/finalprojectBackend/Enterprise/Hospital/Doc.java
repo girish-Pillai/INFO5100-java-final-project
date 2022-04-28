@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author giris
+ * @author girish
  */
 public class Doc extends User{
 

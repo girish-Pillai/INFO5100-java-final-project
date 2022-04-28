@@ -6,21 +6,37 @@ package finalprojectBackend.Enterprise;
 
 /**
  *
- * @author prasa
+ * @author girish
  */
 public class Enterprise {
-    private String enterpriseName;
-    private String registeryNumber;
     private String address;
-    private String username;
-    private String password;
+    private String userName;
+    private String pwd;
+    private String enterpriseName;
+    private String regNumber;
 
-    public Enterprise(String enterpriseName, String registeryNumber, String address, String username, String password) {
-        this.enterpriseName = enterpriseName;
-        this.registeryNumber = registeryNumber;
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
         this.address = address;
-        this.username = username;
-        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public String getEnterpriseName() {
@@ -31,35 +47,21 @@ public class Enterprise {
         this.enterpriseName = enterpriseName;
     }
 
-    public String getRegisteryNumber() {
-        return registeryNumber;
+    public String getRegNumber() {
+        return regNumber;
     }
 
-    public void setRegisteryNumber(String registeryNumber) {
-        this.registeryNumber = registeryNumber;
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
+    
+    public Enterprise(String address, String userName, String pwd,String enterpriseName, String regNumber) {
         this.address = address;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        this.userName = userName;
+        this.pwd = pwd;
+        this.enterpriseName = enterpriseName;
+        this.regNumber = regNumber;
+        
     }
 }
