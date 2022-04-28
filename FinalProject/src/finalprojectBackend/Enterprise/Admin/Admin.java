@@ -9,6 +9,7 @@ import finalprojectBackend.Enterprise.Enterprise;
 /**
  *
  * @author prasad
+ * This Class holds all the functionalities for the Admin User
  */
 public class Admin extends Enterprise {
     public Admin(String address, String userName, String pwd, String enterpriseName, String regNumber) {

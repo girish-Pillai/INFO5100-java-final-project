@@ -9,12 +9,13 @@ import java.util.ArrayList;
 /**
  *
  * @author prasa
+ * This Class holds all the functionalities for the DonorBank User
  */
 public class DonorBank extends Enterprise {
     
-    private ArrayList<Donor> donor;
+    private ArrayList<DonorUser> donor;
     private ArrayList<BloodGroup> bloodgroup;
-    private ArrayList<Organ> organ;
+    private ArrayList<Kidney> organ;
 
     public DonorBank(String address, String userName, String pwd, String enterpriseName, String regNumber) {
         super(address, userName, pwd, enterpriseName, regNumber);
@@ -24,11 +25,11 @@ public class DonorBank extends Enterprise {
         this.organ = new ArrayList();
     }
 
-    public ArrayList<Donor> getDonor() {
+    public ArrayList<DonorUser> getDonor() {
         return donor;
     }
 
-    public void setDonor(ArrayList<Donor> donor) {
+    public void setDonor(ArrayList<DonorUser> donor) {
         this.donor = donor;
     }
 
@@ -40,11 +41,11 @@ public class DonorBank extends Enterprise {
         this.bloodgroup = bloodgroup;
     }
 
-    public ArrayList<Organ> getOrgan() {
+    public ArrayList<Kidney> getOrgan() {
         return organ;
     }
 
-    public void setOrgan(ArrayList<Organ> organ) {
+    public void setOrgan(ArrayList<Kidney> organ) {
         this.organ = organ;
     }
 

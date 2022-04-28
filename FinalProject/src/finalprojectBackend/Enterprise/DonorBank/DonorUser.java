@@ -9,13 +9,14 @@ import java.util.Date;
 /**
  *
  * @author prasa
+ This Class holds all the functionalities for the DonorUser User
  */
-public class Donor extends User{
+public class DonorUser extends User{
     
     private String donorBankName;
     
-    public Donor(String userName, String password, String userId, String PersonName, String address, String gender, String phoneNumber, Date dateOfBirth,String donorBankName) {
-        super(userName, password, userId, PersonName, address, gender, phoneNumber, dateOfBirth);
+    public DonorUser(String uname, String user_password, String userId, String PersonName, String address, String gender, String phoneNumber, Date dob,String donorBankName) {
+        super(uname, user_password, userId, PersonName, address, gender, phoneNumber, dob);
         this.donorBankName = donorBankName;
     }
 
