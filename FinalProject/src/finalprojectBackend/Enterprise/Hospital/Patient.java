@@ -5,7 +5,7 @@
 package finalprojectBackend.Enterprise.Hospital;
 
 
-import finalprojectBackend.Components.Address;
+import finalprojectBackend.Components.userAddress;
 import finalprojectBackend.Organization.User;
 import java.util.Date;
 
