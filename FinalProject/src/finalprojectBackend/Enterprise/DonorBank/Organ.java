@@ -6,22 +6,23 @@ package finalprojectBackend.Enterprise.DonorBank;
 
 /**
  *
- * @author prasa
+ * @author prasad
  */
 public class Organ {
     
-    private String organname;
+    private String organ;
     
-    public Organ() {
-        this.organname = "Kidney";
-    }
-    
-    public String getOrganname() {
-        return organname;
+    public void setOrgan(String organ) {
+        this.organ = organ;
     }
 
-//    public void setOrganname(String organname) {
-//        this.organname = organname;
+    public String getOrgan() {
+        return organ;
+    }
+
+
+//    public void setOrganname(String organ) {
+//        this.organ = organ;
 //    }
     
 }

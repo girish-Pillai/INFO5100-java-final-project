@@ -6,20 +6,20 @@ package finalprojectBackend.Enterprise.DonorBank;
 
 /**
  *
- * @author prasa
+ * @author prasad
  */
-public class Blood {
+public class BloodGroup {
     
-    private String bloodgrp;
+    private String bloodg;
 
-    public Blood() {
+    public BloodGroup() {
     }
     
-    public String getBloodgrp() {
-        return bloodgrp;
+    public String getBloodg() {
+        return bloodg;
     }
 
-    public void setBloodgrp(String bloodgrp) {
-        this.bloodgrp = bloodgrp;
+    public void setBloodg(String bloodg) {
+        this.bloodg = bloodg;
     }
 }
