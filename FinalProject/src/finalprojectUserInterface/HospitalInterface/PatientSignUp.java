@@ -246,7 +246,7 @@ public class PatientSignUp extends javax.swing.JPanel {
         lbl_hosplist.setText("Hospital:");
         jPanel1.add(lbl_hosplist, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 870));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -114,7 +114,7 @@ public class AdminLogin extends javax.swing.JPanel {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelArea2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/AdobeStock_279753293.jpeg")); // NOI18N
+        jLabelArea2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
         jPanel3.add(jLabelArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 1060));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N

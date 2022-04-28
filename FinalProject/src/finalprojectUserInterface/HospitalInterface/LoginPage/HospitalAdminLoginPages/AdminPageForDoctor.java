@@ -64,7 +64,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
         });
         jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 459, 110, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/413051.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1500, 900));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

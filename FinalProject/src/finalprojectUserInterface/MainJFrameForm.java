@@ -64,7 +64,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
             }
         });
 
-        Logicon_lbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-progress-indicator-50.png")); // NOI18N
+        Logicon_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-progress-indicator-50.png"))); // NOI18N
 
         Log_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Log_lbl.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,7 +101,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
             }
         });
 
-        Donobankicon_lbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-add-to-favorites-50.png")); // NOI18N
+        Donobankicon_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-add-to-favorites-50.png"))); // NOI18N
 
         DonorBank_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         DonorBank_lbl.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,7 +138,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
             }
         });
 
-        labicon_lbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-wait-50.png")); // NOI18N
+        labicon_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-wait-50.png"))); // NOI18N
 
         Lab_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Lab_lbl.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +175,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
             }
         });
 
-        Adminicon_lbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-approval-50.png")); // NOI18N
+        Adminicon_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-approval-50.png"))); // NOI18N
 
         Admin_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Admin_lbl.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,7 +210,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
             }
         });
 
-        Hosicon_lbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-heart-plus-50.png")); // NOI18N
+        Hosicon_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-heart-plus-50.png"))); // NOI18N
         Hosicon_lbl.setMaximumSize(new java.awt.Dimension(48, 48));
         Hosicon_lbl.setMinimumSize(new java.awt.Dimension(48, 48));
         Hosicon_lbl.setPreferredSize(new java.awt.Dimension(48, 48));
@@ -249,9 +249,9 @@ public class MainJFrameForm extends javax.swing.JFrame {
         OrganTitle.setForeground(new java.awt.Color(255, 255, 255));
         OrganTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         OrganTitle.setText("Organ Transplantation System");
-        jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 460, 58));
+        jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 460, 58));
 
-        closelbl.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/icons8-close-50.png")); // NOI18N
+        closelbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-close-50.png"))); // NOI18N
         closelbl.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 0, 204), null));
         closelbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -260,8 +260,8 @@ public class MainJFrameForm extends javax.swing.JFrame {
         });
         jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 58, 51));
 
-        gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalprojectUserInterface/UserInterfaceMainpage/image_processing20210413-17906-14nj7li.gif"))); // NOI18N
-        jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 1020, 780));
+        gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/image201.gif"))); // NOI18N
+        jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 1020, 780));
 
         jSplitPane1.setRightComponent(jPanel3);
 

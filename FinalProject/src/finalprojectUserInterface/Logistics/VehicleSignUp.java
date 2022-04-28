@@ -123,7 +123,7 @@ public class VehicleSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(SignUpbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 87, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/express-delivery-concept-checking-delivery-service-app-on-mobile-phone-delivery-scooter-motorcycle-with-cardboard-box-on-mobile-phone-and-city-background-vector.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -100, 2220, 1030));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

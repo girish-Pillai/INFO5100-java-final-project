@@ -42,11 +42,11 @@ public class MainLabCoverPage extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Laboratory");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 160, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 160, 40));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_role.setText("Role:");
-        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, -1, -1));
+        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
 
         cmb_Role.setEditable(true);
         cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -56,17 +56,17 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 197, -1));
+        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_username.setText("Username:");
-        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 197, -1));
+        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setText("Password:");
-        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, -1, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 197, -1));
+        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btn_login.setText("Login");
@@ -75,7 +75,7 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, -1, 40));
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, 40));
 
         btnSignin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -84,9 +84,9 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 80, 40));
+        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 80, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/supriyaa/Desktop/INFOfinalproject/info5100-java-final-project/FinalProject/src/Backgrounds/iStock-1212896143.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1212896143.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
