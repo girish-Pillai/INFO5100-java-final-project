@@ -4,6 +4,18 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectBackend.Enterprise.Hospital.Nurse;
+import finalprojectUserInterface.MainJFrameForm;
+
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +25,34 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
     /**
      * Creates new form AdminPageforOrganDonate
      */
-    public AdminPageforOrganDonate() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+
+    public AdminPageforOrganDonate(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        System.out.println("AdminDonateOrg() init");
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.hospital = h;
+        
+        for (Doc d : operatingSystem.getDoctorDirectory()) {
+
+            if (d.getHospitalName().equals(hospital.getEnterpriseName())) {
+                doctorList.addItem(d.getUserName());
+            }
+
+        }
+        
+        for(Patient pa : operatingSystem.getPatientDirectory() ){
+            if( pa.getHospitalName().equals(hospital.getEnterpriseName())){
+                patList.addItem(pa.getUserName());
+            }
+        }
+        
+        
     }
 
     /**
@@ -106,20 +144,20 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
     private void AddDntbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDntbtnActionPerformed
         // TODO add your handling code here:
 
-        DonateEntity de = new DonateEntity();
-        de.setEntityName(entityTxt.getText().toString());
+        DonationAssignment de = new DonationAssignment();
+        de.setDonationEntityName(entityTxt.getText().toString());
         Random rand = new Random();
         de.setId( String.format("%04d", rand.nextInt(10000)));
-        de.setDonorEnterprise(hospital);
-        de.setBloodGroup(Bldgrp_txt.getText().toString());
+        de.setDonEnterprise(hospital);
+        de.setbGroup(Bldgrp_txt.getText().toString());
         de.setType(txtType.getText().toString());
-        de.setDonorDoctor(ecoSystem.findDoctorByUserName(doctorList.getSelectedItem().toString()));
-        de.setDonorPatient(ecoSystem.findPatientByUserName(patList.getSelectedItem().toString()));
-        de.setStatus("available");
+        de.setDonDoctor(operatingSystem.getDoctorByUserName(doctorList.getSelectedItem().toString()));
+        de.setDonPatient(operatingSystem.getPatientByUserName(patList.getSelectedItem().toString()));
+        de.setDonationStatus("available");
         //        System.out.println("dede: "+de.getDonorDoctor().getName());
-        ecoSystem.addDonateEntity(de);
+        operatingSystem.addDonationAssignment(de);
 
-        dB4OUtil.storeSystem(ecoSystem);
+        dB4OUtility.storeSystem(operatingSystem);
         JOptionPane.showMessageDialog(this, "Entity added!");
 
     }//GEN-LAST:event_AddDntbtnActionPerformed

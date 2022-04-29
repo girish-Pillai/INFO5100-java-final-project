@@ -4,6 +4,14 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Nurse;
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author supriyaa
@@ -13,8 +21,18 @@ public class AdminPageForNurses extends javax.swing.JPanel {
     /**
      * Creates new form AdminPageForNurses
      */
-    public AdminPageForNurses() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+
+    public AdminPageForNurses(MainJFrameForm mainScreen, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        this.MainLPage = mainScreen;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.hospital = h;
+        populateNurseTable();
     }
 
     /**
@@ -100,11 +118,29 @@ public class AdminPageForNurses extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblNurse.getModel();
         String nurseUName = model.getValueAt(selectedRow, 1).toString();
         System.out.println(" nurse uname: " + nurseUName);
-        ecoSystem.deleteNurse(nurseUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteNurseUser(nurseUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateNurseTable();
     }//GEN-LAST:event_deletebtnActionPerformed
 
+    private void populateNurseTable(){
+    DefaultTableModel model = (DefaultTableModel) tblNurse.getModel();
+    model.setRowCount(0);
+
+    for (Nurse n : operatingSystem.getNurseDirectory()) {
+
+        if (n.getHospitalName().equals(hospital.getEnterpriseName())) {
+            Object[] row = new Object[5];
+            row[0] = n.getPersonName();
+            row[1] = n.getUserName();
+            row[2] = n.getGender();
+            row[3] = n.getAddress();
+            model.addRow(row);
+
+        }
+
+    }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NurseTitle;

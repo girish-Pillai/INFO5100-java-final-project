@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages;
 
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,20 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
     /**
      * Creates new form AdminPageForDoctor
      */
-    public AdminPageForDoctor() {
+    
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+    
+    public AdminPageForDoctor(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.hospital = h;
+        populateDoctorTable();
+    }
     }
 
     /**
@@ -62,7 +84,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
                 deletebtnActionPerformed(evt);
             }
         });
-        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 459, 110, 40));
+        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, 110, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1500, 900));
@@ -105,6 +127,25 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
         populateDoctorTable();
     }//GEN-LAST:event_deletebtnActionPerformed
 
+    private void populateDoctorTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+
+        for (Doc d : operatingSystem.getDoctordirectory()) {
+
+            if (d.getHospname().equals(hospital.getEnterpriseName())) {
+                Object[] row = new Object[5];
+                row[0] = d.getName();
+                row[1] = d.getUname();
+                row[2] = d.getSpeciality();
+                row[3] = d.getAdd();
+                model.addRow(row);
+
+            }
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton deletebtn;

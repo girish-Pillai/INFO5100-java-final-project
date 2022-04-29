@@ -6,6 +6,17 @@ package finalprojectUserInterface.HospitalInterface;
 
 import javax.swing.JOptionPane;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectUserInterface.HospitalInterface.LoginPage.AdminLogin;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalDoctorLoginPages.DoctorLogin;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalPatientLoginPages.PatientLogin;
+import finalprojectUserInterface.MainJFrameForm;
+
+
 /**
  *
  * @author girish
@@ -15,8 +26,16 @@ public class HospitalLandingPage extends javax.swing.JPanel {
     /**
      * Creates new form MainJpanel
      */
-    public HospitalLandingPage() {
+    
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public HospitalLandingPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
 
     /**
@@ -123,14 +142,14 @@ public class HospitalLandingPage extends javax.swing.JPanel {
         // TODO add your handling code here:
         try{
             if (cmbxRole.getSelectedItem().toString() == "Hospital Admin") {
-                Hospital ho = (Hospital) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+                Hospital ho = (Hospital) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
                 if(ho == null){
                     JOptionPane.showMessageDialog(this, "Incorrect credential");
                 }else{
-                    AdminLogin ap = new AdminLogin(mainScreen, dB4OUtil, ecoSystem, ho);
-                    mainScreen.setContentPane(ap);
-                    mainScreen.invalidate();
-                    mainScreen.validate();
+                    AdminLogin ap = new AdminLogin(MainLPage, dB4OUtility, operatingSystem, ho);
+                    MainLPage.setContentPane(ap);
+                    MainLPage.invalidate();
+                    MainLPage.validate();
                     return;
                 }
 
@@ -141,28 +160,28 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         if (cmbxRole.getSelectedItem().toString() == "Patient") {
             System.out.println("selecteditem");
-            Patient pa = (Patient) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+            Patient pa = (Patient) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (pa == null) {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             } else {
-                PatientLogin pl = new PatientLogin(mainScreen, dB4OUtil, ecoSystem, pa);
-                mainScreen.setContentPane(pl);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                PatientLogin pl = new PatientLogin(MainLPage, dB4OUtility, operatingSystem, pa);
+                MainLPage.setContentPane(pl);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
         }
 
         if (cmbxRole.getSelectedItem().toString() == "Doctor") {
             System.out.println("selecteditem");
-            Doctor dr = (Doctor) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+            Doc dr = (Doc) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (dr == null) {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             } else {
-                DoctorLogin dl = new DoctorLogin(mainScreen, dB4OUtil, ecoSystem, dr);
-                mainScreen.setContentPane(dl);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                DoctorLogin dl = new DoctorLogin(MainLPage, dB4OUtility, operatingSystem, dr);
+                MainLPage.setContentPane(dl);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
         }
@@ -179,10 +198,10 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         if (cmbxRole.getSelectedItem().toString() == "Doctor") {
 
-            SignUpDoctor doc = new SignUpDoctor(mainScreen, dB4OUtil, ecoSystem);
-            mainScreen.setContentPane(doc);
-            mainScreen.invalidate();
-            mainScreen.validate();
+            DoctorSignUp doc = new DoctorSignUp(MainLPage, dB4OUtility, operatingSystem);
+            MainLPage.setContentPane(doc);
+            MainLPage.invalidate();
+            MainLPage.validate();
 
             //            this.setContentPane(docsign);
             //            this.invalidate();
@@ -195,40 +214,40 @@ public class HospitalLandingPage extends javax.swing.JPanel {
             //            this.setContentPane(nursesign);
             //            this.invalidate();
             //            this.validate();
-            SignUpNurse n = new SignUpNurse(mainScreen, dB4OUtil, ecoSystem);
+            NurseSignUp n = new NurseSignUp(MainLPage, dB4OUtility, operatingSystem);
 
             //suc.setVisible(true);
-            mainScreen.setContentPane(n);
+            MainLPage.setContentPane(n);
             //             this.add(s);
 
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
 
         if (cmbxRole.getSelectedItem().toString() == "Patient") {
 
-            SignUpPatient signpat = new SignUpPatient(mainScreen, dB4OUtil, ecoSystem);
+            PatientSignUp signpat = new PatientSignUp(MainLPage, dB4OUtility, operatingSystem);
 
             //suc.setVisible(true);
-            mainScreen.setContentPane(signpat);
+            MainLPage.setContentPane(signpat);
             //             this.add(s);
 
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
 
         if (cmbxRole.getSelectedItem().toString() == "Hospital Admin") {
             //System.out.println("Hospital");
-            SignUpHospitalAdmin s = new SignUpHospitalAdmin(mainScreen, dB4OUtil, ecoSystem);
+            HospitalAdminSignUp s = new HospitalAdminSignUp(MainLPage, dB4OUtility, operatingSystem);
 
             //suc.setVisible(true);
-            mainScreen.setContentPane(s);
+            MainLPage.setContentPane(s);
             //             this.add(s);
 
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
     }//GEN-LAST:event_btSignUpActionPerformed

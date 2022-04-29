@@ -4,7 +4,7 @@
  */
 package finalprojectUserInterface;
 
-import finalprojectBackend.Components.DB4OUtility;
+import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectUserInterface.Administration.AdminMainPage;
 import finalprojectUserInterface.DonarBankInterface.DonarBankLandingPage;
