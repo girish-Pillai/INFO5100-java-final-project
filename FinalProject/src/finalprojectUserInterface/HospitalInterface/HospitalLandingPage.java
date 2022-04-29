@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author girish
  */
-public class MainJpanel extends javax.swing.JPanel {
+public class HospitalLandingPage extends javax.swing.JPanel {
 
     /**
      * Creates new form MainJpanel
      */
-    public MainJpanel() {
+    public HospitalLandingPage() {
         initComponents();
     }
 

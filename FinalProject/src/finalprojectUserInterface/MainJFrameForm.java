@@ -4,9 +4,27 @@
  */
 package finalprojectUserInterface;
 
-import finalprojectUserInterface.UserInterfaceMainpage.*;
-import finalprojectUserInterface.*;
+import finalprojectBackend.Components.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectUserInterface.Administration.AdminMainPage;
+import finalprojectUserInterface.DonarBankInterface.DonarBankLandingPage;
+import finalprojectUserInterface.HospitalInterface.HospitalLandingPage;
+import finalprojectUserInterface.LabInterfaceForUser.MainLabCoverPage;
+import finalprojectUserInterface.Logistics.LogisticsFrontPage;
 
+
+
+import javax.mail.Session;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.Transport;
+import javax.swing.*;
+import java.awt.*;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.Message;
+import javax.mail.MessagingException;
 /**
  *
  * @author supriyaa
@@ -16,8 +34,27 @@ public class MainJFrameForm extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrameForm
      */
+    
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility = DB4OUtility.getInstance();
+    
+    ImageIcon myImage;
+
+    public ImageIcon setIcon(String m) {
+        if (m != null) {
+            myImage = new ImageIcon(m);
+        }
+        Image img1 = myImage.getImage();
+        Image img2 = img1.getScaledInstance(442, 266, Image.SCALE_SMOOTH);
+        ImageIcon i = new ImageIcon(img2);
+        return i;
+
+    }
+    
     public MainJFrameForm() {
         initComponents();
+        this.setSize(1200, 750);
+        this.operatingSystem = dB4OUtility.retrieveSystem();
     }
 
     /**
@@ -279,39 +316,97 @@ public class MainJFrameForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    public void sendMail() {
+
+        try {
+            Properties properties = new Properties();
+//            properties.put("mail.smtp.auth", "true");
+//            properties.put("mail.smtp.starttls.enable", "true");
+//            properties.put("mail.smtp.host", "smtp.gmail.com");
+//            properties.put("mail.smtp.port", "587");
+            properties.put("mail.smtp.user", "username");
+            
+            properties.put("mail.smtp.host", "smtp.gmail.com");
+            properties.put("mail.smtp.port", "25");
+            properties.put("mail.debug", "true");
+            properties.put("mail.smtp.auth", "true");
+            properties.put("mail.smtp.starttls.enable", "true");
+            properties.put("mail.smtp.EnableSSL.enable", "true");
+
+            properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            properties.setProperty("mail.smtp.socketFactory.fallback", "false");
+            properties.setProperty("mail.smtp.port", "465");
+            properties.setProperty("mail.smtp.socketFactory.port", "465");
+            String myAccountEmail = "harshaljaiswal25@gmail.com";
+            String password = "96655332139822204181jh";
+            Session session;
+            session = Session.getInstance(properties, new javax.mail.Authenticator() {
+                @Override
+                protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
+                    return new javax.mail.PasswordAuthentication(myAccountEmail, password);
+                }
+            });
+            Message message = prepareMessage(session, myAccountEmail, "obms018@gmail.com", "msg", "sub");
+            Transport.send(message);
+// System.out.println("Successful sent");
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    private static Message prepareMessage(Session session, String myAccountEmail, String toAddress, String emailmsg, String emailsubject) {
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(myAccountEmail));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
+            message.setSubject(emailsubject);
+            message.setText(emailmsg);
+            return message;
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+
+    }
+    
     private void LogisticsPaneljPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogisticsPaneljPanel4MouseClicked
         // TODO add your handling code here:
         //logistics
-        MainLogisticsPage mlp = new MainLogisticsPage(this, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mlp);
+        LogisticsFrontPage LogisticsFrontPage = new LogisticsFrontPage(this, dB4OUtility, operatingSystem);
+        jSplitPane1.setRightComponent(LogisticsFrontPage);
     }//GEN-LAST:event_LogisticsPaneljPanel4MouseClicked
 
     private void donorPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_donorPanelMouseClicked
         // TODO add your handling code here:
         //Donor Bank
-        MainDonorBankPage mdp = new MainDonorBankPage(this, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mdp);
+        DonarBankLandingPage DonorBankLandingPage = new DonarBankLandingPage(this, dB4OUtility, operatingSystem);
+        jSplitPane1.setRightComponent(DonorBankLandingPage);
     }//GEN-LAST:event_donorPanelMouseClicked
 
     private void LabPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabPanelMouseClicked
         // TODO add your handling code here:
         //Laboratory
-        MainLabPage mlp = new MainLabPage(this, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mlp);
+        MainLabCoverPage MainLabCoverPage = new MainLabCoverPage(this, dB4OUtility, operatingSystem);
+        jSplitPane1.setRightComponent(MainLabCoverPage);
     }//GEN-LAST:event_LabPanelMouseClicked
 
     private void AdminPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminPanelMouseClicked
         // TODO add your handling code here:
         //Admin
-        MainAdministrationPage map = new MainAdministrationPage(this, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(map);
+        AdminMainPage AdminPage = new AdminMainPage(this, dB4OUtility, operatingSystem);
+        jSplitPane1.setRightComponent(AdminPage);
     }//GEN-LAST:event_AdminPanelMouseClicked
 
     private void HospitalPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HospitalPanelMouseClicked
         // TODO add your handling code here:
         //Hospital
-        MainHospitalPage mhp = new MainHospitalPage(this, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mhp);
+        HospitalLandingPage HospitalLandingPage = new HospitalLandingPage(this, dB4OUtility, operatingSystem);
+        jSplitPane1.setRightComponent(HospitalLandingPage);
     }//GEN-LAST:event_HospitalPanelMouseClicked
 
     private void closelblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closelblMouseClicked
