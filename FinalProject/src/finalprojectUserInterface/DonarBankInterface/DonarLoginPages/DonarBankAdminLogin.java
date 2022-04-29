@@ -4,6 +4,19 @@
  */
 package finalprojectUserInterface.DonarBankInterface.DonarLoginPages;
 
+
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages.DonarAdminOrganDonate;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages.DonarAdminDonarList;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages.DonarAdminTransplant;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 /**
  *
  * @author supriyaa
@@ -13,8 +26,17 @@ public class DonarBankAdminLogin extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankAdminLogin
      */
-    public DonarBankAdminLogin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorBank donorBank;
+    
+    public DonarBankAdminLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donbank) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.donorBank = donbank;
     }
 
     /**
@@ -122,20 +144,20 @@ public class DonarBankAdminLogin extends javax.swing.JPanel {
 
     private void btn_donateOrganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_donateOrganActionPerformed
         // TODO add your handling code here:
-        DonorAdminDonateOrgan dado = new DonorAdminDonateOrgan(mainScreen, dB4OUtil, ecoSystem, donbank);
+        DonarAdminOrganDonate dado = new DonarAdminOrganDonate(MainLPage, dB4OUtility, operatingSystem, donorBank);
         jSplitPane1.setRightComponent(dado);
     }//GEN-LAST:event_btn_donateOrganActionPerformed
 
     private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btn_logoutActionPerformed
 
     private void btn_transplant1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_transplant1ActionPerformed
         // TODO add your handling code here:
-        DonorAdminTransplant dat = new DonorAdminTransplant(mainScreen, dB4OUtil, ecoSystem, donbank);
+        DonarAdminTransplant dat = new DonarAdminTransplant(MainLPage, dB4OUtility, operatingSystem, donorBank);
         jSplitPane1.setRightComponent(dat);
     }//GEN-LAST:event_btn_transplant1ActionPerformed
 
