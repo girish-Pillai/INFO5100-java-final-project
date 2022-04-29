@@ -4,6 +4,19 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalDoctorLoginPages;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+
+
 /**
  *
  * @author supriyaa
@@ -13,8 +26,19 @@ public class DoctorLogin extends javax.swing.JPanel {
     /**
      * Creates new form DoctorLogin
      */
-    public DoctorLogin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Doc doctor;
+
+    public DoctorLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Doc d) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.doctor = d;
+        populateTable(doctor.getUserName());
+        populatePatientTable();
     }
 
     /**
@@ -206,23 +230,23 @@ public class DoctorLogin extends javax.swing.JPanel {
         String id = model.getValueAt(selectedRow, 1).toString();
         //System.out.println("column count " + selectedRow);
 
-        for (Patient p : ecoSystem.getPatientdirectory()) {
+        for (Patient p : operatingSystem.getPatientDirectory()) {
             try {
-                if (p.getUname().equals(id)) {
-                    p.setDiagnosis(txtAdd.getText().toString());
+                if (p.getUserName().equals(id)) {
+                    p.setPtnDiagnosis(txtAdd.getText().toString());
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        dB4OUtil.storeSystem(ecoSystem);
+        dB4OUtility.storeSystem(operatingSystem);
         populatePatientTable();
     }//GEN-LAST:event_btnAddDiagActionPerformed
 
     private void BtnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLogoutActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_BtnLogoutActionPerformed
@@ -234,7 +258,7 @@ public class DoctorLogin extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
@@ -252,18 +276,18 @@ public class DoctorLogin extends javax.swing.JPanel {
         String id = model.getValueAt(selectedRow, 9).toString();
         //System.out.println("column count " + selectedRow);
 
-        for (DonateEntity c : ecoSystem.getDonateEntityList()) {
+        for (DonationAssignment c : operatingSystem.getDonationAssignmentList()) {
             try {
                 if (c.getId().equals(id)) {
-                    c.setStatus(txtStatus.getText().toString());
+                    c.setDonationStatus(txtStatus.getText().toString());
                 }
             } catch (Exception e) {
 
             }
         }
 
-        dB4OUtil.storeSystem(ecoSystem);
-        populateTable(doctor.getUname());
+        dB4OUtility.storeSystem(operatingSystem);
+        populateTable(doctor.getUserName());
     }//GEN-LAST:event_statusBtnActionPerformed
 
     private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
@@ -278,6 +302,119 @@ public class DoctorLogin extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtSearchActionPerformed
 
+    private void populatePatientTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (Patient p : operatingSystem.getPatientDirectory()) {
+            System.out.println("patient " + p.getUserName());
+            try {
+                if (p.getHospitalName().equals(doctor.getHospitalName())) {
+                    Object[] row = new Object[10];
+                    row[0] = p.getPersonName();
+                    row[1] = p.getUserName();
+                    row[2] = p.getPtnDiagnosis();
+                    model.addRow(row);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+    
+    private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb2.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            try {
+                if (d.getRecDoctor().getUserName().matches(name)) {
+                    Object[] row = new Object[11];
+                    row[0] = d.getType();
+                    row[1] = d.getbGroup();
+                    row[2] = d.getDonationEntityName();
+                    row[3] = d.getDonationStatus();
+                    try {
+                        row[4] = d.getDonEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+
+                    try {
+                        row[5] = d.getRecEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[6] = d.getRecPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[7] = d.getDonPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+                    row[8] = d.getDonationReport();
+                    row[9] = d.getId();
+                    
+
+                    model.addRow(row);
+                }
+            } catch (Exception e) {
+
+            }
+
+
+        }
+
+    }
+    
+    private void populateTableName(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb2.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            if (d.getDonDoctor().getUserName().equals(name)) {
+                Object[] row = new Object[10];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+
+                row[8] = d.getDonationReport();
+                row[9] = d.getId();
+                model.addRow(row);
+            }
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnLogout;

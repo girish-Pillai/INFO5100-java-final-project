@@ -4,6 +4,15 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Nurse;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectUserInterface.MainJFrameForm;
 /**
  *
  * @author supriyaa
@@ -13,8 +22,37 @@ public class AdminPageforPatient extends javax.swing.JPanel {
     /**
      * Creates new form AdminPageforPatient
      */
-    public AdminPageforPatient() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+
+    public AdminPageforPatient(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.hospital = h;
+        populatePatientTable();
+    }
+
+    public void populatePatientTable() {
+        DefaultTableModel model = (DefaultTableModel) tblPatient.getModel();
+        model.setRowCount(0);
+
+        for (Patient p : operatingSystem.getPatientDirectory()) {
+
+            if (p.getHospitalName().equals(hospital.getEnterpriseName())) {
+                Object[] row = new Object[5];
+                row[0] = p.getPersonName();
+                row[1] = p.getUserName();
+                row[2] = p.getPtnDiagnosis();
+                row[3] = p.getHospitalName();
+                model.addRow(row);
+
+            }
+
+        }
     }
 
     /**
@@ -94,8 +132,8 @@ public class AdminPageforPatient extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblPatient.getModel();
         String patientUName = model.getValueAt(selectedRow, 1).toString();
         System.out.println(" nurse uname: " + patientUName);
-        ecoSystem.deletePatient(patientUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deletePatient(patientUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populatePatientTable();
     }//GEN-LAST:event_deletebtnActionPerformed
 

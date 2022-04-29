@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.HospitalInterface;
 
+import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,18 @@ public class PatientSignUp extends javax.swing.JPanel {
     /**
      * Creates new form PatientSignUp
      */
-    public PatientSignUp() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    public PatientSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        for(Hospital h: operatingSystem.getHospitalDirectory().getListOfHospitals()){
+            hospitalList.addItem(h.getEnterpriseName());
+        }
     }
 
     /**
@@ -61,18 +81,7 @@ public class PatientSignUp extends javax.swing.JPanel {
         lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lbl_admintitle.setText("Create Patient Profile");
         jPanel1.add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
-
-        txtFullName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFullNameActionPerformed(evt);
-            }
-        });
-        txtFullName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtFullNameKeyReleased(evt);
-            }
-        });
-        jPanel1.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 221, -1));
+        jPanel1.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 221, -1));
 
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_name.setText("Name:");
@@ -81,87 +90,31 @@ public class PatientSignUp extends javax.swing.JPanel {
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_uname.setText("Username:");
         jPanel1.add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, -1, -1));
-
-        txtUsrName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsrNameActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 221, -1));
+        jPanel1.add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 221, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
-
-        txtPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPassActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 221, -1));
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_address.setText("Address:");
         jPanel1.add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
-
-        txtAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddActionPerformed(evt);
-            }
-        });
-        txtAdd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtAddKeyReleased(evt);
-            }
-        });
         jPanel1.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 221, -1));
 
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txt_City.setText("City:");
         jPanel1.add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, -1, -1));
-
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
-            }
-        });
-        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCityKeyReleased(evt);
-            }
-        });
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 221, -1));
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txt_state.setText("State:");
         jPanel1.add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
-
-        txtState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStateActionPerformed(evt);
-            }
-        });
-        txtState.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtStateKeyReleased(evt);
-            }
-        });
         jPanel1.add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 221, -1));
 
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txt_Zip.setText("Zip Code:");
         jPanel1.add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, 10));
-
-        txtZip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtZipActionPerformed(evt);
-            }
-        });
-        txtZip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtZipKeyReleased(evt);
-            }
-        });
         jPanel1.add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 221, 27));
 
         btn_back.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -188,54 +141,21 @@ public class PatientSignUp extends javax.swing.JPanel {
 
         cmb_gender.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cmb_gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
-        jPanel1.add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 221, -1));
+        jPanel1.add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 221, -1));
 
         lbl_telenum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_telenum.setText("Phone no.:");
         jPanel1.add(lbl_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, -1, -1));
-
-        txt_telenum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_telenumActionPerformed(evt);
-            }
-        });
-        txt_telenum.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txt_telenumKeyReleased(evt);
-            }
-        });
         jPanel1.add(txt_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 221, -1));
 
         lbl_dob.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_dob.setText("Date of Birth:");
         jPanel1.add(lbl_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, -1, -1));
-
-        txt_dob.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_dobActionPerformed(evt);
-            }
-        });
-        txt_dob.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txt_dobKeyReleased(evt);
-            }
-        });
         jPanel1.add(txt_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 221, -1));
 
         lbl_diag.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_diag.setText("Diagnosis:");
         jPanel1.add(lbl_diag, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, -1, -1));
-
-        txt_diag.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_diagActionPerformed(evt);
-            }
-        });
-        txt_diag.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txt_diagKeyReleased(evt);
-            }
-        });
         jPanel1.add(txt_diag, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 221, -1));
 
         hospitalList.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -271,104 +191,9 @@ public class PatientSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFullNameActionPerformed
-
-    private void txtFullNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFullNameKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtFullNameKeyReleased
-
-    private void txtUsrNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsrNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsrNameActionPerformed
-
-    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPassActionPerformed
-
-    private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAddActionPerformed
-
-    private void txtAddKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddKeyReleased
-        // TODO add your handling code here:
-
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtAddKeyReleased
-
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityActionPerformed
-
-    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-        // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtCityKeyReleased
-
-    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtStateActionPerformed
-
-    private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
-        // TODO add your handling code here:
-
-        //        String stateconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(stateconv);
-        //        Matcher mat = pat.matcher(txtState.getText());
-        //
-        //        if (!mat.matches()) {
-            //            state_chk.setText("State is incorrect");
-            //        } else {
-            //            state_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtStateKeyReleased
-
-    private void txtZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtZipActionPerformed
-
-    private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-        // TODO add your handling code here:
-        //        String zipconv = "^[0-9]{5}$";
-        //        Pattern pat = Pattern.compile(zipconv);
-        //        Matcher mat = pat.matcher(txtZip.getText());
-        //
-        //        if (!mat.matches()) {
-            //            zip_chk.setText("Zipcode is incorrect");
-            //        } else {
-            //            zip_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtZipKeyReleased
-
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
@@ -381,58 +206,14 @@ public class PatientSignUp extends javax.swing.JPanel {
         Patient patient = new Patient(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(),new Date() , txt_diag.getText(),hospitalList.getSelectedItem().toString());
         System.out.println("Patient added");
 
-        ecoSystem.addPatient(patient);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.addPatient(patient);
+        dB4OUtility.storeSystem(operatingSystem);
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtil.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
+        
     }//GEN-LAST:event_btn_signupActionPerformed
-
-    private void txt_telenumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telenumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_telenumActionPerformed
-
-    private void txt_telenumKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_telenumKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_telenumKeyReleased
-
-    private void txt_dobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dobActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dobActionPerformed
-
-    private void txt_dobKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dobKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dobKeyReleased
-
-    private void txt_diagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_diagActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_diagActionPerformed
-
-    private void txt_diagKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_diagKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_diagKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

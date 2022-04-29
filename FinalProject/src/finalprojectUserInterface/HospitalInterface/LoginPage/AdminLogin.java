@@ -4,7 +4,20 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage;
 
-import finalprojectUserInterface.HospitalLoginPages.*;
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminPageForDoctor;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminPageForNurses;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminPageforOrganDonate;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminPageforPatient;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminReceiveOrgan;
+import finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages.AdminTransplant;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -15,9 +28,20 @@ public class AdminLogin extends javax.swing.JPanel {
     /**
      * Creates new form AdminLogin
      */
-    public AdminLogin() {
+    
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+    
+
+        public AdminLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -149,44 +173,44 @@ public class AdminLogin extends javax.swing.JPanel {
 
     private void DocBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DocBtnActionPerformed
         // TODO add your handling code here:
-        AdminDoctor ad = new AdminDoctor(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminPageForDoctor ad = new AdminPageForDoctor(MainLPage, dB4OUtility, operatingSystem, hospital);
         jSplitPane1.setRightComponent(ad);
     }//GEN-LAST:event_DocBtnActionPerformed
 
     private void PatentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatentBtnActionPerformed
         // TODO add your handling code here:
-        AdminPatient ap = new AdminPatient(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminPageforPatient ap = new AdminPageforPatient(MainLPage, dB4OUtility, operatingSystem, hospital);
         jSplitPane1.setRightComponent(ap);
     }//GEN-LAST:event_PatentBtnActionPerformed
 
     private void DonOrgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DonOrgBtnActionPerformed
         // TODO add your handling code here:
-        AdminDonateOrgan ado = new AdminDonateOrgan(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminPageforOrganDonate ado = new AdminPageforOrganDonate(MainLPage, dB4OUtility, operatingSystem, hospital);
         System.out.println("AdminDonateOrg()");
         jSplitPane1.setRightComponent(ado);
     }//GEN-LAST:event_DonOrgBtnActionPerformed
 
     private void NursesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NursesBtnActionPerformed
         // TODO add your handling code here:
-        AdminNurses an = new AdminNurses(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminPageForNurses an = new AdminPageForNurses(MainLPage, dB4OUtility, operatingSystem, hospital);
         jSplitPane1.setRightComponent(an);
     }//GEN-LAST:event_NursesBtnActionPerformed
 
     private void ReceiveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReceiveBtnActionPerformed
         // TODO add your handling code here:
-        AdminReceiveOrgan aro = new AdminReceiveOrgan(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminReceiveOrgan aro = new AdminReceiveOrgan(MainLPage, dB4OUtility, operatingSystem, hospital);
         jSplitPane1.setRightComponent(aro);
     }//GEN-LAST:event_ReceiveBtnActionPerformed
 
     private void TransplantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransplantBtnActionPerformed
         // TODO add your handling code here:
-        AdminTransplants at = new AdminTransplants(mainScreen, dB4OUtil, ecoSystem, hospital);
+        AdminTransplant at = new AdminTransplant(MainLPage, dB4OUtility, operatingSystem, hospital);
         jSplitPane1.setRightComponent(at);
     }//GEN-LAST:event_TransplantBtnActionPerformed
 
     private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_LogOutBtnActionPerformed

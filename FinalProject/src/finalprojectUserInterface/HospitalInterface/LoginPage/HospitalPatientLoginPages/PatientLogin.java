@@ -4,6 +4,18 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalPatientLoginPages;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +25,30 @@ public class PatientLogin extends javax.swing.JPanel {
     /**
      * Creates new form PatientLogin
      */
-    public PatientLogin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Patient patient;
+    
+    public PatientLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Patient p) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.operatingSystem = operatingSystem;
+        this.dB4OUtility = dB4OUtility;
+        this.patient = p;
+        
+        txt_name.setText(p.getPersonName());
+        Usernametxt.setText(p.getUserName());
+        Diagtxt.setText(p.getPtnDiagnosis());
+        Hospiatltxt.setText(p.getHospitalName());
+        
+        System.out.println("Patient login screen added");
+        
+        populateTable(patient.getUserName());
+    }
+
+    public PatientLogin(MainJFrameForm mainScreen, DB4OUtility dB4OUtil, OperatingSystem ecoSystem, Doc dr) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -214,14 +248,14 @@ public class PatientLogin extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogoutActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btnlogoutActionPerformed
@@ -230,6 +264,51 @@ public class PatientLogin extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_HospiatltxtActionPerformed
 
+    private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            try {
+                if (d.getRecPatient().getUserName().matches(name)) {
+                    Object[] row = new Object[8];
+                    row[0] = d.getType();
+                    row[1] = d.getbGroup();
+                    row[2] = d.getDonationEntityName();
+                    row[3] = d.getDonationStatus();
+                    try {
+                        row[4] = d.getDonEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+
+                    try {
+                        row[5] = d.getRecEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[6] = d.getRecPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[7] = d.getDonPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+
+                    model.addRow(row);
+                }
+            } catch (Exception e) {
+
+            }
+
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Diaglbl;
