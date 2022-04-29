@@ -4,6 +4,20 @@
  */
 package finalprojectUserInterface.Logistics;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Organization.DonationAssignment;
+
+import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Enterprise.Logistics.Vehicle;
+
+import finalprojectUserInterface.MainJFrameForm;
+
+import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +27,21 @@ public class HandlerSignUp extends javax.swing.JPanel {
     /**
      * Creates new form HandlerSignUp
      */
-    public HandlerSignUp() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public HandlerSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        
+        for(Vehicle h: operatingSystem.getVehicleDirectory()){
+            String s = h.getVehiclenum()+"| " + h.getVehiclename()+" | "+ h.getVehicletype();
+            vehicle_cmb.addItem(s);
+        }
     }
 
     /**
@@ -68,67 +95,22 @@ public class HandlerSignUp extends javax.swing.JPanel {
         unamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         unamelbl.setText("Username:");
         jPanel1.add(unamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, -1, -1));
-
-        FullNametxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FullNametxtActionPerformed(evt);
-            }
-        });
-        FullNametxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                FullNametxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(FullNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 216, -1));
-
-        UsrNametxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsrNametxtActionPerformed(evt);
-            }
-        });
         jPanel1.add(UsrNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 216, -1));
 
         pswdlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         pswdlbl.setText("Password:");
         jPanel1.add(pswdlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
-
-        Passtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasstxtActionPerformed(evt);
-            }
-        });
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 216, -1));
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addresslbl.setText("Address:");
         jPanel1.add(addresslbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, -1));
-
-        Add_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Add_txtActionPerformed(evt);
-            }
-        });
-        Add_txt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                Add_txtKeyReleased(evt);
-            }
-        });
         jPanel1.add(Add_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 216, -1));
 
         City_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         City_lbl.setText("City:");
         jPanel1.add(City_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, -1, -1));
-
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
-            }
-        });
-        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCityKeyReleased(evt);
-            }
-        });
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 216, -1));
 
         State_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -138,29 +120,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
         Zip_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Zip_lbl.setText("Zip Code:");
         jPanel1.add(Zip_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, -1, -1));
-
-        Statetxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StatetxtActionPerformed(evt);
-            }
-        });
-        Statetxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                StatetxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(Statetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 216, -1));
-
-        Ziptxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZiptxtActionPerformed(evt);
-            }
-        });
-        Ziptxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                ZiptxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(Ziptxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 215, -1));
 
         BackBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -191,43 +151,16 @@ public class HandlerSignUp extends javax.swing.JPanel {
 
         genderCmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         genderCmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
-        genderCmb.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderCmbActionPerformed(evt);
-            }
-        });
         jPanel1.add(genderCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 216, -1));
 
         dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         dob_lbl.setText("Date of Birth:");
         jPanel1.add(dob_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 560, -1, -1));
-
-        telenum_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telenum_txtActionPerformed(evt);
-            }
-        });
-        telenum_txt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                telenum_txtKeyReleased(evt);
-            }
-        });
         jPanel1.add(telenum_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 216, -1));
 
         vehnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         vehnum_lbl.setText("Vehicle:");
         jPanel1.add(vehnum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 604, -1, 20));
-
-        dob_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dob_txtActionPerformed(evt);
-            }
-        });
-        dob_txt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                dob_txtKeyReleased(evt);
-            }
-        });
         jPanel1.add(dob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 216, 27));
 
         vehicle_cmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -258,104 +191,9 @@ public class HandlerSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FullNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FullNametxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FullNametxtActionPerformed
-
-    private void FullNametxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FullNametxtKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
-    }//GEN-LAST:event_FullNametxtKeyReleased
-
-    private void UsrNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsrNametxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UsrNametxtActionPerformed
-
-    private void PasstxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasstxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasstxtActionPerformed
-
-    private void Add_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Add_txtActionPerformed
-
-    private void Add_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Add_txtKeyReleased
-        // TODO add your handling code here:
-
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
-    }//GEN-LAST:event_Add_txtKeyReleased
-
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityActionPerformed
-
-    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-        // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
-    }//GEN-LAST:event_txtCityKeyReleased
-
-    private void StatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatetxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_StatetxtActionPerformed
-
-    private void StatetxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_StatetxtKeyReleased
-        // TODO add your handling code here:
-
-        //        String stateconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(stateconv);
-        //        Matcher mat = pat.matcher(txtState.getText());
-        //
-        //        if (!mat.matches()) {
-            //            state_chk.setText("State is incorrect");
-            //        } else {
-            //            state_chk.setText("");
-            //        }
-    }//GEN-LAST:event_StatetxtKeyReleased
-
-    private void ZiptxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZiptxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZiptxtActionPerformed
-
-    private void ZiptxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ZiptxtKeyReleased
-        // TODO add your handling code here:
-        //        String zipconv = "^[0-9]{5}$";
-        //        Pattern pat = Pattern.compile(zipconv);
-        //        Matcher mat = pat.matcher(txtZip.getText());
-        //
-        //        if (!mat.matches()) {
-            //            zip_chk.setText("Zipcode is incorrect");
-            //        } else {
-            //            zip_chk.setText("");
-            //        }
-    }//GEN-LAST:event_ZiptxtKeyReleased
-
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_BackBtnActionPerformed
@@ -366,12 +204,12 @@ public class HandlerSignUp extends javax.swing.JPanel {
         //uname, pswd, id, name, add, gender, telenum, dob
         //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
 
-        Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), "idid", FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),ecoSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
-        System.out.println("handler " + handler.getVehicle().getVehname());
-        ecoSystem.addHandler(handler);
-        dB4OUtil.storeSystem(ecoSystem);
+        Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), "idid", FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),operatingSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
+        System.out.println("handler " + handler.getVehicle().getVehiclename());
+        operatingSystem.addHandler(handler);
+        dB4OUtility.storeSystem(operatingSystem);
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
         //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
@@ -389,33 +227,13 @@ public class HandlerSignUp extends javax.swing.JPanel {
             //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
             //            system.addCustomer(cus);
             //
-            //            dB4OUtil.storeSystem(system);
+            //            dB4OUtility.storeSystem(system);
             //            JOptionPane.showMessageDialog(this, "Customer information saved.");
             //            MainJFrame cust = new MainJFrame();
             //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
             //            cust.setVisible(true);
             //        }
     }//GEN-LAST:event_signupBtnActionPerformed
-
-    private void telenum_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telenum_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telenum_txtActionPerformed
-
-    private void telenum_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telenum_txtKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telenum_txtKeyReleased
-
-    private void dob_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dob_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dob_txtActionPerformed
-
-    private void dob_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dob_txtKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dob_txtKeyReleased
-
-    private void genderCmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderCmbActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_genderCmbActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
