@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.Logistics;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Logistics.Vehicle;
+import finalprojectBackend.Organization.DonationAssignment;
+
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,15 @@ public class VehicleSignUp extends javax.swing.JPanel {
     /**
      * Creates new form VehicleSignUp
      */
-    public VehicleSignUp() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public VehicleSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
 
     /**
@@ -49,60 +66,21 @@ public class VehicleSignUp extends javax.swing.JPanel {
         NameLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         NameLbl.setText("Vehicle Name:");
         jPanel1.add(NameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
-
-        VehicleTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VehicleTxtActionPerformed(evt);
-            }
-        });
-        VehicleTxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                VehicleTxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(VehicleTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 177, -1));
 
         VehNumlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         VehNumlbl.setText("Vehicle Number:");
         jPanel1.add(VehNumlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
-
-        VehNumtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VehNumtxtActionPerformed(evt);
-            }
-        });
         jPanel1.add(VehNumtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 177, -1));
 
         Address_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Address_lbl.setText("Vehicle Type:");
         jPanel1.add(Address_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, -1, -1));
-
-        TypeVehtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TypeVehtxtActionPerformed(evt);
-            }
-        });
-        TypeVehtxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                TypeVehtxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(TypeVehtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 177, -1));
 
         DescLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         DescLbl.setText("Description:");
         jPanel1.add(DescLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
-
-        Desctxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DesctxtActionPerformed(evt);
-            }
-        });
-        Desctxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                DesctxtKeyReleased(evt);
-            }
-        });
         jPanel1.add(Desctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 177, -1));
 
         BackBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -148,65 +126,9 @@ public class VehicleSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void VehicleTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VehicleTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VehicleTxtActionPerformed
-
-    private void VehicleTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VehicleTxtKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
-    }//GEN-LAST:event_VehicleTxtKeyReleased
-
-    private void VehNumtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VehNumtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VehNumtxtActionPerformed
-
-    private void TypeVehtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeVehtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TypeVehtxtActionPerformed
-
-    private void TypeVehtxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TypeVehtxtKeyReleased
-        // TODO add your handling code here:
-
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
-    }//GEN-LAST:event_TypeVehtxtKeyReleased
-
-    private void DesctxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesctxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DesctxtActionPerformed
-
-    private void DesctxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DesctxtKeyReleased
-        // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
-    }//GEN-LAST:event_DesctxtKeyReleased
-
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_BackBtnActionPerformed
@@ -218,33 +140,39 @@ public class VehicleSignUp extends javax.swing.JPanel {
         //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
         Vehicle vehicle = new Vehicle(VehicleTxt.getText(),VehNumtxt.getText(),TypeVehtxt.getText(),Desctxt.getText());
 
-        ecoSystem.addVehicle(vehicle);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.addVehicle(vehicle);
+        dB4OUtility.storeSystem(operatingSystem);
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
         //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
             //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
             //
             //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
+            //String vehname, String vehnum, String vtype, String description
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String vehname, String vehnum, String vtype, String description
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String vehname, String vehnum, String vtype, String description
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String vehname, String vehnum, String vtype, String description
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            //        } else if (!name_chk.getText().equals("") || //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();!telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
             //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String vehname, String vehnum, String vtype, String description
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
+            //String vehname, String vehnum, String vtype, String description
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
             //
             //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
             //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtil.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
+
     }//GEN-LAST:event_SignUpbtnActionPerformed
 
 

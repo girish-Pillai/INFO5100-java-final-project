@@ -221,7 +221,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
             //
             //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
             //        }
-        //        else{
+            //        else{
             //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
             //
             //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
