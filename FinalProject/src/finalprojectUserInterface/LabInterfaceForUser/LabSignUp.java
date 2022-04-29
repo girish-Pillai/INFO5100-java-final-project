@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.LabInterfaceForUser;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Lab.Technician;
+
+import finalprojectUserInterface.MainJFrameForm;
+import java.util.Date;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,15 @@ public class LabSignUp extends javax.swing.JPanel {
     /**
      * Creates new form LabSignUp
      */
-    public LabSignUp() {
+    MainJFrameForm MainLPage;
+    private DB4OUtility dB4OUtility;
+    private OperatingSystem operatingSystem;
+    public LabSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        
     }
 
     /**
@@ -56,9 +73,11 @@ public class LabSignUp extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
         admintitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        admintitle.setForeground(new java.awt.Color(0, 0, 0));
         admintitle.setText("Create Technician Profile");
 
         namelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        namelbl.setForeground(new java.awt.Color(0, 0, 0));
         namelbl.setText("Name:");
 
         fullname_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +92,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         unamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
 
         usrnametxt.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +102,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         paswdlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        paswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         paswdlbl.setText("Password:");
 
         passtxt.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +112,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
 
         addresstxt.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +127,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         citylbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        citylbl.setForeground(new java.awt.Color(0, 0, 0));
         citylbl.setText("City:");
 
         citytxt.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +142,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         statelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        statelbl.setForeground(new java.awt.Color(0, 0, 0));
         statelbl.setText("State:");
 
         state_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -133,6 +157,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         ziplbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ziplbl.setForeground(new java.awt.Color(0, 0, 0));
         ziplbl.setText("Zip Code:");
 
         lblzip.addActionListener(new java.awt.event.ActionListener() {
@@ -163,12 +188,14 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         genderlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         genderlbl.setText("Gender:");
 
         gender_cmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         gender_cmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
 
         telephnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        telephnum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         telephnum_lbl.setText("Phone no.:");
 
         telenum_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +210,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        dob_lbl.setForeground(new java.awt.Color(0, 0, 0));
         dob_lbl.setText("Date of Birth:");
 
         dob_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -197,6 +225,7 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         labname_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labname_lbl.setForeground(new java.awt.Color(0, 0, 0));
         labname_lbl.setText("Lab Name:");
 
         labname_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -449,7 +478,7 @@ public class LabSignUp extends javax.swing.JPanel {
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btnbackActionPerformed
@@ -462,10 +491,10 @@ public class LabSignUp extends javax.swing.JPanel {
 
         Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
 
-        ecoSystem.addTech(tech);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.addTechnician(tech);
+        dB4OUtility.storeSystem(operatingSystem);
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
         //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
@@ -483,7 +512,7 @@ public class LabSignUp extends javax.swing.JPanel {
             //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
             //            system.addCustomer(cus);
             //
-            //            dB4OUtil.storeSystem(system);
+            //            dB4OUtility.storeSystem(system);
             //            JOptionPane.showMessageDialog(this, "Customer information saved.");
             //            MainJFrame cust = new MainJFrame();
             //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
