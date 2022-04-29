@@ -4,6 +4,12 @@
  */
 package finalprojectUserInterface.HospitalInterface.LoginPage.HospitalAdminLoginPages;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author supriyaa
@@ -13,8 +19,93 @@ public class AdminTransplant extends javax.swing.JPanel {
     /**
      * Creates new form AdminTransplant
      */
-    public AdminTransplant() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Hospital hospital;
+
+    public AdminTransplant(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Hospital h) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.hospital = h;
+        populateTable(hospital.getEnterpriseName().toLowerCase());
+    }
+    
+    private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            if (d.getDonEnterprise().getEnterpriseName().toLowerCase().equals(name)) {
+                Object[] row = new Object[8];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+
+                model.addRow(row);
+            }
+            try {
+                if (d.getRecEnterprise().getEnterpriseName().toLowerCase().equals(name)) {
+                    Object[] row = new Object[8];
+                    row[0] = d.getType();
+                    row[1] = d.getbGroup();
+                    row[2] = d.getDonationEntityName();
+                    row[3] = d.getDonationStatus();
+                    try {
+                        row[4] = d.getDonEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+
+                    try {
+                        row[5] = d.getRecEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[6] = d.getRecPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[7] = d.getDonPatient().getPersonName();
+                    } catch (Exception e) {
+
+                    }
+
+                    model.addRow(row);
+                }
+            } catch (Exception e) {
+
+            }
+
+        }
+
     }
 
     /**
