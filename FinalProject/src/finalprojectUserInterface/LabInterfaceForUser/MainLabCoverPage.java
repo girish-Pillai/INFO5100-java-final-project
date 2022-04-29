@@ -4,6 +4,15 @@
  */
 package finalprojectUserInterface.LabInterfaceForUser;
 
+import javax.swing.JOptionPane;
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Lab.Technician;
+import finalprojectUserInterface.LabInterfaceForUser.LabLoginPages.LabTechnicianSignin;
+
+import finalprojectUserInterface.MainJFrameForm;
+
+
 /**
  *
  * @author supriyaa
@@ -13,8 +22,16 @@ public class MainLabCoverPage extends javax.swing.JPanel {
     /**
      * Creates new form MainLabCoverPage
      */
-    public MainLabCoverPage() {
+    MainJFrameForm MainLPage;
+    private DB4OUtility dB4OUtility;
+    private OperatingSystem operatingSystem;
+    
+    public MainLabCoverPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
 
     /**
@@ -41,10 +58,12 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Laboratory");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 160, 40));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_role.setForeground(new java.awt.Color(0, 0, 0));
         lbl_role.setText("Role:");
         jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
 
@@ -59,11 +78,13 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_username.setForeground(new java.awt.Color(0, 0, 0));
         lbl_username.setText("Username:");
         jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
         jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 197, -1));
@@ -125,14 +146,14 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         if (cmb_Role.getSelectedItem().toString() == "Technician") {
-            Technician ho = (Technician) ecoSystem.loginCheck(txtUsername.getText(), txtPassword.getText());
+            Technician ho = (Technician) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (ho == null) {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             } else {
-                TechLogin ap = new TechLogin(mainScreen, dB4OUtil, ecoSystem, ho);
-                mainScreen.setContentPane(ap);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                LabTechnicianSignin ap = new LabTechnicianSignin(MainLPage, dB4OUtility, operatingSystem, ho);
+                MainLPage.setContentPane(ap);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
 
@@ -144,14 +165,14 @@ public class MainLabCoverPage extends javax.swing.JPanel {
 
         if (cmb_Role.getSelectedItem().toString() == "Technician") {
 
-            SignUpLab signlab = new SignUpLab(mainScreen, dB4OUtil, ecoSystem);
+            LabSignUp signlab = new LabSignUp(MainLPage, dB4OUtility, operatingSystem);
             //
             //            //suc.setVisible(true);
-            mainScreen.setContentPane(signlab);
+            MainLPage.setContentPane(signlab);
             ////            //             this.add(s);
             ////
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
     }//GEN-LAST:event_btnSigninActionPerformed
