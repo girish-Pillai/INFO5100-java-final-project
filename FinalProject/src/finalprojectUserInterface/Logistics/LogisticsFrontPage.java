@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.Logistics;
 
+import javax.swing.JOptionPane;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.Logistics.LogisticsLoginPages.HandlerLogin;
+
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,16 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
     /**
      * Creates new form LogisticsFrontPage
      */
-    public LogisticsFrontPage() {
+    MainJFrameForm MainLPage;
+    private DB4OUtility dB4OUtility;
+    private OperatingSystem operatingSystem;
+
+    public LogisticsFrontPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
 
     /**
@@ -63,12 +81,6 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         username_lbl.setText("Username:");
         jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
-
-        usrname_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usrname_txtActionPerformed(evt);
-            }
-        });
         jPanel1.add(usrname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, 197, -1));
 
         pswd_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -140,14 +152,14 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
         //
         //        }
         if (cmb_role.getSelectedItem().toString() == "Handler") {
-            Handler ho = (Handler) ecoSystem.loginCheck(usrname_txt.getText(), passtxt.getText());
+            Handler ho = (Handler) operatingSystem.loginAuthentication(usrname_txt.getText(), passtxt.getText());
             if (ho == null) {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             } else {
-                HandlerLogin ap = new HandlerLogin(mainScreen, dB4OUtil, ecoSystem, ho);
-                mainScreen.setContentPane(ap);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                HandlerLogin ap = new HandlerLogin(MainLPage, dB4OUtility, operatingSystem, ho);
+                MainLPage.setContentPane(ap);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
 
@@ -159,18 +171,37 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
             //            if (r == null) {
                 //                JOptionPane.showMessageDialog(this, "Incorrect credential");
                 //            } else {
-                //                DeliverManMainPage delimp = new DeliverManMainPage(system, dB4OUtil, r);
+                //                DeliverManMainPage delimp = new DeliverManMainPage(system, dB4OUtility, r);
                 //                this.setContentPane(delimp);
                 //                this.invalidate();
                 //                this.validate();
                 //                return;
                 //            }
-            //
-            //        }
-        //
-        //        if (cmb_Role.getSelectedItem().toString() == "Hospital Admin") {
-            //            if (txtUsername.getText().matches("a") && txtPassword.getText().matches("a")) {
-                //                AdminPage adminpg = new AdminPage(system, dB4OUtil);
+                //
+                //        }
+
+                //
+                //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
+                //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
+                //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
+                //
+                //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
+                //        }
+                //        else{
+                //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
+                //
+                //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
+                //            system.addCustomer(cus);
+                //
+                //            dB4OUtility.storeSystem(system);
+                //            JOptionPane.showMessageDialog(this, "Customer information saved.");
+                //            MainJFrame cust = new MainJFrame();
+                //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                //            cust.setVisible(true);
+                //
+                //        if (cmb_Role.getSelectedItem().toString() == "Hospital Admin") {
+                //            if (txtUsername.getText().matches("a") && txtPassword.getText().matches("a")) {
+                //                AdminPage adminpg = new AdminPage(system, dB4OUtility);
                 //                this.setContentPane(adminpg);
                 //                this.invalidate();
                 //                this.validate();
@@ -186,34 +217,30 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
 
         if (cmb_role.getSelectedItem().toString() == "Vehicle") {
 
-            SignUpVehicle signveh = new SignUpVehicle(mainScreen, dB4OUtil, ecoSystem);
+            VehicleSignUp signveh = new VehicleSignUp(MainLPage, dB4OUtility, operatingSystem);
             //
             //            //suc.setVisible(true);
-            mainScreen.setContentPane(signveh);
+            MainLPage.setContentPane(signveh);
             ////            //             this.add(s);
             ////
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
 
         if (cmb_role.getSelectedItem().toString() == "Handler") {
             // System.out.println("Hospital");
-            SignUpHandler s = new SignUpHandler(mainScreen, dB4OUtil, ecoSystem);
+            HandlerSignUp s = new HandlerSignUp(MainLPage, dB4OUtility, operatingSystem);
 
             //suc.setVisible(true);
-            mainScreen.setContentPane(s);
+            MainLPage.setContentPane(s);
             //             this.add(s);
 
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.invalidate();
+            MainLPage.validate();
 
         }
     }//GEN-LAST:event_signinBtnActionPerformed
-
-    private void usrname_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrname_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usrname_txtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
