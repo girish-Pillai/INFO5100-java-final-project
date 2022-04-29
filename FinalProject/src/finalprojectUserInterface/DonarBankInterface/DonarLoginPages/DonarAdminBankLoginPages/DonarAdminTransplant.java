@@ -2,7 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package finalprojectUserInterface.DonarBankInterface.DonarAdminBankLoginPages;
+package finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,8 +20,18 @@ public class DonarAdminTransplant extends javax.swing.JPanel {
     /**
      * Creates new form DonarAdminTransplant
      */
-    public DonarAdminTransplant() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorBank donorBank;
+    
+    public DonarAdminTransplant(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donbank) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.donorBank = donbank;
+        populateTable(donbank.getEnterpriseName().toLowerCase());
     }
 
     /**
@@ -66,7 +83,82 @@ public class DonarAdminTransplant extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
+     private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
 
+            if (d.getDonEnterprise().getEnterpriseName().toLowerCase().equals(name)) {
+                Object[] row = new Object[8];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getUserName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getUserName();
+                } catch (Exception e) {
+
+                }
+
+                model.addRow(row);
+            }
+            try {
+                if (d.getRecEnterprise().getEnterpriseName().toLowerCase().equals(name)) {
+                    Object[] row = new Object[8];
+                    row[0] = d.getType();
+                    row[1] = d.getbGroup();
+                    row[2] = d.getDonationEntityName();
+                    row[3] = d.getDonationStatus();
+                    try {
+                        row[4] = d.getDonEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+
+                    try {
+                        row[5] = d.getRecEnterprise().getEnterpriseName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[6] = d.getRecPatient().getUserName();
+                    } catch (Exception e) {
+
+                    }
+                    try {
+                        row[7] = d.getDonPatient().getUserName();
+                    } catch (Exception e) {
+
+                    }
+
+                    model.addRow(row);
+                }
+            } catch (Exception e) {
+
+            }
+
+        }
+
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tb1;

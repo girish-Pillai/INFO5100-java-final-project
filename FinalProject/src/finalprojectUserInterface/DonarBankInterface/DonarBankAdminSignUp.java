@@ -4,6 +4,13 @@
  */
 package finalprojectUserInterface.DonarBankInterface;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author supriyaa
@@ -13,9 +20,17 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankAdminSignUp
      */
-    public DonarBankAdminSignUp() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public DonarBankAdminSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -285,164 +300,67 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtFullNameActionPerformed
 
     private void txtFullNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFullNameKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
+
     }//GEN-LAST:event_txtFullNameKeyReleased
 
     private void txtUsrNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsrNameActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtUsrNameActionPerformed
 
     private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtPassActionPerformed
 
     private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtAddActionPerformed
 
     private void txtAddKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddKeyReleased
-        // TODO add your handling code here:
 
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtAddKeyReleased
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
         DonorBank donbank = new DonorBank(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
-        //System.out.println("Hospital"+hosp.getUsername());
-
-        ecoSystem.addDonorBank(donbank);
-        dB4OUtil.storeSystem(ecoSystem);
-
-        MainFrameForm suc = new MainFrameForm();
+        operatingSystem.addDonorBank(donbank);
+        dB4OUtility.storeSystem(operatingSystem);
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtil.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
     }//GEN-LAST:event_btn_signupActionPerformed
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
-
-        //this.setVisible(false);
-        //        MainHospitalPage f = new MainHospitalPage(mainScreen);
-        //        mainScreen.add(f);
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
-        //        MainJFrame cust = new MainJFrame();
-        //        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        //cust.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
 
     private void txtNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtNoActionPerformed
 
     private void txtNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNoKeyReleased
-        // TODO add your handling code here:
-        //        String teleconv = "^(\\d{3}[- .]?){2}\\d{4}$";
-        //        Pattern pat = Pattern.compile(teleconv);
-        //        Matcher mat = pat.matcher(txtNo.getText());
-        //
-        //        if (!mat.matches()) {
-            //            telenum_chk.setText("No. is incorrect");
-            //        } else {
-            //            telenum_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtNoKeyReleased
 
     private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtCityActionPerformed
 
     private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-        // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtCityKeyReleased
 
     private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtStateActionPerformed
 
     private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
-        // TODO add your handling code here:
-
-        //        String stateconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(stateconv);
-        //        Matcher mat = pat.matcher(txtState.getText());
-        //
-        //        if (!mat.matches()) {
-            //            state_chk.setText("State is incorrect");
-            //        } else {
-            //            state_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtStateKeyReleased
 
     private void txtZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtZipActionPerformed
 
     private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-        // TODO add your handling code here:
-        //        String zipconv = "^[0-9]{5}$";
-        //        Pattern pat = Pattern.compile(zipconv);
-        //        Matcher mat = pat.matcher(txtZip.getText());
-        //
-        //        if (!mat.matches()) {
-            //            zip_chk.setText("Zipcode is incorrect");
-            //        } else {
-            //            zip_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtZipKeyReleased
 
 

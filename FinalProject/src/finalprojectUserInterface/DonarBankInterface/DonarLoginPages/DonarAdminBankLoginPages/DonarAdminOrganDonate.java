@@ -2,7 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package finalprojectUserInterface.DonarBankInterface.DonarAdminBankLoginPages;
+package finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,8 +22,25 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
     /**
      * Creates new form DonarAdminOrganDonate
      */
-    public DonarAdminOrganDonate() {
+    
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorBank donorBank;
+    
+    public DonarAdminOrganDonate(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donbank) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.donorBank = donbank;
+        
+        for(DonorUser pa : operatingSystem.getDonorUserDirectory() ){
+            System.out.println("DonorAdminDonateOrgan"+pa.getDonorBankName());
+            if( pa.getDonorBankName().equals(donbank.getEnterpriseName())){
+                listdon.addItem(pa.getUserName());
+            }
+        }
     }
 
     /**
@@ -142,20 +168,20 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
     private void savebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebtnActionPerformed
         // TODO add your handling code here:
 
-        DonateEntity de = new DonateEntity();
-        de.setEntityName(entnametxt.getText().toString());
-        de.setDonorEnterprise(donbank);
+        DonationAssignment de = new DonationAssignment();
+        de.setDonationEntityName(entnametxt.getText().toString());
+        de.setDonEnterprise(donorBank);
         Random rand = new Random();
         de.setId( String.format("%04d", rand.nextInt(10000)));
-        de.setBloodGroup(bldgrptxt.getText().toString());
+        de.setbGroup(bldgrptxt.getText().toString());
         de.setType(enttypecmb.getSelectedItem().toString());
         //de.setDonorDoctor(ecoSystem.findDoctorByUserName(doctorList.getSelectedItem().toString()));
-        de.setDonorPatient(ecoSystem.findPatientByUserName(listdon.getSelectedItem().toString()));
-        de.setStatus(statuscmb.getSelectedItem().toString());
+        de.setDonPatient(operatingSystem.getPatientByUserName(listdon.getSelectedItem().toString()));
+        de.setDonationStatus(statuscmb.getSelectedItem().toString());
         //        System.out.println("dede: "+de.getDonorDoctor().getName());
-        ecoSystem.addDonateEntity(de);
+        operatingSystem.addDonationAssignment(de);
 
-        dB4OUtil.storeSystem(ecoSystem);
+        dB4OUtility.storeSystem(operatingSystem);
 
         JOptionPane.showMessageDialog(this, "Entity details added.");
     }//GEN-LAST:event_savebtnActionPerformed
