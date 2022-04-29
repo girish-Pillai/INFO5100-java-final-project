@@ -4,6 +4,14 @@
  */
 package finalprojectUserInterface.DonarBankInterface;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectUserInterface.MainJFrameForm;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarBankAdminLogin;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarLogin;
+import javax.swing.JOptionPane;
 /**
  *
  * @author supriyaa
@@ -13,15 +21,15 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankLandingPage
      */
-    MainFrameForm mainScreen;
-    private DB4OUtil dB4OUtil;
-    private EcoSystem ecoSystem;
-
-    public MainDonorBankPage(MainFrameForm mainScreen, DB4OUtil dB4OUtil, EcoSystem ecoSystem) {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public DonarBankLandingPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
-        this.mainScreen = mainScreen;
-        this.dB4OUtil = dB4OUtil;
-        this.ecoSystem = ecoSystem;
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
     }
 
     /**
@@ -136,114 +144,47 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
-            DonorBank donbank = (DonorBank) ecoSystem.loginCheck(UsernameTxt.getText(), PassTxt.getText());
+            DonorBank donbank = (DonorBank) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(donbank == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
-                DonorBankAdminLogin ap = new DonorBankAdminLogin(mainScreen, dB4OUtil, ecoSystem, donbank);
-                mainScreen.setContentPane(ap);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                DonarBankAdminLogin ap = new DonarBankAdminLogin(MainLPage, dB4OUtility, operatingSystem, donbank);
+                MainLPage.setContentPane(ap);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
         }
 
         if (RoleCmb.getSelectedItem().toString() == "Donor") {
-            Donor don = (Donor) ecoSystem.loginCheck(UsernameTxt.getText(), PassTxt.getText());
+            DonorUser don = (DonorUser) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(don == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
-                DonorLogin ap = new DonorLogin(mainScreen, dB4OUtil, ecoSystem, don);
-                mainScreen.setContentPane(ap);
-                mainScreen.invalidate();
-                mainScreen.validate();
+                DonarLogin ap = new DonarLogin(MainLPage, dB4OUtility, operatingSystem, don);
+                MainLPage.setContentPane(ap);
+                MainLPage.invalidate();
+                MainLPage.validate();
                 return;
             }
         }
-
-        //        if (cmb_Role.getSelectedItem().toString() == "Doctor") {
-            //            Customer c = system.loginCustomer(txtUsername.getText(), txtPassword.getText());
-            //            if (c == null) {
-                //                JOptionPane.showMessageDialog(this, "Incorrect credential");
-                //            } else {
-                //                CustomerMainPage custmp = new CustomerMainPage(system, dB4OUtil, c);
-                //                this.setContentPane(custmp);
-                //                this.invalidate();
-                //                this.validate();
-                //                return;
-                //            }
-            //
-            //        }
-        //        if (cmb_Role.getSelectedItem().toString() == "Nurse") {
-            //            Restaurant r = system.loginResaturant(txtUsername.getText(), txtPassword.getText());
-            //
-            //            if (r == null) {
-                //                JOptionPane.showMessageDialog(this, "Incorrect credential");
-                //            } else {
-                //                RestaurantMainPage restmp = new RestaurantMainPage(system, dB4OUtil, r);
-                //                this.setContentPane(restmp);
-                //                this.invalidate();
-                //                this.validate();
-                //                return;
-                //            }
-            //
-            //        }
-        //
-        //        if (cmb_Role.getSelectedItem().toString() == "Patient") {
-            //            DeliveryMan r = system.loginDeliveryMan(txtUsername.getText(), txtPassword.getText());
-            //
-            //            if (r == null) {
-                //                JOptionPane.showMessageDialog(this, "Incorrect credential");
-                //            } else {
-                //                DeliverManMainPage delimp = new DeliverManMainPage(system, dB4OUtil, r);
-                //                this.setContentPane(delimp);
-                //                this.invalidate();
-                //                this.validate();
-                //                return;
-                //            }
-            //
-            //        }
-        //
-        //        if (cmb_Role.getSelectedItem().toString() == "Hospital Admin") {
-            //            if (txtUsername.getText().matches("a") && txtPassword.getText().matches("a")) {
-                //                AdminPage adminpg = new AdminPage(system, dB4OUtil);
-                //                this.setContentPane(adminpg);
-                //                this.invalidate();
-                //                this.validate();
-                //                return;
-                //            } else {
-                //                JOptionPane.showMessageDialog(this, "Incorrect credential");
-                //            }
-            //        }
     }//GEN-LAST:event_Login_btnActionPerformed
 
     private void SigninbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninbtnActionPerformed
         // TODO add your handling code here:
 
         if (RoleCmb.getSelectedItem().toString() == "Donor") {
-
-            SignUpDonor signdon = new SignUpDonor(mainScreen, dB4OUtil, ecoSystem);
-            //
-            //            //suc.setVisible(true);
-            mainScreen.setContentPane(signdon);
-            ////            //             this.add(s);
-            ////
-            mainScreen.invalidate();
-            mainScreen.validate();
-
+            DonarBankSignUp signdon = new DonarBankSignUp(MainLPage, dB4OUtility, operatingSystem);
+            MainLPage.setContentPane(signdon);
+            MainLPage.invalidate();
+            MainLPage.validate();
         }
 
         if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
-            // System.out.println("Hospital");
-            SignUpDonorAdmin s = new SignUpDonorAdmin(mainScreen, dB4OUtil, ecoSystem);
-
-            //suc.setVisible(true);
-            mainScreen.setContentPane(s);
-            //             this.add(s);
-
-            mainScreen.invalidate();
-            mainScreen.validate();
-
+            DonarBankAdminSignUp s = new DonarBankAdminSignUp(MainLPage, dB4OUtility, operatingSystem);
+            MainLPage.setContentPane(s);
+            MainLPage.invalidate();
+            MainLPage.validate();
         }
     }//GEN-LAST:event_SigninbtnActionPerformed
 

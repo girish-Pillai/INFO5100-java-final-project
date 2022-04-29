@@ -2,19 +2,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package finalprojectUserInterface.DonarBankInterface.DonarBankProfileLoginPages;
-
+package finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarBankProfileLoginPages;
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectUserInterface.MainJFrameForm;
 /**
  *
  * @author supriyaa
  */
+
+    
+
+
 public class ProfileDetailsDonor extends javax.swing.JPanel {
 
     /**
      * Creates new form ProfileDetailsDonor
      */
-    public ProfileDetailsDonor() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorUser don;
+    
+    public ProfileDetailsDonor(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorUser don) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.don = don;
     }
 
     /**

@@ -4,6 +4,15 @@
  */
 package finalprojectUserInterface.DonarBankInterface;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectUserInterface.MainJFrameForm;
+import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +22,19 @@ public class DonarBankSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankSignUp
      */
-    public DonarBankSignUp() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    
+    public DonarBankSignUp(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        
+        for(DonorBank db: operatingSystem.getDonorBankDirectory()){
+            donorbnknamecmb.addItem(db.getEnterpriseName());
+        }
     }
 
     /**
@@ -354,103 +374,43 @@ public class DonarBankSignUp extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void FullNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FullNametxtActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_FullNametxtActionPerformed
 
     private void FullNametxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FullNametxtKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
     }//GEN-LAST:event_FullNametxtKeyReleased
 
     private void UsernametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernametxtActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_UsernametxtActionPerformed
 
     private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtPassActionPerformed
 
     private void AddtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddtxtActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_AddtxtActionPerformed
 
     private void AddtxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AddtxtKeyReleased
-        // TODO add your handling code here:
-
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
     }//GEN-LAST:event_AddtxtKeyReleased
 
     private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtCityActionPerformed
 
     private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-        // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtCityKeyReleased
 
     private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtStateActionPerformed
 
     private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
-        // TODO add your handling code here:
-
-        //        String stateconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(stateconv);
-        //        Matcher mat = pat.matcher(txtState.getText());
-        //
-        //        if (!mat.matches()) {
-            //            state_chk.setText("State is incorrect");
-            //        } else {
-            //            state_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtStateKeyReleased
 
     private void txtZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtZipActionPerformed
 
     private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-        // TODO add your handling code here:
-        //        String zipconv = "^[0-9]{5}$";
-        //        Pattern pat = Pattern.compile(zipconv);
-        //        Matcher mat = pat.matcher(txtZip.getText());
-        //
-        //        if (!mat.matches()) {
-            //            zip_chk.setText("Zipcode is incorrect");
-            //        } else {
-            //            zip_chk.setText("");
-            //        }
     }//GEN-LAST:event_txtZipKeyReleased
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
-
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_backbtnActionPerformed
@@ -458,58 +418,30 @@ public class DonarBankSignUp extends javax.swing.JPanel {
     private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
         // TODO add your handling code here:
         String address = Addtxt.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        //uname, pswd, id, name, add, gender, telenum, dob
-        //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
 
-        Donor donor = new Donor(Usernametxt.getText(), txtPass.getText(), "idid", FullNametxt.getText(), address, gendercmb.getSelectedItem().toString(), telenumtxt.getText(), new Date(),donorbnknamecmb.getSelectedItem().toString());
+        DonorUser donor = new DonorUser(Usernametxt.getText(), txtPass.getText(), "idid", FullNametxt.getText(), address, gendercmb.getSelectedItem().toString(), telenumtxt.getText(), new Date(),donorbnknamecmb.getSelectedItem().toString());
 
-        ecoSystem.addDonor(donor);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.addDonor(donor);
+        dB4OUtility.storeSystem(operatingSystem);
 
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtil.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
     }//GEN-LAST:event_signupbtnActionPerformed
 
     private void telenumtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telenumtxtActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_telenumtxtActionPerformed
 
     private void telenumtxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telenumtxtKeyReleased
-        // TODO add your handling code here:
     }//GEN-LAST:event_telenumtxtKeyReleased
 
     private void dobtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dobtxtActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_dobtxtActionPerformed
 
     private void dobtxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dobtxtKeyReleased
-        // TODO add your handling code here:
     }//GEN-LAST:event_dobtxtKeyReleased
 
     private void donorbnknamecmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donorbnknamecmbActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_donorbnknamecmbActionPerformed
 
 

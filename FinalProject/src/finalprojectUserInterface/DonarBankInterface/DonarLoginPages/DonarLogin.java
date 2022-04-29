@@ -4,6 +4,14 @@
  */
 package finalprojectUserInterface.DonarBankInterface.DonarLoginPages;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarBankProfileLoginPages.ProfileDetailsDonor;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +21,17 @@ public class DonarLogin extends javax.swing.JPanel {
     /**
      * Creates new form DonarLogin
      */
-    public DonarLogin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorUser donorUser;
+    
+    public DonarLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorUser don) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.donorUser = don;
     }
 
     /**
@@ -110,13 +127,13 @@ public class DonarLogin extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        DonorProfileDetails dpd = new DonorProfileDetails(mainScreen, dB4OUtil, ecoSystem, don);
+        ProfileDetailsDonor dpd = new ProfileDetailsDonor(MainLPage, dB4OUtility, operatingSystem, donorUser);
         jSplitPane1.setRightComponent(dpd);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
