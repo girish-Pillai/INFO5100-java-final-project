@@ -4,6 +4,20 @@
  */
 package finalprojectUserInterface.LogisticsLoginPages;
 
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Organization.DonationAssignment;
+
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +27,18 @@ public class HandlerLogin extends javax.swing.JPanel {
     /**
      * Creates new form HandlerLogin
      */
-    public HandlerLogin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Handler ho;
+
+    public HandlerLogin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Handler ho) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.ho = ho;
+        populateTable(ho.getUserName().toLowerCase());
     }
 
     /**
@@ -59,7 +83,7 @@ public class HandlerLogin extends javax.swing.JPanel {
                 LogoutBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(LogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 500, 110, -1));
+        jPanel1.add(LogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 150, 30));
 
         StatusLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         StatusLbl.setText("Status:");
@@ -79,7 +103,7 @@ public class HandlerLogin extends javax.swing.JPanel {
                 StatusBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(StatusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 150, -1));
+        jPanel1.add(StatusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -80, 2080, 1150));
@@ -108,7 +132,7 @@ public class HandlerLogin extends javax.swing.JPanel {
 
     private void LogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutBtnActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_LogoutBtnActionPerformed
@@ -126,24 +150,71 @@ public class HandlerLogin extends javax.swing.JPanel {
         String id = model.getValueAt(selectedRow, 8).toString();
         //System.out.println("column count " + selectedRow);
 
-        for (DonateEntity c : ecoSystem.getDonateEntityList()) {
+        for (DonationAssignment c : operatingSystem.getDonationAssignmentList()) {
             try {
                 if (c.getId().equals(id)) {
-                    c.setStatus(status_txt.getText().toString());
+                    c.setDonationStatus(status_txt.getText().toString());
                 }
             } catch (Exception e) {
 
             }
         }
 
-        dB4OUtil.storeSystem(ecoSystem);
-        populateTable(ho.getUname());
+        dB4OUtility.storeSystem(operatingSystem);
+        populateTable(ho.getUserName());
     }//GEN-LAST:event_StatusBtnActionPerformed
 
     private void status_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_status_txtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_status_txtActionPerformed
 
+    private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+            
+            try{
+                //System.out.println("print: "+d.getHandler().getUname()+" "+d.getHandler().getUname().matches(name));
+            if (d.getHandler().getUserName().matches(name)) {
+                Object[] row = new Object[9];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                row[8] = d.getId();
+
+                model.addRow(row);
+            }
+            }catch(Exception e){
+                //System.out.println("error: ");
+//                e.printStackTrace();
+            }
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogoutBtn;
