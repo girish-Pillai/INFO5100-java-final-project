@@ -2,7 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package finalprojectUserInterface.LabLoginPages;
+package finalprojectUserInterface.LabInterfaceForUser.LabLoginPages;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectBackend.Enterprise.Lab.Technician;
+
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,8 +25,18 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
     /**
      * Creates new form LabTechnicianSignin
      */
-    public LabTechnicianSignin() {
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    Technician t;
+    
+    public LabTechnicianSignin(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, Technician t) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.t = t;
+        populateTable(t.getUserName());
     }
 
     /**
@@ -44,6 +66,7 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
         LabTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LabTitle.setForeground(new java.awt.Color(0, 0, 0));
         LabTitle.setText("Lab Technician Login");
 
         nametxt.addActionListener(new java.awt.event.ActionListener() {
@@ -78,12 +101,15 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tb1);
 
         Reportlbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Reportlbl.setForeground(new java.awt.Color(0, 0, 0));
         Reportlbl.setText("Report:");
 
         namelbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        namelbl.setForeground(new java.awt.Color(0, 0, 0));
         namelbl.setText("Name:");
 
         Bloodlbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Bloodlbl.setForeground(new java.awt.Color(0, 0, 0));
         Bloodlbl.setText("Blood:");
 
         reportbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -130,13 +156,10 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
                             .addComponent(namelbl)
                             .addComponent(Reportlbl)
                             .addComponent(Bloodlbl))
+                        .addGap(347, 347, 347)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(347, 347, 347)
-                                .addComponent(bldgrpbtn))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(347, 347, 347)
-                                .addComponent(commbtn))))
+                            .addComponent(bldgrpbtn)
+                            .addComponent(commbtn)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(389, 389, 389)
                         .addComponent(logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -232,23 +255,23 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         String id = model.getValueAt(selectedRow, 9).toString();
         //System.out.println("column count " + selectedRow);
 
-        for (DonateEntity c : ecoSystem.getDonateEntityList()) {
+        for (DonationAssignment c : operatingSystem.getDonationAssignmentList()) {
             try {
                 if (c.getId().equals(id)) {
-                    c.setReport(reporttxt.getText().toString());
+                    c.setDonationReport(reporttxt.getText().toString());
                 }
             } catch (Exception e) {
 
             }
         }
 
-        dB4OUtil.storeSystem(ecoSystem);
-        populateTable(t.getUname());
+        dB4OUtility.storeSystem(operatingSystem);
+        populateTable(t.getUserName());
     }//GEN-LAST:event_reportbtnActionPerformed
 
     private void logoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbtnActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_logoutbtnActionPerformed
@@ -263,6 +286,139 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         populateTableBlood(bloodtxt.getText().toLowerCase().toString());
     }//GEN-LAST:event_bldgrpbtnActionPerformed
 
+  
+    private void populateTable(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+            
+            try{
+            if (d.getTechnician().getUserName().matches(name)) {
+                Object[] row = new Object[10];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                row[8] = d.getDonationReport();
+                row[9] = d.getId();
+
+                model.addRow(row);
+            }
+            }catch(Exception e){
+                
+            }
+
+        }
+
+    }
+      
+    private void populateTableBlood(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            if (d.getbGroup().toLowerCase().contains(name)) {
+                Object[] row = new Object[10];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                row[8] = d.getDonationReport();
+                row[9] = d.getId();
+                model.addRow(row);
+            }
+
+        }
+
+    }
+
+    private void populateTableName(String name) {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            if (d.getDonationEntityName().toLowerCase().contains(name)) {
+                Object[] row = new Object[10];
+                row[0] = d.getType();
+                row[1] = d.getbGroup();
+                row[2] = d.getDonationEntityName();
+                row[3] = d.getDonationStatus();
+                try {
+                    row[4] = d.getDonEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+
+                try {
+                    row[5] = d.getRecEnterprise().getEnterpriseName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[6] = d.getRecPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+                try {
+                    row[7] = d.getDonPatient().getPersonName();
+                } catch (Exception e) {
+
+                }
+
+                row[8] = d.getDonationReport();
+                row[9] = d.getId();
+                model.addRow(row);
+            }
+
+        }
+
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Bloodlbl;
