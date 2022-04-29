@@ -2,7 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package finalprojectUserInterface.DonarBankInterface.DonarAdminBankLoginPages;
+package finalprojectUserInterface.DonarBankInterface.DonarLoginPages.DonarAdminBankLoginPages;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectBackend.Organization.DonationAssignment;
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,8 +22,32 @@ public class DonarAdminDonarList extends javax.swing.JPanel {
     /**
      * Creates new form DonarAdminDonarList
      */
-    public DonarAdminDonarList() {
+    
+    MainJFrameForm MainLPage;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+    DonorBank donorBank;
+
+    public DonarAdminDonarList(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donbank) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        this.donorBank = donbank;
+        populateTable();
+    }
+    
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonorUser d : operatingSystem.getDonorUserDirectory()) {
+            System.out.println("populatetable " + d.getUserName());
+
+            Object[] row = new Object[5];
+            row[0] = d.getUserName();
+            model.addRow(row);
+        }
     }
 
     /**
@@ -86,8 +119,8 @@ public class DonarAdminDonarList extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" doctor uname: " + doctorUName);
-        ecoSystem.deleteDonorBYuserName(doctorUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteDonorByUserName(doctorUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateTable();
     }//GEN-LAST:event_jButton1ActionPerformed
 
