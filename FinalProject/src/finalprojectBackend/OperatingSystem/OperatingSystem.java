@@ -72,6 +72,11 @@ public class OperatingSystem {
     public void setHospitalDirectory(HospitalDirectory hospitalDirectory) {
         this.hospitalDirectory = hospitalDirectory;
     }
+    
+    public void addHospital(Hospital hosp) {
+        System.out.println("addHospital() in ecosystem: " + hosp.getEnterpriseName());
+        hospitalDirectory.addHospital(hosp);
+    }
 
     public ArrayList<Doc> getDoctorDirectory() {
         return doctorDirectory;
