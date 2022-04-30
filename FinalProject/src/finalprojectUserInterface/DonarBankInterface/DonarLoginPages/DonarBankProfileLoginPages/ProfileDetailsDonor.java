@@ -31,6 +31,14 @@ public class ProfileDetailsDonor extends javax.swing.JPanel {
         this.dB4OUtility = dB4OUtility;
         this.operatingSystem = operatingSystem;
         this.don = don;
+        
+        
+        txtName.setText(don.getPersonName());
+        txtUName.setText(don.getUserName());
+        txtAddHosp.setText(don.getAddress());
+        txtTeleName.setText(don.getPhoneNumber());
+        txtDOB.setText(don.getDateOfBirth().toString());
+        txtDonor.setText(don.getDonorBankName());
     }
 
     /**
