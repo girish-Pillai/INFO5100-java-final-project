@@ -4,6 +4,14 @@
  */
 package finalprojectUserInterface.Administration;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+
 /**
  *
  * @author supriyaa
@@ -13,8 +21,17 @@ public class AdminSplitPage extends javax.swing.JPanel {
     /**
      * Creates new form AdminSplitPage
      */
-    public AdminSplitPage() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public AdminSplitPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+
     }
 
     /**
@@ -161,25 +178,25 @@ public class AdminSplitPage extends javax.swing.JPanel {
 
     private void DonarbankBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DonarbankBtnActionPerformed
         // TODO add your handling code here:
-        ManageDonorBank mdb = new ManageDonorBank(mainScreen, dB4OUtil, ecoSystem);
+        ManageDonarBank mdb = new ManageDonarBank(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_DonarbankBtnActionPerformed
 
     private void hospBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospBtnActionPerformed
         // TODO add your handling code here:
-        ManageHospital ap = new ManageHospital(mainScreen, dB4OUtil, ecoSystem);
+        ManageHospital ap = new ManageHospital(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(ap);
     }//GEN-LAST:event_hospBtnActionPerformed
 
     private void transbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transbtnActionPerformed
         // TODO add your handling code here:
-        ManageTransplant mt = new ManageTransplant(mainScreen, dB4OUtil, ecoSystem);
+        ManageTransplants mt = new ManageTransplants(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_transbtnActionPerformed
 
     private void LogoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutbtnActionPerformed
         // TODO add your handling code here:
-        MainFrameForm suc = new MainFrameForm();
+        MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_LogoutbtnActionPerformed
@@ -187,14 +204,14 @@ public class AdminSplitPage extends javax.swing.JPanel {
     private void LogBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogBtnActionPerformed
         // TODO add your handling code here:
 
-        ManageLogistics mdb = new ManageLogistics(mainScreen, dB4OUtil, ecoSystem);
+        ManageLogistics mdb = new ManageLogistics(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_LogBtnActionPerformed
 
     private void graphsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_graphsbtnActionPerformed
         // TODO add your handling code here:
-        //        ManageTransplant mt = new ManageTransplant(mainScreen, dB4OUtil, ecoSystem);
-        Graphs mt = new Graphs(mainScreen, dB4OUtil, ecoSystem);
+        //        ManageTransplant mt = new ManageTransplant(MainLPage, dB4OUtil, ecoSystem);
+        Graphs mt = new Graphs(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_graphsbtnActionPerformed
 

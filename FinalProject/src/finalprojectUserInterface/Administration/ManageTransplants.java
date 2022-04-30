@@ -4,6 +4,15 @@
  */
 package finalprojectUserInterface.Administration;
 
+import javax.swing.table.DefaultTableModel;
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Organization.DonationAssignment;
+
+import finalprojectUserInterface.MainJFrameForm;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author supriyaa
@@ -13,8 +22,17 @@ public class ManageTransplants extends javax.swing.JPanel {
     /**
      * Creates new form ManageTransplants
      */
-    public ManageTransplants() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public ManageTransplants(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        populateTable();
     }
 
     /**
@@ -109,22 +127,86 @@ public class ManageTransplants extends javax.swing.JPanel {
         String id = model.getValueAt(selectedRow, 12).toString();
         System.out.println(" handler uname: " + id);
 
-        for(DonateEntity de : ecoSystem.getDonateEntityList()){
+        for(DonationAssignment de : operatingSystem.getDonationAssignmentList()){
             try{
                 if(de.getId().equals(id)){
-                    de.setStatus(model.getValueAt(selectedRow, 3).toString());
+                    de.setDonationStatus(model.getValueAt(selectedRow, 3).toString());
                 }
             }catch(Exception e){
 
             }
         }
 
-        dB4OUtil.storeSystem(ecoSystem);
+        dB4OUtility.storeSystem(operatingSystem);
         JOptionPane.showMessageDialog(this, "Updated Status");
 
     }//GEN-LAST:event_UpdateStat_btnActionPerformed
 
 
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+        System.out.println("populatetable");
+        for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
+
+            Object[] row = new Object[13];
+            row[0] = d.getType();
+            row[1] = d.getbGroup();
+            row[2] = d.getDonationEntityName();
+            row[3] = d.getDonationStatus();
+            try {
+                row[4] = d.getDonEnterprise().getEnterpriseName();
+            } catch (Exception e) {
+
+            }
+
+            try {
+                row[5] = d.getRecEnterprise().getEnterpriseName();
+            } catch (Exception e) {
+
+            }
+            try {
+                row[6] = d.getRecPatient().getPersonName();
+            } catch (Exception e) {
+
+            }
+            try {
+                row[7] = d.getDonPatient().getPersonName();
+            } catch (Exception e) {
+
+            }
+            try {
+            row[8] = d.getDonDoctor().getPersonName();
+            }catch (Exception e) {
+
+            }
+            try {
+            row[9] = d.getRecDoctor().getPersonName();
+            }catch (Exception e) {
+
+            }
+            try{
+            row[10] = d.getHandler().getPersonName();
+            }catch (Exception e) {
+
+            }
+            try {
+            row[11] = d.getDonationReport();
+            }catch (Exception e) {
+
+            }
+            try {
+            row[12] = d.getId();
+            }catch (Exception e) {
+
+            }
+
+            model.addRow(row);
+
+        }
+
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton UpdateStat_btn;
     private javax.swing.JPanel jPanel1;

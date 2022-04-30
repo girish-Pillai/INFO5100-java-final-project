@@ -28,11 +28,11 @@ public class ManageLogistics extends javax.swing.JPanel {
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
 
-    public ManageLogistics(MainJFrameForm mainScreen, DB4OUtility dB4OUtil, OperatingSystem ecoSystem) {
+    public ManageLogistics(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
-        this.MainLPage = mainScreen;
-        this.dB4OUtility = dB4OUtil;
-        this.operatingSystem = ecoSystem;
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
         populateHandlerTable();
         populateVehicleTable();
     }
