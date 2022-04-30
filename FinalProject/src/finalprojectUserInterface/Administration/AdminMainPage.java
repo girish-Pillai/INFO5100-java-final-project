@@ -26,7 +26,7 @@ public class AdminMainPage extends javax.swing.JPanel {
 
     public AdminMainPage(MainJFrameForm mainScreen, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
-        this.MainLPage = MainLPage;
+        this.MainLPage = mainScreen;
         this.dB4OUtility = dB4OUtility;
         this.operatingSystem = operatingSystem;
 
