@@ -185,9 +185,10 @@ public class NurseSignUp extends javax.swing.JPanel {
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        Nurse nurse = new Nurse(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText(), txtGender.getText(), txtDOB.getText(), new Date(),jComboBox1.getSelectedItem().toString());
-
+        String address = txtAdd.getText() + "," + txtCity.getText() + "," + txtState.getText() + "," + txtZip.getText();
+        //Nurse nurse = new Nurse(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText(), txtGender.getText(), txtDOB.getText(), new Date(),jComboBox1.getSelectedItem().toString());
+        Nurse nurse = new Nurse(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, txtGender.getText(), txtNo.getText(), new Date(), jComboBox1.getSelectedItem().toString());
+        
         operatingSystem.addNurse(nurse);
         dB4OUtility.storeSystem(operatingSystem);
 

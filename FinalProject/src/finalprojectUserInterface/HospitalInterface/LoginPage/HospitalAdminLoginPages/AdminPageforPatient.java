@@ -86,7 +86,7 @@ public class AdminPageforPatient extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblPatient);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 190, 480, 160));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 190, 780, 160));
 
         PatientTitle.setBackground(new java.awt.Color(255, 255, 255));
         PatientTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -100,7 +100,7 @@ public class AdminPageforPatient extends javax.swing.JPanel {
                 deletebtnActionPerformed(evt);
             }
         });
-        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 130, 50));
+        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 130, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -4, 1130, 750));

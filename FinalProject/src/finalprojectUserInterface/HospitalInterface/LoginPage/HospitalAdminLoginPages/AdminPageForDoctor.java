@@ -66,7 +66,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 97, 648, 209));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 97, 820, 209));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setText("Manage Doctor");

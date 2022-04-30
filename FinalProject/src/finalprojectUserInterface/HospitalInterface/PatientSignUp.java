@@ -200,7 +200,7 @@ public class PatientSignUp extends javax.swing.JPanel {
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+        String address = txtAdd.getText() + ", " + txtCity.getText() + ", " + txtState.getText() + ", " + txtZip.getText();
         //uname, pswd, id, name, add, gender, telenum, dob diag
         //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
         Patient patient = new Patient(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(),new Date() , txt_diag.getText(),hospitalList.getSelectedItem().toString());

@@ -48,7 +48,7 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         lbl_admintitle = new javax.swing.JLabel();
         lbl_name = new javax.swing.JLabel();
-        txtFullName = new javax.swing.JTextField();
+        txtEnterpriseName = new javax.swing.JTextField();
         lbl_uname = new javax.swing.JLabel();
         txtUsrName = new javax.swing.JTextField();
         lbl_pswd = new javax.swing.JLabel();
@@ -76,7 +76,7 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_name.setText("Name:");
         jPanel1.add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
-        jPanel1.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 210, -1));
+        jPanel1.add(txtEnterpriseName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 210, -1));
 
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lbl_uname.setText("Username:");
@@ -158,8 +158,8 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        Hospital hosp = new Hospital(address,  txtUsrName.getText(),txtPass.getText(), txtFullName.getText(), txtNo.getText());
+        String address = txtAdd.getText() + ", " + txtCity.getText() + ", " + txtState.getText() + ", " + txtZip.getText();
+        Hospital hosp = new Hospital(address,  txtUsrName.getText(),txtPass.getText(), txtEnterpriseName.getText(), txtNo.getText());
         System.out.println("Hospital"+hosp.getUserName());
 
         operatingSystem.addHospital(hosp);
@@ -222,7 +222,7 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
     private javax.swing.JLabel lbl_uname;
     private javax.swing.JTextField txtAdd;
     private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtFullName;
+    private javax.swing.JTextField txtEnterpriseName;
     private javax.swing.JTextField txtNo;
     private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtState;

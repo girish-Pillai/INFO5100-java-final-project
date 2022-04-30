@@ -66,7 +66,7 @@ public class AdminPageForNurses extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblNurse);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, 240));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 980, 240));
 
         NurseTitle.setBackground(new java.awt.Color(255, 255, 255));
         NurseTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -80,7 +80,7 @@ public class AdminPageForNurses extends javax.swing.JPanel {
                 deletebtnActionPerformed(evt);
             }
         });
-        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 140, 40));
+        jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 140, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1420, 930));
