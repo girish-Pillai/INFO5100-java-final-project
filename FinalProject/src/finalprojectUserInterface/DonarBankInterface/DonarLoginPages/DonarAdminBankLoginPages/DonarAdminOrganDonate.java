@@ -28,16 +28,16 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
     private DB4OUtility dB4OUtility;
     DonorBank donorBank;
     
-    public DonarAdminOrganDonate(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donbank) {
+    public DonarAdminOrganDonate(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem, DonorBank donarbank) {
         initComponents();
         this.MainLPage = MainLPage;
         this.dB4OUtility = dB4OUtility;
         this.operatingSystem = operatingSystem;
-        this.donorBank = donbank;
+        this.donorBank = donarbank;
         
         for(DonorUser pa : operatingSystem.getDonorUserDirectory() ){
             System.out.println("DonorAdminDonateOrgan"+pa.getDonorBankName());
-            if( pa.getDonorBankName().equals(donbank.getEnterpriseName())){
+            if( pa.getDonorBankName().equals(donarbank.getEnterpriseName())){
                 listdon.addItem(pa.getUserName());
             }
         }
