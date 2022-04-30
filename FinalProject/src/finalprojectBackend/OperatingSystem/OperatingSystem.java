@@ -247,7 +247,7 @@ public class OperatingSystem {
                 return d;
             }
         }
-         for (Hospital ho : hospitalDirectory.getListOfHospitals()) {
+        for (Hospital ho : hospitalDirectory.getListOfHospitals()) {
             System.out.println("LoginCheck(ho): " + ho.getUserName() + " " + ho.getPwd());
             if (ho.getUserName().equals(userId) && ho.getPwd().equals(password)) {
                 System.out.println("LoginCheck(): matched");
