@@ -53,9 +53,11 @@ public class AdminSplitPage extends javax.swing.JPanel {
         graphsbtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
 
+        DonarbankBtn.setBackground(new java.awt.Color(255, 255, 255));
         DonarbankBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        DonarbankBtn.setForeground(new java.awt.Color(0, 0, 0));
         DonarbankBtn.setText("Manage Donor Bank");
         DonarbankBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +65,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
+        hospBtn.setBackground(new java.awt.Color(255, 255, 255));
         hospBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        hospBtn.setForeground(new java.awt.Color(0, 0, 0));
         hospBtn.setText("Manage Hospital");
         hospBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +75,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
+        transbtn.setBackground(new java.awt.Color(255, 255, 255));
         transbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        transbtn.setForeground(new java.awt.Color(0, 0, 0));
         transbtn.setText("Manage Transplants");
         transbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +85,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
+        Logoutbtn.setBackground(new java.awt.Color(255, 255, 255));
         Logoutbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Logoutbtn.setForeground(new java.awt.Color(0, 0, 0));
         Logoutbtn.setText("Logout");
         Logoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +95,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
+        LogBtn.setBackground(new java.awt.Color(255, 255, 255));
         LogBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        LogBtn.setForeground(new java.awt.Color(0, 0, 0));
         LogBtn.setText("Manage Logistics");
         LogBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +105,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
+        graphsbtn.setBackground(new java.awt.Color(255, 255, 255));
         graphsbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        graphsbtn.setForeground(new java.awt.Color(0, 0, 0));
         graphsbtn.setText("Graphs");
         graphsbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,41 +123,34 @@ public class AdminSplitPage extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DonarbankBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(transbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(transbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                     .addComponent(Logoutbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(LogBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(graphsbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(graphsbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hospBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(hospBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(DonarbankBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LogBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(graphsbtn)
-                .addGap(23, 23, 23)
-                .addComponent(transbtn)
-                .addGap(79, 79, 79)
-                .addComponent(Logoutbtn)
-                .addContainerGap(222, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(144, 144, 144)
-                    .addComponent(hospBtn)
-                    .addContainerGap(513, Short.MAX_VALUE)))
+                .addGap(58, 58, 58)
+                .addComponent(hospBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(DonarbankBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(LogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addComponent(graphsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(transbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -211,7 +216,7 @@ public class AdminSplitPage extends javax.swing.JPanel {
     private void graphsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_graphsbtnActionPerformed
         // TODO add your handling code here:
         //        ManageTransplant mt = new ManageTransplant(MainLPage, dB4OUtil, ecoSystem);
-        Graphs mt = new Graphs(MainLPage, dB4OUtility, operatingSystem);
+        Visualization mt = new Visualization(MainLPage, dB4OUtility, operatingSystem);
         jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_graphsbtnActionPerformed
 

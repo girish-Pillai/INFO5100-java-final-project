@@ -57,6 +57,8 @@ public class ManageDonarBank extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 255));
 
+        tb1.setBackground(new java.awt.Color(255, 255, 255));
+        tb1.setForeground(new java.awt.Color(255, 255, 255));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -70,6 +72,8 @@ public class ManageDonarBank extends javax.swing.JPanel {
         ));
         jScrollPanebBankdetails.setViewportView(tb1);
 
+        tb2.setBackground(new java.awt.Color(255, 255, 255));
+        tb2.setForeground(new java.awt.Color(255, 255, 255));
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -100,9 +104,11 @@ public class ManageDonarBank extends javax.swing.JPanel {
         });
 
         bankdetails_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        bankdetails_lbl.setForeground(new java.awt.Color(0, 0, 0));
         bankdetails_lbl.setText("Donor Bank Details");
 
         Donardetails_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        Donardetails_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Donardetails_lbl.setText("Donor Details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -111,15 +117,24 @@ public class ManageDonarBank extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(217, 217, 217)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPanebBankdetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletebtn2)
-                    .addComponent(deletebtn)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPaneDonarDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(bankdetails_lbl)
-                        .addComponent(Donardetails_lbl)))
-                .addContainerGap(398, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bankdetails_lbl)
+                    .addComponent(Donardetails_lbl))
+                .addContainerGap(718, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPanebBankdetails, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneDonarDetails))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(475, 475, 475))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(472, 472, 472))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,14 +144,14 @@ public class ManageDonarBank extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPanebBankdetails, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deletebtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Donardetails_lbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(34, 34, 34)
                 .addComponent(jScrollPaneDonarDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(deletebtn2)
-                .addGap(503, 503, 503))
+                .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(466, 466, 466))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
