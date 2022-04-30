@@ -79,7 +79,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 DocBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(DocBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 116, 121, -1));
+        jPanel2.add(DocBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 121, -1));
 
         PatentBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         PatentBtn.setText("Patients");
@@ -88,7 +88,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 PatentBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(PatentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 163, 121, -1));
+        jPanel2.add(PatentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 121, -1));
 
         DonOrgBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         DonOrgBtn.setText("Donate Organ");
@@ -97,7 +97,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 DonOrgBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(DonOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 290, 121, -1));
+        jPanel2.add(DonOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 121, -1));
 
         NursesBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         NursesBtn.setText("Nurses");
@@ -106,7 +106,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 NursesBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(NursesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 210, 121, -1));
+        jPanel2.add(NursesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 121, -1));
 
         ReceiveBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ReceiveBtn.setText("Receive Organ");
@@ -115,7 +115,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 ReceiveBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(ReceiveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 337, 121, -1));
+        jPanel2.add(ReceiveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 121, -1));
 
         TransplantBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         TransplantBtn.setText("Transplants");
@@ -124,7 +124,7 @@ public class AdminLogin extends javax.swing.JPanel {
                 TransplantBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(TransplantBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 384, 121, -1));
+        jPanel2.add(TransplantBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 121, -1));
 
         LogOutBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         LogOutBtn.setText("Logout");
@@ -133,14 +133,14 @@ public class AdminLogin extends javax.swing.JPanel {
                 LogOutBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(LogOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 481, 121, -1));
+        jPanel2.add(LogOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 121, 80));
 
         jSplitPane1.setLeftComponent(jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelArea2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel3.add(jLabelArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 1060));
+        jPanel3.add(jLabelArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1450, 1060));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setText("Hospital Admin Login");
@@ -154,7 +154,7 @@ public class AdminLogin extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1590, Short.MAX_VALUE)
+            .addGap(0, 1616, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -163,7 +163,7 @@ public class AdminLogin extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1064, Short.MAX_VALUE)
+            .addGap(0, 1070, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)

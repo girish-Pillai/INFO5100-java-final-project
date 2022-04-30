@@ -57,6 +57,7 @@ public class ManageLogistics extends javax.swing.JPanel {
         vehicle_lbl = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
         tb1.setBackground(new java.awt.Color(255, 255, 255));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
@@ -103,9 +104,11 @@ public class ManageLogistics extends javax.swing.JPanel {
         });
 
         handler_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        handler_lbl.setForeground(new java.awt.Color(0, 0, 0));
         handler_lbl.setText("Handler Details");
 
         vehicle_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        vehicle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         vehicle_lbl.setText("Vehicle Details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

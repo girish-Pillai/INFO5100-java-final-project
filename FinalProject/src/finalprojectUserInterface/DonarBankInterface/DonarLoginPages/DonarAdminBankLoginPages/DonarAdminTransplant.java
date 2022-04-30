@@ -46,7 +46,7 @@ public class DonarAdminTransplant extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tb1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 204, 102));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

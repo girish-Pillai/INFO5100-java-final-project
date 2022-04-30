@@ -65,9 +65,11 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
         lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lbl_admintitle.setForeground(new java.awt.Color(0, 0, 0));
         lbl_admintitle.setText("Create Donor Admin Profile");
 
-        lbl_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
 
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +83,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
 
         txtUsrName.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +93,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
 
         txtPass.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +103,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        lbl_address.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
 
         txtAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +134,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        lbl_registeryNum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_registeryNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_registeryNum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_registeryNum.setText("Registered No.:");
 
         txtNo.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +149,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        txt_City.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
 
         txtCity.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +164,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        txt_state.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_state.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
 
         txtState.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +179,8 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             }
         });
 
-        txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
 
         txtZip.addActionListener(new java.awt.event.ActionListener() {
@@ -190,46 +199,41 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(258, Short.MAX_VALUE)
+                .addContainerGap(229, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(51, 51, 51)
-                            .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(28, 28, 28)
-                            .addComponent(btn_signup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txt_Zip)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addGap(10, 10, 10)
-                                            .addComponent(txt_City))
-                                        .addComponent(lbl_address)
-                                        .addComponent(txt_state))
-                                    .addGap(30, 30, 30))
+                                    .addComponent(lbl_name)
+                                    .addGap(46, 46, 46))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(13, 13, 13)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lbl_uname)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(lbl_pswd)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addGap(17, 17, 17)
-                                            .addComponent(lbl_name)))
-                                    .addGap(25, 25, 25))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(lbl_registeryNum)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                        .addComponent(lbl_uname)
+                                        .addComponent(lbl_registeryNum)
+                                        .addComponent(lbl_address)
+                                        .addComponent(txt_City))
+                                    .addGap(47, 47, 47)))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtNo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtUsrName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txt_state)
+                                .addComponent(txt_Zip))
+                            .addGap(47, 47, 47)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(28, 28, 28)
+                            .addComponent(btn_signup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addComponent(lbl_admintitle)))
@@ -238,7 +242,7 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addComponent(lbl_admintitle)
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -264,19 +268,19 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_City))
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_state))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_Zip))
-                .addGap(39, 39, 39)
+                .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_signup, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(135, 135, 135))
+                .addGap(149, 149, 149))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

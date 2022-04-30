@@ -58,13 +58,13 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         DonarjLabel1.setBackground(new java.awt.Color(255, 255, 255));
         DonarjLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         DonarjLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        DonarjLabel1.setText("DONOR BANK");
-        jPanel1.add(DonarjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
+        DonarjLabel1.setText("DONATION BANK");
+        jPanel1.add(DonarjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, -1, -1));
 
-        RoleLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        RoleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RoleLabel.setForeground(new java.awt.Color(255, 255, 255));
         RoleLabel.setText("Role:");
-        jPanel1.add(RoleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 70, 20));
+        jPanel1.add(RoleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 70, 20));
 
         RoleCmb.setEditable(true);
         RoleCmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -74,37 +74,39 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 RoleCmbActionPerformed(evt);
             }
         });
-        jPanel1.add(RoleCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 197, -1));
+        jPanel1.add(RoleCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 197, 30));
 
-        UsernameLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        UsernameLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
         UsernameLabel.setText("Username:");
-        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
-        jPanel1.add(UsernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 197, -1));
+        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
+        jPanel1.add(UsernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 197, 30));
 
-        passwordLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        passwordLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         passwordLbl.setForeground(new java.awt.Color(255, 255, 255));
         passwordLbl.setText("Password:");
-        jPanel1.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
-        jPanel1.add(PassTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 197, -1));
+        jPanel1.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, -1));
+        jPanel1.add(PassTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 197, 30));
 
         Login_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Login_btn.setForeground(new java.awt.Color(0, 0, 0));
         Login_btn.setText("Login");
         Login_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Login_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(Login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 140, 30));
+        jPanel1.add(Login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 150, 30));
 
         Signinbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Signinbtn.setForeground(new java.awt.Color(0, 0, 0));
         Signinbtn.setText("Sign Up");
         Signinbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SigninbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Signinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 470, 150, 30));
+        jPanel1.add(Signinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/donarblood2.jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");

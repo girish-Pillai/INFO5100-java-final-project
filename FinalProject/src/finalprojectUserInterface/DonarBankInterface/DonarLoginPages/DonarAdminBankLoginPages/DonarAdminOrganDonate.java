@@ -65,27 +65,33 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
         savebtn = new javax.swing.JButton();
         listdon = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(255, 204, 102));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         titlelbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        titlelbl.setForeground(new java.awt.Color(0, 0, 0));
         titlelbl.setText("Add Entity Details");
 
         donornamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        donornamelbl.setForeground(new java.awt.Color(0, 0, 0));
         donornamelbl.setText("Donor Name:");
 
         enttypelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        enttypelbl.setForeground(new java.awt.Color(0, 0, 0));
         enttypelbl.setText("Entity Type:");
 
         enttypecmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         enttypecmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood", "Organ" }));
 
         entnamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        entnamelbl.setForeground(new java.awt.Color(0, 0, 0));
         entnamelbl.setText("Entity Name:");
 
         bldgrplbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        bldgrplbl.setForeground(new java.awt.Color(0, 0, 0));
         bldgrplbl.setText("Blood Group:");
 
         statuslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        statuslbl.setForeground(new java.awt.Color(0, 0, 0));
         statuslbl.setText("Status:");
 
         statuscmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -124,8 +130,8 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(entnametxt)
-                                    .addComponent(listdon, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(enttypecmb, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(enttypecmb, 0, 156, Short.MAX_VALUE)
+                                    .addComponent(listdon, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(statuslbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -140,9 +146,9 @@ public class DonarAdminOrganDonate extends javax.swing.JPanel {
                 .addGap(64, 64, 64)
                 .addComponent(titlelbl)
                 .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(donornamelbl)
-                    .addComponent(listdon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(listdon, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enttypelbl)

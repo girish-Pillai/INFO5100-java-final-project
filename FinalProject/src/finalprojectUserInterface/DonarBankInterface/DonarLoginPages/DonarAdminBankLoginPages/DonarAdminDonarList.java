@@ -63,7 +63,7 @@ public class DonarAdminDonarList extends javax.swing.JPanel {
         tb1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 102));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

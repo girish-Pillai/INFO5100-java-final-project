@@ -90,8 +90,9 @@ public class AdminPageforPatient extends javax.swing.JPanel {
 
         PatientTitle.setBackground(new java.awt.Color(255, 255, 255));
         PatientTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        PatientTitle.setForeground(new java.awt.Color(0, 0, 0));
         PatientTitle.setText("Manage Patient Records");
-        jPanel1.add(PatientTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
+        jPanel1.add(PatientTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
         deletebtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deletebtn.setText("Delete");
