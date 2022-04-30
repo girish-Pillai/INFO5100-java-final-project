@@ -159,7 +159,7 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        Hospital hosp = new Hospital(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+        Hospital hosp = new Hospital(address,  txtUsrName.getText(),txtPass.getText(), txtFullName.getText(), txtNo.getText());
         System.out.println("Hospital"+hosp.getUserName());
 
         operatingSystem.addHospital(hosp);
