@@ -72,51 +72,17 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
 
-        txtFullName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFullNameActionPerformed(evt);
-            }
-        });
-        txtFullName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtFullNameKeyReleased(evt);
-            }
-        });
-
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
-
-        txtUsrName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsrNameActionPerformed(evt);
-            }
-        });
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
 
-        txtPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPassActionPerformed(evt);
-            }
-        });
-
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
-
-        txtAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddActionPerformed(evt);
-            }
-        });
-        txtAdd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtAddKeyReleased(evt);
-            }
-        });
 
         btn_signup.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btn_signup.setText("Sign Up");
@@ -138,61 +104,17 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         lbl_registeryNum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_registeryNum.setText("Registered No.:");
 
-        txtNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNoActionPerformed(evt);
-            }
-        });
-        txtNo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNoKeyReleased(evt);
-            }
-        });
-
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
-
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
-            }
-        });
-        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCityKeyReleased(evt);
-            }
-        });
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
 
-        txtState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStateActionPerformed(evt);
-            }
-        });
-        txtState.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtStateKeyReleased(evt);
-            }
-        });
-
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
-
-        txtZip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtZipActionPerformed(evt);
-            }
-        });
-        txtZip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtZipKeyReleased(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -303,28 +225,6 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
-    }//GEN-LAST:event_txtFullNameActionPerformed
-
-    private void txtFullNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFullNameKeyReleased
-
-    }//GEN-LAST:event_txtFullNameKeyReleased
-
-    private void txtUsrNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsrNameActionPerformed
-    }//GEN-LAST:event_txtUsrNameActionPerformed
-
-    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-
-    }//GEN-LAST:event_txtPassActionPerformed
-
-    private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
-
-    }//GEN-LAST:event_txtAddActionPerformed
-
-    private void txtAddKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddKeyReleased
-
-    }//GEN-LAST:event_txtAddKeyReleased
-
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
@@ -343,30 +243,6 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
-
-    private void txtNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoActionPerformed
-    }//GEN-LAST:event_txtNoActionPerformed
-
-    private void txtNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNoKeyReleased
-    }//GEN-LAST:event_txtNoKeyReleased
-
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-    }//GEN-LAST:event_txtCityActionPerformed
-
-    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-    }//GEN-LAST:event_txtCityKeyReleased
-
-    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
-    }//GEN-LAST:event_txtStateActionPerformed
-
-    private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
-    }//GEN-LAST:event_txtStateKeyReleased
-
-    private void txtZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipActionPerformed
-    }//GEN-LAST:event_txtZipActionPerformed
-
-    private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-    }//GEN-LAST:event_txtZipKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
