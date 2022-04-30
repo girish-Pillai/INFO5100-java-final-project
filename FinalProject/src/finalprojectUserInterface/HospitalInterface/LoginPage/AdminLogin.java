@@ -40,6 +40,7 @@ public class AdminLogin extends javax.swing.JPanel {
         this.MainLPage = MainLPage;
         this.dB4OUtility = dB4OUtility;
         this.operatingSystem = operatingSystem;
+        this.hospital = h;
     }
     
 
