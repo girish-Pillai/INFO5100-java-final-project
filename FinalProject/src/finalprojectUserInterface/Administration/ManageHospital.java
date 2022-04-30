@@ -4,6 +4,18 @@
  */
 package finalprojectUserInterface.Administration;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Hospital.Hospital;
+import finalprojectBackend.Enterprise.Hospital.Nurse;
+import finalprojectBackend.Enterprise.Hospital.Patient;
+import finalprojectBackend.Enterprise.Hospital.Doc;
+import finalprojectUserInterface.MainJFrameForm;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author supriyaa
@@ -13,9 +25,19 @@ public class ManageHospital extends javax.swing.JPanel {
     /**
      * Creates new form ManageHospital
      */
-    public ManageHospital() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public ManageHospital(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        populateTable();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -196,13 +218,80 @@ public class ManageHospital extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         String hospitalName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" hospitalDoctorSeach: " + hospitalName);
-        Hospital h = ecoSystem.getHospitaldirectory().findHospital(hospitalName);
+        Hospital h = operatingSystem.getHospitalDirectory().findHospital(hospitalName);
         //        System.out.println(" "+h.getDoctordirectory().get(0).getName());
-        populateDoctorTable(ecoSystem.getDoctordirectory(), hospitalName);
-        populatePatientTable(ecoSystem.getPatientdirectory(), hospitalName);
-        populateNurseTable(ecoSystem.getNursedirectory(), hospitalName);
+        populateDoctorTable(operatingSystem.getDoctorDirectory(), hospitalName);
+        populatePatientTable(operatingSystem.getPatientDirectory(), hospitalName);
+        populateNurseTable(operatingSystem.getNurseDirectory(), hospitalName);
     }//GEN-LAST:event_getdetails_btnActionPerformed
 
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+
+        for (Hospital h : operatingSystem.getHospitalDirectory().getListOfHospitals()) {
+
+            Object[] row = new Object[5];
+            row[0] = h.getEnterpriseName();
+            row[1] = h.getUserName();
+            row[2] = h.getRegNumber();
+            row[3] = h.getAddress();
+            model.addRow(row);
+        }
+
+    }
+
+    private void populateDoctorTable(ArrayList<Doc> doctors, String hosp) {
+        DefaultTableModel model = (DefaultTableModel) tb2.getModel();
+        model.setRowCount(0);
+
+        for (Doc d : doctors) {
+            
+            Object[] row = new Object[5];
+            if (d.getHospitalName().equals(hosp)) {
+
+                row[0] = d.getPersonName();
+                row[1] = d.getUserName();
+                row[2] = d.getHospitalName();
+                row[3] = d.getAddress();
+                model.addRow(row);
+            }
+        }
+    }
+
+    private void populateNurseTable(ArrayList<Nurse> nurse, String hosp) {
+        DefaultTableModel model = (DefaultTableModel) tb3.getModel();
+        model.setRowCount(0);
+
+        for (Nurse d : nurse) {
+
+            Object[] row = new Object[5];
+            if (d.getHospitalName().equals(hosp)) {
+                row[0] = d.getPersonName();
+                row[1] = d.getUserName();
+                row[2] = d.getHospitalName();
+                row[3] = d.getAddress();
+                model.addRow(row);
+            } 
+        }
+    }
+
+    private void populatePatientTable(ArrayList<Patient> patient, String hosp) {
+        DefaultTableModel model = (DefaultTableModel) tb4.getModel();
+        model.setRowCount(0);
+
+        for (Patient d : patient) {
+
+            Object[] row = new Object[5];
+            if (d.getHospitalName().equals(hosp)) {
+                row[0] = d.getPersonName();
+                row[1] = d.getUserName();
+                row[2] = d.getHospitalName();
+                row[3] = d.getPtnDiagnosis();
+                model.addRow(row);
+            }
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DocDetails_lbl;
