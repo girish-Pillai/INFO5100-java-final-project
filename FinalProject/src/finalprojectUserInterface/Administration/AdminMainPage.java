@@ -53,17 +53,20 @@ public class AdminMainPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Admintitle_lbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Admintitle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Admintitle_lbl.setText("Administration");
-        jPanel1.add(Admintitle_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 210, -1));
+        jPanel1.add(Admintitle_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 210, -1));
 
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        username_lbl.setForeground(new java.awt.Color(0, 0, 0));
         username_lbl.setText("Username:");
-        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, 20));
+        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, 20));
         jPanel1.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 197, 30));
 
         pass_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        pass_lbl.setForeground(new java.awt.Color(0, 0, 0));
         pass_lbl.setText("Password:");
-        jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, -1, 20));
+        jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 197, 30));
 
         Loginbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N

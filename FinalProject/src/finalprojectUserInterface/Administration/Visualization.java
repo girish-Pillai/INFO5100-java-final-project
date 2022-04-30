@@ -35,17 +35,17 @@ import org.jfree.util.PublicCloneable;
  *
  * @author supriyaa
  */
-public class Graphs extends javax.swing.JPanel {
+public class Visualization extends javax.swing.JPanel {
 
     /**
-     * Creates new form Graphs
+     * Creates new form Visualization
      */
     MainJFrameForm MainLPage;
     //FirebaseHelper firebaseHelper;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
 
-    public Graphs(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
+    public Visualization(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
         this.MainLPage = MainLPage;
         this.dB4OUtility = dB4OUtility;
@@ -59,28 +59,28 @@ public class Graphs extends javax.swing.JPanel {
     private static final int N = 128;
     private static final Random random = new Random();
     
-    private ChartPanel createEntityNameChartPanel() {
+    private ChartPanel chartPanelNameEntity() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
             series.add(i, random.nextGaussian());
         }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
-        DefaultCategoryDataset dc = new DefaultCategoryDataset();
+        DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
-        Map<String, Integer> hm = new HashMap();
-        for(DonationAssignment de: operatingSystem.getDonationAssignmentList()){
-            String key = de.getDonationEntityName().toLowerCase();
+        Map<String, Integer> hashMap = new HashMap();
+        for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
+            String key = dasn.getDonationEntityName().toLowerCase();
             
-            hm.put(key,  hm.containsKey(key)? 1+hm.get(key):1);
+            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
            
         }
-        for(String k:hm.keySet()){
-            System.out.println("key: "+k+": "+hm.get(k));
-            dc.addValue(hm.get(k), "", k);
+        for(String k:hashMap.keySet()){
+            System.out.println("key: "+k+": "+hashMap.get(k));
+            defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
         JFreeChart chart = ChartFactory.createBarChart("", "organ/blood",
-            "Range", dc, PlotOrientation.VERTICAL, false, false, false);
+            "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
             public Dimension getPreferredSize() {
@@ -89,28 +89,28 @@ public class Graphs extends javax.swing.JPanel {
         };
     }
     
-    private ChartPanel createEntityBloodChartPanel() {
+    private ChartPanel chartPanelBloodEntity() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
             series.add(i, random.nextGaussian());
         }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
-        DefaultCategoryDataset dc = new DefaultCategoryDataset();
+        DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
-        Map<String, Integer> hm = new HashMap();
-        for(DonationAssignment de: operatingSystem.getDonationAssignmentList()){
-            String key = de.getbGroup().toLowerCase();
+        Map<String, Integer> hashMap = new HashMap();
+        for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
+            String key = dasn.getbGroup().toLowerCase();
             
-            hm.put(key,  hm.containsKey(key)? 1+hm.get(key):1);
+            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
            
         }
-        for(String k:hm.keySet()){
-            System.out.println("key: "+k+": "+hm.get(k));
-            dc.addValue(hm.get(k), "", k);
+        for(String k:hashMap.keySet()){
+            System.out.println("key: "+k+": "+hashMap.get(k));
+            defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
         JFreeChart chart = ChartFactory.createBarChart("", "blood",
-            "Range", dc, PlotOrientation.VERTICAL, false, false, false);
+            "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
             public Dimension getPreferredSize() {
@@ -119,33 +119,33 @@ public class Graphs extends javax.swing.JPanel {
         };
     }
     
-    private ChartPanel createEntityEnterpriseChartPanel() {
+    private ChartPanel chartPanelEnterpriseEntity() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
             series.add(i, random.nextGaussian());
         }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
-        DefaultCategoryDataset dc = new DefaultCategoryDataset();
+        DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
-        Map<String, Integer> hm = new HashMap();
-        for(DonationAssignment de: operatingSystem.getDonationAssignmentList()){
+        Map<String, Integer> hashMap = new HashMap();
+        for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
             try{
-            String key = de.getDonEnterprise().getEnterpriseName().toLowerCase();
+            String key = dasn.getDonEnterprise().getEnterpriseName().toLowerCase();
             
-            hm.put(key,  hm.containsKey(key)? 1+hm.get(key):1);
+            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
             }
             catch (Exception e){
                 //e.printStackTrace();
             }
            
         }
-        for(String k:hm.keySet()){
-            System.out.println("key: "+k+": "+hm.get(k));
-            dc.addValue(hm.get(k), "", k);
+        for(String k:hashMap.keySet()){
+            System.out.println("key: "+k+": "+hashMap.get(k));
+            defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
         JFreeChart chart = ChartFactory.createBarChart("", "Donor Ent.",
-            "Range", dc, PlotOrientation.VERTICAL, false, false, false);
+            "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
             public Dimension getPreferredSize() {
@@ -154,33 +154,33 @@ public class Graphs extends javax.swing.JPanel {
         };
     }
     
-    private ChartPanel createEntityRecChartPanel() {
+    private ChartPanel chartPanelReceiverEntityChartPanel() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
             series.add(i, random.nextGaussian());
         }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
-        DefaultCategoryDataset dc = new DefaultCategoryDataset();
+        DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
-        Map<String, Integer> hm = new HashMap();
-        for(DonationAssignment de: operatingSystem.getDonationAssignmentList()){
+        Map<String, Integer> hashMap = new HashMap();
+        for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
             try{
-            String key = de.getRecEnterprise().getEnterpriseName().toLowerCase();
+            String key = dasn.getRecEnterprise().getEnterpriseName().toLowerCase();
             
-            hm.put(key,  hm.containsKey(key)? 1+hm.get(key):1);
+            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
             }
             catch (Exception e){
                 //e.printStackTrace();
             }
            
         }
-        for(String k:hm.keySet()){
-            System.out.println("key: "+k+": "+hm.get(k));
-            dc.addValue(hm.get(k), "", k);
+        for(String k:hashMap.keySet()){
+            System.out.println("key: "+k+": "+hashMap.get(k));
+            defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
         JFreeChart chart = ChartFactory.createBarChart("", "Receiver Ent.",
-            "Range", dc, PlotOrientation.VERTICAL, false, false, false);
+            "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
             public Dimension getPreferredSize() {
@@ -189,19 +189,19 @@ public class Graphs extends javax.swing.JPanel {
         };
     }
     
-    private ChartPanel createStatusChartPanel() {
+    private ChartPanel chartPanelStatusPanel() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
             series.add(i, random.nextGaussian());
         }
  
-        Map<String, Integer> hm = new HashMap();
+        Map<String, Integer> hashMap = new HashMap();
         
-        for(DonationAssignment de: operatingSystem.getDonationAssignmentList()){
+        for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
             try{
-            String key = de.getDonationStatus().toLowerCase();
+            String key = dasn.getDonationStatus().toLowerCase();
             
-            hm.put(key,  hm.containsKey(key)? 1+hm.get(key):1);
+            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
             }
             catch (Exception e){
                // e.printStackTrace();
@@ -210,9 +210,9 @@ public class Graphs extends javax.swing.JPanel {
         }
         DefaultPieDataset ds = new DefaultPieDataset();
 //      dataset.setValue( "IPhone 5s" , new Double( 20 ) );  
-        for(String k:hm.keySet()){
-            System.out.println("key: "+k+": "+hm.get(k));
-            ds.setValue( k , Double.valueOf( hm.get(k) ) ); 
+        for(String k:hashMap.keySet()){
+            System.out.println("key: "+k+": "+hashMap.get(k));
+            ds.setValue( k , Double.valueOf( hashMap.get(k) ) ); 
         }
         
         JFreeChart chart = ChartFactory.createPieChart("Status", 
@@ -230,13 +230,12 @@ public class Graphs extends javax.swing.JPanel {
     
     private void display() {
         JFrame f = new JFrame("Test");
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel p = new JPanel(new GridLayout(1, 0));
-        p.add(createEntityNameChartPanel());
-        p.add(createEntityEnterpriseChartPanel());
-        p.add(createEntityBloodChartPanel());
-        p.add(createEntityRecChartPanel());
-        p.add(createStatusChartPanel());
+        p.add(chartPanelNameEntity());
+        p.add(chartPanelEnterpriseEntity());
+        p.add(chartPanelBloodEntity());
+        p.add(chartPanelReceiverEntityChartPanel());
+        p.add(chartPanelStatusPanel());
         f.add(p);
         f.pack();
         f.setLocationRelativeTo(null);
