@@ -4,6 +4,15 @@
  */
 package finalprojectUserInterface.Administration;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.DonorBank.DonorBank;
+import finalprojectBackend.Enterprise.DonorBank.DonorUser;
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +22,18 @@ public class ManageDonarBank extends javax.swing.JPanel {
     /**
      * Creates new form ManageDonarBank
      */
-    public ManageDonarBank() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public ManageDonarBank(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        populateDonorBankTable();
+        populateDonorTable();
     }
 
     /**
@@ -149,8 +168,8 @@ public class ManageDonarBank extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" donorbank uname: " + doctorUName);
-        ecoSystem.deleteDonorBank(doctorUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteDonorBank(doctorUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateDonorBankTable();
         populateDonorTable();
     }//GEN-LAST:event_deletebtnActionPerformed
@@ -166,12 +185,43 @@ public class ManageDonarBank extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb2.getModel();
         String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" donor uname: " + doctorUName);
-        ecoSystem.deleteDonor(doctorUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteDonor(doctorUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateDonorBankTable();
         populateDonorTable();
     }//GEN-LAST:event_deletebtn2ActionPerformed
 
+    private void populateDonorTable() {
+        DefaultTableModel model = (DefaultTableModel) tb2.getModel();
+        model.setRowCount(0);
+
+        for (DonorUser d : operatingSystem.getDonorUserDirectory()) {
+
+            Object[] row = new Object[5];
+            row[0] = d.getUserName();
+            row[1] = d.getPersonName();
+            row[2]= d.getDonorBankName();
+            model.addRow(row);
+
+        }
+
+    }
+    
+    private void populateDonorBankTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+
+        for (DonorBank d : operatingSystem.getDonorBankDirectory()) {
+
+            Object[] row = new Object[5];
+            row[0] = d.getUserName();
+            row[1] = d.getRegNumber();
+            row[2] = d.getEnterpriseName();
+            model.addRow(row);
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Donardetails_lbl;

@@ -4,6 +4,16 @@
  */
 package finalprojectUserInterface.Administration;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Enterprise.Logistics.Vehicle;
+
+import finalprojectUserInterface.MainJFrameForm;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +23,18 @@ public class ManageLogistics extends javax.swing.JPanel {
     /**
      * Creates new form ManageLogistics
      */
-    public ManageLogistics() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public ManageLogistics(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+        populateHandlerTable();
+        populateVehicleTable();
     }
 
     /**
@@ -150,8 +170,8 @@ public class ManageLogistics extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" handler uname: " + doctorUName);
-        ecoSystem.deleteHandler(doctorUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteHandler(doctorUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateHandlerTable();
     }//GEN-LAST:event_deleteBtnActionPerformed
 
@@ -166,11 +186,44 @@ public class ManageLogistics extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tb2.getModel();
         String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" vehicle uname: " + doctorUName);
-        ecoSystem.deleteVehicle(doctorUName);
-        dB4OUtil.storeSystem(ecoSystem);
+        operatingSystem.deleteVehicle(doctorUName);
+        dB4OUtility.storeSystem(operatingSystem);
         populateVehicleTable();
     }//GEN-LAST:event_deletebtn2ActionPerformed
 
+    private void populateHandlerTable() {
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+        model.setRowCount(0);
+
+        for (Handler d : operatingSystem.getHandlerDirectory()) {
+
+            Object[] row = new Object[5];
+            row[0] = d.getUserName();
+            row[1] = d.getPersonName();
+            row[2] = d.getPhoneNumber();
+            row[3] = d.getUserId();
+            model.addRow(row);
+
+        }
+
+    }
+
+    private void populateVehicleTable() {
+        DefaultTableModel model = (DefaultTableModel) tb2.getModel();
+        model.setRowCount(0);
+
+        for (Vehicle d : operatingSystem.getVehicleDirectory()) {
+
+            Object[] row = new Object[5];
+            row[0] = d.getVehiclenum();
+            row[1] = d.getVehiclename();
+            row[2] = d.getVehicletype();
+            row[3] = d.getVehicaldescription();
+            model.addRow(row);
+
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton deleteBtn;

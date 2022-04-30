@@ -4,6 +4,12 @@
  */
 package finalprojectUserInterface.Administration;
 
+import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.OperatingSystem.OperatingSystem;
+import finalprojectUserInterface.MainJFrameForm;
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author supriyaa
@@ -13,8 +19,17 @@ public class AdminMainPage extends javax.swing.JPanel {
     /**
      * Creates new form AdminMainPage
      */
-    public AdminMainPage() {
+    MainJFrameForm MainLPage;
+    //FirebaseHelper firebaseHelper;
+    private OperatingSystem operatingSystem;
+    private DB4OUtility dB4OUtility;
+
+    public AdminMainPage(MainJFrameForm mainScreen, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
+        this.MainLPage = MainLPage;
+        this.dB4OUtility = dB4OUtility;
+        this.operatingSystem = operatingSystem;
+
     }
 
     /**
@@ -82,11 +97,11 @@ public class AdminMainPage extends javax.swing.JPanel {
     private void LoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginbtnActionPerformed
         // TODO add your handling code here:
         if (usernametxt.getText().toString().equals("Admin") && Passtxt.getText().toString().equals("Admin")) {
-            AdministrationSplitPage ap = new AdministrationSplitPage(mainScreen, dB4OUtil, ecoSystem);
+            AdminSplitPage ap = new AdminSplitPage(MainLPage, dB4OUtility, operatingSystem);
 
-            mainScreen.setContentPane(ap);
-            mainScreen.invalidate();
-            mainScreen.validate();
+            MainLPage.setContentPane(ap);
+            MainLPage.invalidate();
+            MainLPage.validate();
             return;
         } else {
             JOptionPane.showMessageDialog(this, "Incorrect credential");
