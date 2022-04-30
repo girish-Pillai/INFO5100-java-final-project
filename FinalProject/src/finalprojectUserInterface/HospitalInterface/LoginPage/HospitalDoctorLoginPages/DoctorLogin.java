@@ -90,7 +90,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, 220));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 10, 990, 220));
 
         btnAddDiag.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnAddDiag.setText("Add Diagnosis");
@@ -99,14 +99,14 @@ public class DoctorLogin extends javax.swing.JPanel {
                 btnAddDiagActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAddDiag, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, 40));
+        jPanel2.add(btnAddDiag, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, 50));
 
         txtAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAddActionPerformed(evt);
             }
         });
-        jPanel2.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 266, 274, 30));
+        jPanel2.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 274, 30));
 
         BtnLogout.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         BtnLogout.setText("Logout");
@@ -115,7 +115,7 @@ public class DoctorLogin extends javax.swing.JPanel {
                 BtnLogoutActionPerformed(evt);
             }
         });
-        jPanel2.add(BtnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, -1, 40));
+        jPanel2.add(BtnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 170, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1227122387.jpg"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, 1500, 1050));
