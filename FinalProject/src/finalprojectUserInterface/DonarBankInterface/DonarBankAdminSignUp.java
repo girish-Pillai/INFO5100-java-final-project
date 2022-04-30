@@ -324,8 +324,9 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        DonorBank donbank = new DonorBank(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+        DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
         operatingSystem.addDonorBank(donbank);
+        System.out.println("Adding Donor Admin User: " + txtUsrName.getText());
         dB4OUtility.storeSystem(operatingSystem);
         MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();

@@ -142,7 +142,7 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
 
     private void Login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_btnActionPerformed
         // TODO add your handling code here:
-
+        
         if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
             DonorBank donbank = (DonorBank) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(donbank == null){
