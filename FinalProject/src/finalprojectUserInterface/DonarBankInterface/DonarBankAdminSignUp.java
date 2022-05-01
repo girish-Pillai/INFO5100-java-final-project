@@ -247,6 +247,7 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
                     ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
                     suc.setVisible(true);
                 }
+                else
                 {
                     JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
                     validationCheck=true;
