@@ -20,8 +20,8 @@ import finalprojectBackend.Enterprise.Hospital.Hospital;
 import finalprojectBackend.Enterprise.Hospital.Doc;
 import finalprojectBackend.Enterprise.Hospital.Patient;
 import finalprojectBackend.Enterprise.Lab.Technician;
-import finalprojectBackend.Enterprise.Logistics.Handler;
-import finalprojectBackend.Enterprise.Logistics.Vehicle;
+import finalprojectBackend.Enterprise.SupplyChain.Handler;
+import finalprojectBackend.Enterprise.SupplyChain.Vehicle;
 import finalprojectBackend.Organization.DonationAssignment;
 import finalprojectUserInterface.MainJFrameForm;
 

@@ -9,8 +9,8 @@ import javax.swing.table.DefaultTableModel;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
-import finalprojectBackend.Enterprise.Logistics.Handler;
-import finalprojectBackend.Enterprise.Logistics.Vehicle;
+import finalprojectBackend.Enterprise.SupplyChain.Handler;
+import finalprojectBackend.Enterprise.SupplyChain.Vehicle;
 
 import finalprojectUserInterface.MainJFrameForm;
 

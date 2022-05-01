@@ -8,7 +8,7 @@ import finalprojectBackend.Enterprise.Hospital.Doc;
 import finalprojectBackend.Enterprise.Hospital.Nurse;
 import finalprojectBackend.Enterprise.Hospital.Patient;
 import finalprojectBackend.Enterprise.Lab.Technician;
-import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Enterprise.SupplyChain.Handler;
 /**
  *
  * @author prasa
