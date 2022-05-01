@@ -238,7 +238,7 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
             {
                 if(RegexValidation())
                 {
-                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+                    String address = txtAdd.getText() + "," + txtCity.getText() + "," + txtState.getText() + "," + txtZip.getText();
                     DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
                     operatingSystem.addDonorBank(donbank);
                     System.out.println("Adding Donor Admin User: " + txtUsrName.getText());

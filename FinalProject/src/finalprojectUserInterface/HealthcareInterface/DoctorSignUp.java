@@ -202,7 +202,7 @@ public class DoctorSignUp extends javax.swing.JPanel {
             {
                 if(RegexValidation())
                 {
-                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+                    String address = txtAdd.getText() + "," + txtCity.getText() + "," + txtState.getText() + "," + txtZip.getText();
 
 
                     Doc doctor = new Doc(txtUsrName.getText(), txtPass.getText(), txtUsrName.getText(), txtFullName.getText(), address, "male", String.valueOf(docnumber), new Date(),txt_spc.getText(),hospitalList.getSelectedItem().toString());

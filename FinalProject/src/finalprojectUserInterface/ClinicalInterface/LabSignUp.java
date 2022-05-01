@@ -87,11 +87,6 @@ public class LabSignUp extends javax.swing.JPanel {
         namelbl.setForeground(new java.awt.Color(0, 0, 0));
         namelbl.setText("Name:");
 
-        fullname_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fullname_txtActionPerformed(evt);
-            }
-        });
         fullname_txt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 fullname_txtKeyReleased(evt);
@@ -102,31 +97,14 @@ public class LabSignUp extends javax.swing.JPanel {
         unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
 
-        usrnametxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usrnametxtActionPerformed(evt);
-            }
-        });
-
         paswdlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         paswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         paswdlbl.setText("Password:");
-
-        passtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passtxtActionPerformed(evt);
-            }
-        });
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
 
-        addresstxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addresstxtActionPerformed(evt);
-            }
-        });
         addresstxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 addresstxtKeyReleased(evt);
@@ -386,25 +364,9 @@ public class LabSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fullname_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fullname_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fullname_txtActionPerformed
-
     private void fullname_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fullname_txtKeyReleased
         
     }//GEN-LAST:event_fullname_txtKeyReleased
-
-    private void usrnametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrnametxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usrnametxtActionPerformed
-
-    private void passtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passtxtActionPerformed
-
-    private void addresstxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addresstxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addresstxtActionPerformed
 
     private void addresstxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addresstxtKeyReleased
         // TODO add your handling code here:

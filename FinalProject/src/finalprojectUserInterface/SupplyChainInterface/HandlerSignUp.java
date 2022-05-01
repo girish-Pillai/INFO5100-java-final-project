@@ -232,7 +232,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
             {
                 if(RegexValidation())
                 {
-                    String address = Add_txt.getText() + txtCity.getText() + Statetxt.getText() + Ziptxt.getText();
+                    String address = Add_txt.getText() + "," + txtCity.getText() + "," + Statetxt.getText() + "," + Ziptxt.getText();
                     int id = rand.nextInt(99);
                     
 

@@ -294,7 +294,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         });
         jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 58, 51));
 
-        gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/image201.gif"))); // NOI18N
+        gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/organ_transplant.jpg"))); // NOI18N
         jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 800, -1));
 
         MainPageSplit.setRightComponent(jPanel3);
