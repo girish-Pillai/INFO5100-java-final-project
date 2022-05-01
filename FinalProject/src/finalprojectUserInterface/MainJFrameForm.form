@@ -407,7 +407,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="270" y="50" width="530" height="58"/>
+                  <AbsoluteConstraints x="560" y="50" width="530" height="58"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -422,19 +422,19 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="1050" y="10" width="58" height="51"/>
+                  <AbsoluteConstraints x="1340" y="40" width="58" height="51"/>
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="gifLbl">
+            <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Backgrounds/organ_transplant.jpg"/>
+                  <Image iconType="3" name="/Backgrounds/healthcare_politico.gif"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="160" y="150" width="800" height="-1"/>
+                  <AbsoluteConstraints x="170" y="133" width="1160" height="780"/>
                 </Constraint>
               </Constraints>
             </Component>
