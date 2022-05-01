@@ -14,6 +14,7 @@ import finalprojectBackend.Enterprise.Hospital.Hospital;
 import finalprojectBackend.Enterprise.Hospital.Nurse;
 import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
@@ -26,6 +27,7 @@ public class NurseSignUp extends javax.swing.JPanel {
     /**
      * Creates new form NurseSignUp
      */
+    Random rand = new Random();
     
     boolean emptyValidationStatus = true;
     boolean validationCheck = true;
@@ -219,8 +221,9 @@ public class NurseSignUp extends javax.swing.JPanel {
                 if(RegexValidation())
                 {
                     String address = txtAdd.getText() + "," + txtCity.getText() + "," + txtState.getText() + "," + txtZip.getText();
+                    int id = rand.nextInt(99);
                     //Nurse nurse = new Nurse(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText(), txtGender.getText(), txtDOB.getText(), new Date(),jComboBox1.getSelectedItem().toString());
-                    Nurse nurse = new Nurse(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, txtGender.getText(), txtNo.getText(), new Date(), jComboBox1.getSelectedItem().toString());
+                    Nurse nurse = new Nurse(txtUsrName.getText(), txtPass.getText(), String.valueOf(id), txtFullName.getText(), address, txtGender.getText(), txtNo.getText(), new Date(), jComboBox1.getSelectedItem().toString());
 
                     operatingSystem.addNurse(nurse);
                     dB4OUtility.storeSystem(operatingSystem);
