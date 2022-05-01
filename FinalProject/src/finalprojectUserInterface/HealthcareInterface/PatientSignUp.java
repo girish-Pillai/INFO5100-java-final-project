@@ -14,8 +14,10 @@ import finalprojectBackend.Enterprise.Hospital.Hospital;
 import finalprojectBackend.Enterprise.Hospital.Patient;
 import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -27,6 +29,9 @@ public class PatientSignUp extends javax.swing.JPanel {
      * Creates new form PatientSignUp
      */
     
+    Random rand = new Random();
+
+      
     boolean emptyValidationStatus = true;
     boolean validationCheck = true;
     
@@ -230,7 +235,8 @@ public class PatientSignUp extends javax.swing.JPanel {
                     String address = txtAdd.getText() + ", " + txtCity.getText() + ", " + txtState.getText() + ", " + txtZip.getText();
                     //uname, pswd, id, name, add, gender, telenum, dob diag
                     //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-                    Patient patient = new Patient(txtUsrName.getText(), txtPass.getText(), "idid", txtEnterpriseName.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(),new Date() , txt_diag.getText(),hospitalList.getSelectedItem().toString());
+                    int id = rand.nextInt(99);
+                    Patient patient = new Patient(txtUsrName.getText(), txtPass.getText(), String.valueOf(id), txtEnterpriseName.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(),new Date() , txt_diag.getText(),hospitalList.getSelectedItem().toString());
                     System.out.println("Patient added");
 
                     operatingSystem.addPatient(patient);

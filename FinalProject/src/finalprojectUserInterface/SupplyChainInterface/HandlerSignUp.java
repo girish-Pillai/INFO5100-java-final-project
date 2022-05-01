@@ -14,6 +14,7 @@ import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
 
 import java.util.Date;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -28,6 +29,9 @@ public class HandlerSignUp extends javax.swing.JPanel {
     /**
      * Creates new form HandlerSignUp
      */
+    
+    Random rand = new Random();
+    
     
     boolean emptyValidationStatus = true;
     boolean validationCheck = true;
@@ -229,8 +233,10 @@ public class HandlerSignUp extends javax.swing.JPanel {
                 if(RegexValidation())
                 {
                     String address = Add_txt.getText() + txtCity.getText() + Statetxt.getText() + Ziptxt.getText();
+                    int id = rand.nextInt(99);
+                    
 
-                    Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), "idid", FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),operatingSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
+                    Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), String.valueOf(id), FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),operatingSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
                     System.out.println("handler " + handler.getVehicle().getVehiclename());
                     operatingSystem.addHandler(handler);
                     dB4OUtility.storeSystem(operatingSystem);

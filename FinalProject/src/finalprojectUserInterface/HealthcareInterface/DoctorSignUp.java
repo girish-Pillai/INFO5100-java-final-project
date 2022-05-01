@@ -14,6 +14,7 @@ import finalprojectBackend.Enterprise.Hospital.Hospital;
 import finalprojectBackend.Enterprise.Hospital.Doc;
 import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
@@ -26,6 +27,9 @@ public class DoctorSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DoctorSignUp
      */
+    
+    Random rand = new Random();
+    long docnumber = rand.nextInt(900000000) + 100000000;
     
     boolean emptyValidationStatus = true;
     boolean validationCheck = true;
@@ -201,7 +205,7 @@ public class DoctorSignUp extends javax.swing.JPanel {
                     String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
 
 
-                    Doc doctor = new Doc(txtUsrName.getText(), txtPass.getText(), txtUsrName.getText(), txtFullName.getText(), address, "male", "9762974948", new Date(),txt_spc.getText(),hospitalList.getSelectedItem().toString());
+                    Doc doctor = new Doc(txtUsrName.getText(), txtPass.getText(), txtUsrName.getText(), txtFullName.getText(), address, "male", String.valueOf(docnumber), new Date(),txt_spc.getText(),hospitalList.getSelectedItem().toString());
 
                     operatingSystem.addDoctor(doctor);
                     dB4OUtility.storeSystem(operatingSystem);
