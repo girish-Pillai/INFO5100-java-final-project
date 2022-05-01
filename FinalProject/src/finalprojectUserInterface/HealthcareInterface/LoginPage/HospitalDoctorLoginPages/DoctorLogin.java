@@ -108,6 +108,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         });
         jPanel2.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 274, 30));
 
+        BtnLogout.setBackground(new java.awt.Color(255, 204, 204));
         BtnLogout.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         BtnLogout.setText("Logout");
         BtnLogout.addActionListener(new java.awt.event.ActionListener() {

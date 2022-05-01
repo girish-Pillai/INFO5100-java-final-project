@@ -76,6 +76,7 @@ public class HandlerLogin extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 871, 270));
 
+        LogoutBtn.setBackground(new java.awt.Color(255, 204, 204));
         LogoutBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         LogoutBtn.setText("Logout");
         LogoutBtn.addActionListener(new java.awt.event.ActionListener() {

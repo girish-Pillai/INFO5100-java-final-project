@@ -68,6 +68,7 @@ public class AdminMainPage extends javax.swing.JPanel {
         jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 197, 30));
 
+        Loginbtn.setBackground(new java.awt.Color(255, 255, 102));
         Loginbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Loginbtn.setText("Login");
         Loginbtn.addActionListener(new java.awt.event.ActionListener() {

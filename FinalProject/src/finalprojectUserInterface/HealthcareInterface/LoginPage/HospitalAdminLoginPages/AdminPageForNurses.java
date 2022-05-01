@@ -73,6 +73,7 @@ public class AdminPageForNurses extends javax.swing.JPanel {
         NurseTitle.setText("Manage Nurse");
         jPanel1.add(NurseTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
 
+        deletebtn.setBackground(new java.awt.Color(255, 204, 204));
         deletebtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deletebtn.setText("Delete");
         deletebtn.addActionListener(new java.awt.event.ActionListener() {

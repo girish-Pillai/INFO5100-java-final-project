@@ -126,6 +126,7 @@ public class AdminLogin extends javax.swing.JPanel {
         });
         jPanel2.add(TransplantBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 121, -1));
 
+        LogOutBtn.setBackground(new java.awt.Color(255, 204, 204));
         LogOutBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         LogOutBtn.setText("Logout");
         LogOutBtn.addActionListener(new java.awt.event.ActionListener() {

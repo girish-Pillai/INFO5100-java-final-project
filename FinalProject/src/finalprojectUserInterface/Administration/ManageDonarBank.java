@@ -57,8 +57,6 @@ public class ManageDonarBank extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 255));
 
-        tb1.setBackground(new java.awt.Color(255, 255, 255));
-        tb1.setForeground(new java.awt.Color(0, 0, 0));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -72,8 +70,6 @@ public class ManageDonarBank extends javax.swing.JPanel {
         ));
         jScrollPanebBankdetails.setViewportView(tb1);
 
-        tb2.setBackground(new java.awt.Color(255, 255, 255));
-        tb2.setForeground(new java.awt.Color(0, 0, 0));
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -87,6 +83,7 @@ public class ManageDonarBank extends javax.swing.JPanel {
         ));
         jScrollPaneDonarDetails.setViewportView(tb2);
 
+        deletebtn.setBackground(new java.awt.Color(255, 204, 204));
         deletebtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deletebtn.setText("Delete");
         deletebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -95,6 +92,7 @@ public class ManageDonarBank extends javax.swing.JPanel {
             }
         });
 
+        deletebtn2.setBackground(new java.awt.Color(255, 204, 204));
         deletebtn2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deletebtn2.setText("Delete");
         deletebtn2.addActionListener(new java.awt.event.ActionListener() {
@@ -104,11 +102,9 @@ public class ManageDonarBank extends javax.swing.JPanel {
         });
 
         bankdetails_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        bankdetails_lbl.setForeground(new java.awt.Color(0, 0, 0));
         bankdetails_lbl.setText("Donor Bank Details");
 
         Donardetails_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        Donardetails_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Donardetails_lbl.setText("Donor Details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

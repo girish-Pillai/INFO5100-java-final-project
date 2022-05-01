@@ -72,6 +72,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
         jLabel1.setText("Manage Doctor");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 22, -1, -1));
 
+        btDelete.setBackground(new java.awt.Color(255, 204, 204));
         btDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btDelete.setText("Delete");
         btDelete.addActionListener(new java.awt.event.ActionListener() {
