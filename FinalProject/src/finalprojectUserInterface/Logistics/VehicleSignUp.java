@@ -239,6 +239,116 @@ public class VehicleSignUp extends javax.swing.JPanel {
     {
         TypeVehtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
     }
+    
+    // if(addresstxt.getText().equals(null) || addresstxt.getText().trim().isEmpty() )
+    //         {
+    //             addresstxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //             addresstxt.setToolTipText("This Field Cannot be empty");
+    //             emptyValidationStatus= false;
+    //         }
+    //         if(!addresstxt.getText().equals(null) && !addresstxt.getText().trim().isEmpty() )
+    //         {
+    //             addresstxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(citytxt.getText().equals(null) || citytxt.getText().trim().isEmpty() )
+    //         {
+    //             citytxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //             citytxt.setToolTipText("This Field Cannot be empty");
+    //             emptyValidationStatus= false;
+    //         }
+    //         if(!citytxt.getText().equals(null) && !citytxt.getText().trim().isEmpty() )
+    //         {
+    //             citytxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(fullname_txt.getText().equals(null) || fullname_txt.getText().trim().isEmpty() )
+    //         {
+    //             fullname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //             fullname_txt.setToolTipText("This Field Cannot be empty");
+    //             emptyValidationStatus= false;
+    //         }
+    //         if(!fullname_txt.getText().equals(null) && !fullname_txt.getText().trim().isEmpty() )
+    //         {
+    //             fullname_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(passtxt.getText().equals(null) || passtxt.getText().trim().isEmpty() )
+    //         {
+    //             passtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //             passtxt.setToolTipText("This Field Cannot be empty");
+    //             emptyValidationStatus= false;
+    //         }
+    //         if(!passtxt.getText().equals(null) && !passtxt.getText().trim().isEmpty() )
+    //         {
+    //             passtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(state_txt.getText().equals(null) || state_txt.getText().trim().isEmpty() )
+    //         {
+    //             state_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //             state_txt.setToolTipText("This Field Cannot be empty");
+    //             emptyValidationStatus= false;
+    //         }
+    //         if(!state_txt.getText().equals(null) && !state_txt.getText().trim().isEmpty() )
+    //         {
+    //             state_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(usrnametxt.getText().equals(null) || usrnametxt.getText().trim().isEmpty() )
+    //             {
+    //                 usrnametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //                 usrnametxt.setToolTipText("This Field Cannot be empty");
+    //                 emptyValidationStatus= false;
+    //             }
+    //         if(!usrnametxt.getText().equals(null) && !usrnametxt.getText().trim().isEmpty() )
+    //         {
+    //             usrnametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(lblzip.getText().equals(null) || lblzip.getText().trim().isEmpty() )
+    //             {
+    //                 lblzip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //                 lblzip.setToolTipText("This Field Cannot be empty");
+    //                 emptyValidationStatus= false;
+    //             }
+    //         if(!lblzip.getText().equals(null) && !lblzip.getText().trim().isEmpty() )
+    //         {
+    //             lblzip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(labname_txt.getText().equals(null) || labname_txt.getText().trim().isEmpty() )
+    //             {
+    //                 labname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //                 labname_txt.setToolTipText("This Field Cannot be empty");
+    //                 emptyValidationStatus= false;
+    //             }
+    //         if(!labname_txt.getText().equals(null) && !labname_txt.getText().trim().isEmpty() )
+    //         {
+    //             labname_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(telenum_txt.getText().equals(null) || telenum_txt.getText().trim().isEmpty() )
+    //             {
+    //                 telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //                 telenum_txt.setToolTipText("This Field Cannot be empty");
+    //                 emptyValidationStatus= false;
+    //             }
+    //         if(!telenum_txt.getText().equals(null) && !telenum_txt.getText().trim().isEmpty() )
+    //         {
+    //             telenum_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
+
+    //         if(dob_txt.getText().equals(null) || dob_txt.getText().trim().isEmpty() )
+    //             {
+    //                 dob_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+    //                 dob_txt.setToolTipText("This Field Cannot be empty");
+    //                 emptyValidationStatus= false;
+    //             }
+    //         if(!dob_txt.getText().equals(null) && !dob_txt.getText().trim().isEmpty() )
+    //         {
+    //             dob_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    //         }
 
     if(Desctxt.getText().equals(null) || Desctxt.getText().trim().isEmpty() )
     {
