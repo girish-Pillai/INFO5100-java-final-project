@@ -8,7 +8,10 @@ import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.DonorBank.DonorBank;
 import finalprojectUserInterface.MainJFrameForm;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -20,6 +23,9 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankAdminSignUp
      */
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
@@ -72,51 +78,17 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
 
-        txtFullName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFullNameActionPerformed(evt);
-            }
-        });
-        txtFullName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtFullNameKeyReleased(evt);
-            }
-        });
-
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
-
-        txtUsrName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsrNameActionPerformed(evt);
-            }
-        });
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
 
-        txtPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPassActionPerformed(evt);
-            }
-        });
-
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
-
-        txtAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddActionPerformed(evt);
-            }
-        });
-        txtAdd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtAddKeyReleased(evt);
-            }
-        });
 
         btn_signup.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btn_signup.setText("Sign Up");
@@ -138,61 +110,17 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         lbl_registeryNum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_registeryNum.setText("Registered No.:");
 
-        txtNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNoActionPerformed(evt);
-            }
-        });
-        txtNo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNoKeyReleased(evt);
-            }
-        });
-
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
-
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
-            }
-        });
-        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCityKeyReleased(evt);
-            }
-        });
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
 
-        txtState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStateActionPerformed(evt);
-            }
-        });
-        txtState.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtStateKeyReleased(evt);
-            }
-        });
-
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
-
-        txtZip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtZipActionPerformed(evt);
-            }
-        });
-        txtZip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtZipKeyReleased(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -303,38 +231,37 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
-    }//GEN-LAST:event_txtFullNameActionPerformed
-
-    private void txtFullNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFullNameKeyReleased
-
-    }//GEN-LAST:event_txtFullNameKeyReleased
-
-    private void txtUsrNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsrNameActionPerformed
-    }//GEN-LAST:event_txtUsrNameActionPerformed
-
-    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-
-    }//GEN-LAST:event_txtPassActionPerformed
-
-    private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
-
-    }//GEN-LAST:event_txtAddActionPerformed
-
-    private void txtAddKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddKeyReleased
-
-    }//GEN-LAST:event_txtAddKeyReleased
-
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
-        operatingSystem.addDonorBank(donbank);
-        System.out.println("Adding Donor Admin User: " + txtUsrName.getText());
-        dB4OUtility.storeSystem(operatingSystem);
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+                    DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
+                    operatingSystem.addDonorBank(donbank);
+                    System.out.println("Adding Donor Admin User: " + txtUsrName.getText());
+                    dB4OUtility.storeSystem(operatingSystem);
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Donor Admin not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        
     }//GEN-LAST:event_btn_signupActionPerformed
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
@@ -344,30 +271,144 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         suc.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
 
-    private void txtNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoActionPerformed
-    }//GEN-LAST:event_txtNoActionPerformed
+    private boolean RegexValidation() {
+    if(!txtFullName.getText().matches("^[a-zA-Z ]+$"))
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtFullName.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!txtNo.getText().matches("^[0-9]{10}$"))
+        {
+            txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtNo.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
 
-    private void txtNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNoKeyReleased
-    }//GEN-LAST:event_txtNoKeyReleased
 
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-    }//GEN-LAST:event_txtCityActionPerformed
+        if(!txtZip.getText().matches("^[0-9]{5}$"))
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtZip.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
 
-    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
-    }//GEN-LAST:event_txtCityKeyReleased
+        // if(!txt_spc.getText().matches("^[0-9]{5}$"))
+        // {
+        //     txt_spc.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //     txt_spc.setToolTipText("Please enter a 5 digit number");
+        //     validationCheck=false;
+        // }
 
-    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
-    }//GEN-LAST:event_txtStateActionPerformed
+        return validationCheck;
 
-    private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
-    }//GEN-LAST:event_txtStateKeyReleased
 
-    private void txtZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipActionPerformed
-    }//GEN-LAST:event_txtZipActionPerformed
+    }   
 
-    private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-    }//GEN-LAST:event_txtZipKeyReleased
 
+    private boolean EmpytyFieldValidation() {
+        if(txtAdd.getText().equals(null) || txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtAdd.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtAdd.getText().equals(null) && !txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtCity.getText().equals(null) || txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtCity.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtCity.getText().equals(null) && !txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtFullName.getText().equals(null) || txtFullName.getText().trim().isEmpty() )
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtFullName.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtFullName.getText().equals(null) && !txtFullName.getText().trim().isEmpty() )
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtPass.getText().equals(null) || txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtPass.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtPass.getText().equals(null) && !txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtState.getText().equals(null) || txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtState.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtState.getText().equals(null) && !txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtUsrName.getText().equals(null) || txtUsrName.getText().trim().isEmpty() )
+            {
+                txtUsrName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtUsrName.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtUsrName.getText().equals(null) && !txtUsrName.getText().trim().isEmpty() )
+        {
+            txtUsrName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtZip.getText().equals(null) || txtZip.getText().trim().isEmpty() )
+            {
+                txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtZip.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtZip.getText().equals(null) && !txtZip.getText().trim().isEmpty() )
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        // if(txt_spc.getText().equals(null) || txt_spc.getText().trim().isEmpty() )
+        //     {
+        //         txt_spc.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         txt_spc.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!txt_spc.getText().equals(null) && !txt_spc.getText().trim().isEmpty() )
+        // {
+        //     txt_spc.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+
+        // if(txtNo.getText().equals(null) || txtNo.getText().trim().isEmpty() )
+        //     {
+        //         txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         txtNo.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!txtNo.getText().equals(null) && !txtNo.getText().trim().isEmpty() )
+        // {
+        //     txtNo.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+        
+        return emptyValidationStatus;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;

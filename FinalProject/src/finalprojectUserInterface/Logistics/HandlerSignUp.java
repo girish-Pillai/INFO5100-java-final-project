@@ -6,16 +6,17 @@ package finalprojectUserInterface.Logistics;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
-import finalprojectBackend.Enterprise.Logistics.Handler;
-import finalprojectBackend.Organization.DonationAssignment;
 
 import finalprojectBackend.Enterprise.Logistics.Handler;
 import finalprojectBackend.Enterprise.Logistics.Vehicle;
 
 import finalprojectUserInterface.MainJFrameForm;
+import java.awt.Color;
 
 import java.util.Date;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -27,6 +28,10 @@ public class HandlerSignUp extends javax.swing.JPanel {
     /**
      * Creates new form HandlerSignUp
      */
+    
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
@@ -88,39 +93,52 @@ public class HandlerSignUp extends javax.swing.JPanel {
         admintitle.setText("Create Handler Profile");
         jPanel1.add(admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
 
-        Namelbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Namelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Namelbl.setForeground(new java.awt.Color(0, 0, 0));
         Namelbl.setText("Name:");
         jPanel1.add(Namelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, 20));
 
-        unamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        unamelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
-        jPanel1.add(unamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, -1, -1));
+        jPanel1.add(unamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
         jPanel1.add(FullNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 216, -1));
         jPanel1.add(UsrNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 216, -1));
 
-        pswdlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pswdlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         pswdlbl.setText("Password:");
-        jPanel1.add(pswdlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
+        jPanel1.add(pswdlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 216, -1));
 
-        addresslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addresslbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
-        jPanel1.add(addresslbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, -1));
+        jPanel1.add(addresslbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, -1));
         jPanel1.add(Add_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 216, -1));
 
-        City_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        City_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        City_lbl.setForeground(new java.awt.Color(0, 0, 0));
         City_lbl.setText("City:");
-        jPanel1.add(City_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, -1, -1));
+        jPanel1.add(City_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 216, -1));
 
-        State_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        State_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        State_lbl.setForeground(new java.awt.Color(0, 0, 0));
         State_lbl.setText("State:");
-        jPanel1.add(State_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, -1, -1));
+        jPanel1.add(State_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, -1, -1));
 
-        Zip_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Zip_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Zip_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Zip_lbl.setText("Zip Code:");
-        jPanel1.add(Zip_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, -1, -1));
-        jPanel1.add(Statetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 216, -1));
+        jPanel1.add(Zip_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, -1, -1));
+
+        Statetxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatetxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Statetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 216, -1));
         jPanel1.add(Ziptxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 215, -1));
 
         BackBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -132,9 +150,10 @@ public class HandlerSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 659, 87, 40));
 
-        Genderlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Genderlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         Genderlbl.setText("Gender:");
-        jPanel1.add(Genderlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, -1, -1));
+        jPanel1.add(Genderlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, -1, 20));
 
         signupBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         signupBtn.setText("Sign Up");
@@ -145,22 +164,25 @@ public class HandlerSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(signupBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 659, 87, 40));
 
-        telenum_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        telenum_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        telenum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         telenum_lbl.setText("Phone no.:");
-        jPanel1.add(telenum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
+        jPanel1.add(telenum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, -1, -1));
 
         genderCmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         genderCmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
-        jPanel1.add(genderCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 216, -1));
+        jPanel1.add(genderCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 216, -1));
 
-        dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        dob_lbl.setForeground(new java.awt.Color(0, 0, 0));
         dob_lbl.setText("Date of Birth:");
-        jPanel1.add(dob_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 560, -1, -1));
+        jPanel1.add(dob_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 550, -1, 30));
         jPanel1.add(telenum_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 216, -1));
 
-        vehnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        vehnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        vehnum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         vehnum_lbl.setText("Vehicle:");
-        jPanel1.add(vehnum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 604, -1, 20));
+        jPanel1.add(vehnum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, -1, 20));
         jPanel1.add(dob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 216, 27));
 
         vehicle_cmb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -200,41 +222,239 @@ public class HandlerSignUp extends javax.swing.JPanel {
 
     private void signupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBtnActionPerformed
         // TODO add your handling code here:
-        String address = Add_txt.getText() + txtCity.getText() + Statetxt.getText() + Ziptxt.getText();
-        //uname, pswd, id, name, add, gender, telenum, dob
-        //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+        
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = Add_txt.getText() + txtCity.getText() + Statetxt.getText() + Ziptxt.getText();
 
-        Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), "idid", FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),operatingSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
-        System.out.println("handler " + handler.getVehicle().getVehiclename());
-        operatingSystem.addHandler(handler);
-        dB4OUtility.storeSystem(operatingSystem);
+                    Handler handler = new Handler(UsrNametxt.getText(), Passtxt.getText(), "idid", FullNametxt.getText(), address,genderCmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),operatingSystem.getVehicleByNumber(vehicle_cmb.getSelectedItem().toString()));
+                    System.out.println("handler " + handler.getVehicle().getVehiclename());
+                    operatingSystem.addHandler(handler);
+                    dB4OUtility.storeSystem(operatingSystem);
 
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-            //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtility.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+        }
+        
+        /*
+            try {
+                if(EmpytyFieldValidation())
+                {
+                    if(RegexValidation())
+                    {
+                        String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
+                        //uname, pswd, id, name, add, gender, telenum, dob
+                        //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+
+                        Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
+
+                        operatingSystem.addTechnician(tech);
+                        dB4OUtility.storeSystem(operatingSystem);
+
+                        MainJFrameForm suc = new MainJFrameForm();
+                        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                        suc.setVisible(true);
+                    }
+                    else
+                    {
+                        JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                        validationCheck=true;
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                    emptyValidationStatus=true;
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+                emptyValidationStatus=true;
+            }
+            */
+        
     }//GEN-LAST:event_signupBtnActionPerformed
 
+    private void StatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatetxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StatetxtActionPerformed
+
+    private boolean RegexValidation() {
+    if(!FullNametxt.getText().matches("^[a-zA-Z ]+$"))
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            FullNametxt.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!telenum_txt.getText().matches("^[0-9]{10}$"))
+        {
+            telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            telenum_txt.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
+
+
+        if(!Ziptxt.getText().matches("^[0-9]{5}$"))
+        {
+            Ziptxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            Ziptxt.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
+
+        // if(!telenum_txt.getText().matches("^[0-9]{5}$"))
+        // {
+        //     telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //     telenum_txt.setToolTipText("Please enter a 5 digit number");
+        //     validationCheck=false;
+        // }
+
+        return validationCheck;
+
+
+    }   
+
+
+    private boolean EmpytyFieldValidation() {
+
+        if(FullNametxt.getText().equals(null) || FullNametxt.getText().trim().isEmpty() )
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            FullNametxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!FullNametxt.getText().equals(null) && !FullNametxt.getText().trim().isEmpty() )
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(Statetxt.getText().equals(null) || Statetxt.getText().trim().isEmpty() )
+        {
+            Statetxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            Statetxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!Statetxt.getText().equals(null) && !Statetxt.getText().trim().isEmpty() )
+        {
+            Statetxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(Passtxt.getText().equals(null) || Passtxt.getText().trim().isEmpty() )
+        {
+            Passtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            Passtxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!Passtxt.getText().equals(null) && !Passtxt.getText().trim().isEmpty() )
+        {
+            Passtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        
+        if(Add_txt.getText().equals(null) || Add_txt.getText().trim().isEmpty() )
+        {
+            Add_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            Add_txt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!Add_txt.getText().equals(null) && !Add_txt.getText().trim().isEmpty() )
+        {
+            Add_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtCity.getText().equals(null) || txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtCity.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtCity.getText().equals(null) && !txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(Statetxt.getText().equals(null) || Statetxt.getText().trim().isEmpty() )
+            {
+                Statetxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                Statetxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!Statetxt.getText().equals(null) && !Statetxt.getText().trim().isEmpty() )
+        {
+            Statetxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(Ziptxt.getText().equals(null) || Ziptxt.getText().trim().isEmpty() )
+            {
+                Ziptxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                Ziptxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!Ziptxt.getText().equals(null) && !Ziptxt.getText().trim().isEmpty() )
+        {
+            Ziptxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(telenum_txt.getText().equals(null) || telenum_txt.getText().trim().isEmpty() )
+            {
+                telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                telenum_txt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!telenum_txt.getText().equals(null) && !telenum_txt.getText().trim().isEmpty() )
+        {
+            telenum_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        // if(telenum_txt.getText().equals(null) || telenum_txt.getText().trim().isEmpty() )
+        //     {
+        //         telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         telenum_txt.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!telenum_txt.getText().equals(null) && !telenum_txt.getText().trim().isEmpty() )
+        // {
+        //     telenum_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+
+        if(dob_txt.getText().equals(null) || dob_txt.getText().trim().isEmpty() )
+            {
+                dob_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                dob_txt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!dob_txt.getText().equals(null) && !dob_txt.getText().trim().isEmpty() )
+        {
+            dob_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        if(UsrNametxt.getText().equals(null) || UsrNametxt.getText().trim().isEmpty() )
+            {
+                UsrNametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                UsrNametxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!UsrNametxt.getText().equals(null) && !UsrNametxt.getText().trim().isEmpty() )
+        {
+            UsrNametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        return emptyValidationStatus;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Add_txt;

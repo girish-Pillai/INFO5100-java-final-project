@@ -4,7 +4,6 @@
  */
 package finalprojectUserInterface.HospitalInterface;
 
-import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -13,7 +12,9 @@ import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.Hospital.Hospital;
 import finalprojectUserInterface.MainJFrameForm;
 
-import finalprojectUserInterface.HospitalInterface.LoginPage.*;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,6 +25,10 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
     /**
      * Creates new form HospitalAdminSignUp
      */
+    
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     //FirebaseHelper firebaseHelper;
     private OperatingSystem operatingSystem;
@@ -167,40 +172,52 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + ", " + txtCity.getText() + ", " + txtState.getText() + ", " + txtZip.getText();
-        Hospital hosp = new Hospital(address,  txtUsrName.getText(),txtPass.getText(), txtEnterpriseName.getText(), txtNo.getText());
-        System.out.println("Hospital"+hosp.getUserName());
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = txtAdd.getText() + ", " + txtCity.getText() + ", " + txtState.getText() + ", " + txtZip.getText();
+                    Hospital hosp = new Hospital(address,  txtUsrName.getText(),txtPass.getText(), txtEnterpriseName.getText(), txtNo.getText());
+                    System.out.println("Hospital"+hosp.getUserName());
 
-        operatingSystem.addHospital(hosp);
-        for(Hospital h: operatingSystem.getHospitalDirectory().getListOfHospitals()){
-            System.out.println("hosp: "+ h.getEnterpriseName());
+                    operatingSystem.addHospital(hosp);
+                    for(Hospital h: operatingSystem.getHospitalDirectory().getListOfHospitals()){
+                        System.out.println("hosp: "+ h.getEnterpriseName());
+                    }
+                    dB4OUtility.storeSystem(operatingSystem);
+
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                    //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
+                        //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
+                        //
+                        //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
+                        //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
+                        //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
+                        //
+                        //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
+                        //        }
+                }
+                else
+                    {
+                        JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                        validationCheck=true;
+                    }
+            }
+            else{
+                    JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                    emptyValidationStatus=true;
+                }
+        } catch (Exception e) {
+            
+             JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+             emptyValidationStatus=true;
         }
-        dB4OUtility.storeSystem(operatingSystem);
-
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtility.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
+        
+        
+       
     }//GEN-LAST:event_btn_signupActionPerformed
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
@@ -217,6 +234,149 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
         //cust.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
 
+    
+    
+    private boolean RegexValidation() {
+    if(!txtEnterpriseName.getText().matches("^[a-zA-Z ]+$"))
+        {
+            txtEnterpriseName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtEnterpriseName.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!txtNo.getText().matches("^[0-9]{10}$"))
+        {
+            txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtNo.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
+
+
+        if(!txtZip.getText().matches("^[0-9]{5}$"))
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtZip.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
+        return validationCheck;
+    }   
+
+
+    private boolean EmpytyFieldValidation() {
+        if(txtAdd.getText().equals(null) || txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtAdd.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtAdd.getText().equals(null) && !txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtCity.getText().equals(null) || txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtCity.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtCity.getText().equals(null) && !txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtEnterpriseName.getText().equals(null) || txtEnterpriseName.getText().trim().isEmpty() )
+        {
+            txtEnterpriseName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtEnterpriseName.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtEnterpriseName.getText().equals(null) && !txtEnterpriseName.getText().trim().isEmpty() )
+        {
+            txtEnterpriseName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtPass.getText().equals(null) || txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtPass.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtPass.getText().equals(null) && !txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtState.getText().equals(null) || txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtState.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtState.getText().equals(null) && !txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtUsrName.getText().equals(null) || txtUsrName.getText().trim().isEmpty() )
+            {
+                txtUsrName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtUsrName.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtUsrName.getText().equals(null) && !txtUsrName.getText().trim().isEmpty() )
+        {
+            txtUsrName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtZip.getText().equals(null) || txtZip.getText().trim().isEmpty() )
+            {
+                txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtZip.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtZip.getText().equals(null) && !txtZip.getText().trim().isEmpty() )
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        if(txtNo.getText().equals(null) || txtNo.getText().trim().isEmpty() )
+            {
+                txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtNo.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtNo.getText().equals(null) && !txtNo.getText().trim().isEmpty() )
+        {
+            txtNo.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        /*
+
+        if(txt_dob.getText().equals(null) || txt_dob.getText().trim().isEmpty() )
+            {
+                txt_dob.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txt_dob.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txt_dob.getText().equals(null) && !txt_dob.getText().trim().isEmpty() )
+        {
+            txt_dob.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txt_telenum.getText().equals(null) || txt_telenum.getText().trim().isEmpty() )
+            {
+                txt_telenum.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txt_telenum.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txt_telenum.getText().equals(null) && !txt_telenum.getText().trim().isEmpty() )
+        {
+            txt_telenum.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        */
+        return emptyValidationStatus;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;

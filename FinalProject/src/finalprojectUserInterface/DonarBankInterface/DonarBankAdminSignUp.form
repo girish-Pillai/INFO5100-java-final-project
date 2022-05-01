@@ -183,10 +183,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtFullName">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFullNameActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtFullNameKeyReleased"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_uname">
           <Properties>
@@ -200,9 +196,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtUsrName">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsrNameActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_pswd">
           <Properties>
@@ -216,9 +209,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtPass">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPassActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_address">
           <Properties>
@@ -232,10 +222,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtAdd">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAddActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddKeyReleased"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_signup">
           <Properties>
@@ -271,10 +257,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNo">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNoKeyReleased"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_City">
           <Properties>
@@ -288,10 +270,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCity">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCityKeyReleased"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_state">
           <Properties>
@@ -305,10 +283,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtState">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStateActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtStateKeyReleased"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Zip">
           <Properties>
@@ -322,10 +296,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtZip">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtZipActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtZipKeyReleased"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>

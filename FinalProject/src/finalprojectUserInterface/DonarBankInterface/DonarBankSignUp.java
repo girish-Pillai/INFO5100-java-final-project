@@ -9,8 +9,11 @@ import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.DonorBank.DonorUser;
 import finalprojectBackend.Enterprise.DonorBank.DonorBank;
 import finalprojectUserInterface.MainJFrameForm;
+import java.awt.Color;
 import java.util.Date;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -22,6 +25,9 @@ public class DonarBankSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankSignUp
      */
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
@@ -75,9 +81,11 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 204, 204));
 
         lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lbl_admintitle.setForeground(new java.awt.Color(0, 0, 0));
         lbl_admintitle.setText("Create Donor Profile");
 
         Name_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Name_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Name_lbl.setText("Name:");
 
         FullNametxt.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +100,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         uname_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        uname_lbl.setForeground(new java.awt.Color(0, 0, 0));
         uname_lbl.setText("Username:");
 
         Usernametxt.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +110,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         pswd_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pswd_lbl.setForeground(new java.awt.Color(0, 0, 0));
         pswd_lbl.setText("Password:");
 
         txtPass.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +120,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         addrlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addrlbl.setForeground(new java.awt.Color(0, 0, 0));
         addrlbl.setText("Address:");
 
         Addtxt.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +135,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         Citylbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Citylbl.setForeground(new java.awt.Color(0, 0, 0));
         Citylbl.setText("City:");
 
         txtCity.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +150,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         Statelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Statelbl.setForeground(new java.awt.Color(0, 0, 0));
         Statelbl.setText("State:");
 
         txtState.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +165,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         Ziplbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Ziplbl.setForeground(new java.awt.Color(0, 0, 0));
         Ziplbl.setText("Zip Code:");
 
         txtZip.addActionListener(new java.awt.event.ActionListener() {
@@ -182,12 +196,14 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         genderlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         genderlbl.setText("Gender:");
 
         gendercmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         gendercmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
 
         telenumlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        telenumlbl.setForeground(new java.awt.Color(0, 0, 0));
         telenumlbl.setText("Phone no.:");
 
         telenumtxt.addActionListener(new java.awt.event.ActionListener() {
@@ -202,6 +218,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         doblbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        doblbl.setForeground(new java.awt.Color(0, 0, 0));
         doblbl.setText("Date of Birth:");
 
         dobtxt.addActionListener(new java.awt.event.ActionListener() {
@@ -216,6 +233,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
         });
 
         donorbnknamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        donorbnknamelbl.setForeground(new java.awt.Color(0, 0, 0));
         donorbnknamelbl.setText("Donor Bank:");
 
         donorbnknamecmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -232,19 +250,19 @@ public class DonarBankSignUp extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(267, 267, 267)
+                        .addGap(279, 279, 279)
                         .addComponent(Name_lbl)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(FullNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(242, 242, 242)
+                        .addGap(254, 254, 254)
                         .addComponent(uname_lbl)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Usernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
+                        .addGap(256, 256, 256)
                         .addComponent(pswd_lbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(258, 258, 258)
@@ -252,40 +270,20 @@ public class DonarBankSignUp extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Addtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(285, 285, 285)
+                        .addGap(283, 283, 283)
                         .addComponent(Citylbl)
-                        .addGap(10, 10, 10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
+                        .addGap(273, 273, 273)
                         .addComponent(Statelbl)
-                        .addGap(10, 10, 10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addComponent(Ziplbl)
-                        .addGap(10, 10, 10)
-                        .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(genderlbl)
-                        .addGap(12, 12, 12)
-                        .addComponent(gendercmb, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
+                        .addGap(252, 252, 252)
                         .addComponent(telenumlbl)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(telenumtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(doblbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(dobtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(donorbnknamelbl)
-                        .addGap(12, 12, 12)
-                        .addComponent(donorbnknamecmb, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
                         .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -293,7 +291,29 @@ public class DonarBankSignUp extends javax.swing.JPanel {
                         .addComponent(signupbtn))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(318, 318, 318)
-                        .addComponent(lbl_admintitle)))
+                        .addComponent(lbl_admintitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(genderlbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(gendercmb, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Ziplbl)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(235, 235, 235)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(donorbnknamelbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(donorbnknamecmb, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(doblbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dobtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(311, 311, 311))
         );
         layout.setVerticalGroup(
@@ -302,70 +322,52 @@ public class DonarBankSignUp extends javax.swing.JPanel {
                 .addGap(35, 35, 35)
                 .addComponent(lbl_admintitle)
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(Name_lbl))
-                    .addComponent(FullNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FullNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Name_lbl))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(uname_lbl))
-                    .addComponent(Usernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Usernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uname_lbl))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(pswd_lbl))
-                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pswd_lbl))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Addtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addrlbl))
                 .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(Citylbl))
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(Statelbl))
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Citylbl))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Statelbl))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addComponent(Ziplbl))
                     .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(genderlbl))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(genderlbl)
                     .addComponent(gendercmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(telenumlbl))
-                    .addComponent(telenumtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(doblbl))
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(telenumtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telenumlbl))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(doblbl)
                     .addComponent(dobtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(donorbnknamelbl))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(donorbnknamelbl)
                     .addComponent(donorbnknamecmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(signupbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -417,16 +419,37 @@ public class DonarBankSignUp extends javax.swing.JPanel {
 
     private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
         // TODO add your handling code here:
-        String address = Addtxt.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = Addtxt.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
 
-        DonorUser donor = new DonorUser(Usernametxt.getText(), txtPass.getText(), "idid", FullNametxt.getText(), address, gendercmb.getSelectedItem().toString(), telenumtxt.getText(), new Date(),donorbnknamecmb.getSelectedItem().toString());
+                    DonorUser donor = new DonorUser(Usernametxt.getText(), txtPass.getText(), "idid", FullNametxt.getText(), address, gendercmb.getSelectedItem().toString(), telenumtxt.getText(), new Date(),donorbnknamecmb.getSelectedItem().toString());
 
-        operatingSystem.addDonor(donor);
-        dB4OUtility.storeSystem(operatingSystem);
+                    operatingSystem.addDonor(donor);
+                    dB4OUtility.storeSystem(operatingSystem);
 
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Donor not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        
     }//GEN-LAST:event_signupbtnActionPerformed
 
     private void telenumtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telenumtxtActionPerformed
@@ -444,7 +467,192 @@ public class DonarBankSignUp extends javax.swing.JPanel {
     private void donorbnknamecmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donorbnknamecmbActionPerformed
     }//GEN-LAST:event_donorbnknamecmbActionPerformed
 
+    private boolean RegexValidation() {
+    if(!FullNametxt.getText().matches("^[a-zA-Z ]+$"))
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            FullNametxt.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!telenumtxt.getText().matches("^[0-9]{10}$"))
+        {
+            telenumtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            telenumtxt.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
 
+
+        if(!txtZip.getText().matches("^[0-9]{5}$"))
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtZip.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
+
+        // if(!gendercmb.getText().matches("^[0-9]{5}$"))
+        // {
+        //     gendercmb.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //     gendercmb.setToolTipText("Please enter a 5 digit number");
+        //     validationCheck=false;
+        // }
+
+        return validationCheck;
+
+
+    }   
+
+
+    private boolean EmpytyFieldValidation() {
+        if(Addtxt.getText().equals(null) || Addtxt.getText().trim().isEmpty() )
+        {
+            Addtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            Addtxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!Addtxt.getText().equals(null) && !Addtxt.getText().trim().isEmpty() )
+        {
+            Addtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtCity.getText().equals(null) || txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtCity.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtCity.getText().equals(null) && !txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(FullNametxt.getText().equals(null) || FullNametxt.getText().trim().isEmpty() )
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            FullNametxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!FullNametxt.getText().equals(null) && !FullNametxt.getText().trim().isEmpty() )
+        {
+            FullNametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtPass.getText().equals(null) || txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtPass.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtPass.getText().equals(null) && !txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtState.getText().equals(null) || txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtState.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtState.getText().equals(null) && !txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(Usernametxt.getText().equals(null) || Usernametxt.getText().trim().isEmpty() )
+            {
+                Usernametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                Usernametxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!Usernametxt.getText().equals(null) && !Usernametxt.getText().trim().isEmpty() )
+        {
+            Usernametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtZip.getText().equals(null) || txtZip.getText().trim().isEmpty() )
+            {
+                txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtZip.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtZip.getText().equals(null) && !txtZip.getText().trim().isEmpty() )
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        // if(gendercmb.getText().equals(null) || gendercmb.getText().trim().isEmpty() )
+        //     {
+        //         gendercmb.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         gendercmb.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!gendercmb.getText().equals(null) && !gendercmb.getText().trim().isEmpty() )
+        // {
+        //     gendercmb.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+
+        if(telenumtxt.getText().equals(null) || telenumtxt.getText().trim().isEmpty() )
+            {
+                telenumtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                telenumtxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!telenumtxt.getText().equals(null) && !telenumtxt.getText().trim().isEmpty() )
+        {
+            telenumtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(dobtxt.getText().equals(null) || dobtxt.getText().trim().isEmpty() )
+            {
+                dobtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                dobtxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!dobtxt.getText().equals(null) && !dobtxt.getText().trim().isEmpty() )
+        {
+            dobtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        return emptyValidationStatus;
+    }
+
+    
+    /*
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
+                    //uname, pswd, id, name, add, gender, telenum, dob
+                    //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+
+                    Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
+
+                    operatingSystem.addTechnician(tech);
+                    dB4OUtility.storeSystem(operatingSystem);
+
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        */
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Addtxt;
     private javax.swing.JLabel Citylbl;

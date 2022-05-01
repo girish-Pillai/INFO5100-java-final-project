@@ -86,17 +86,14 @@
                                           <Component id="telenum_txt" min="-2" pref="220" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="namelbl" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="fullname_txt" min="-2" pref="221" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="unamelbl" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="usrnametxt" min="-2" pref="221" max="-2" attributes="0"/>
-                                              </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="namelbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="unamelbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="usrnametxt" max="32767" attributes="0"/>
+                                              <Component id="fullname_txt" pref="221" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                       </Group>
@@ -128,7 +125,7 @@
                           <Component id="admintitle" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="429" max="32767" attributes="0"/>
+                  <EmptySpace pref="431" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
