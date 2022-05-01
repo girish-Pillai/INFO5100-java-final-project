@@ -77,14 +77,12 @@ public class LabSignUp extends javax.swing.JPanel {
         labname_lbl = new javax.swing.JLabel();
         labname_txt = new javax.swing.JTextField();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         admintitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        admintitle.setForeground(new java.awt.Color(0, 0, 0));
         admintitle.setText("Create Technician Profile");
 
         namelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        namelbl.setForeground(new java.awt.Color(0, 0, 0));
         namelbl.setText("Name:");
 
         fullname_txt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -94,15 +92,12 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         unamelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
 
         paswdlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        paswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         paswdlbl.setText("Password:");
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
 
         addresstxt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -112,7 +107,6 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         citylbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        citylbl.setForeground(new java.awt.Color(0, 0, 0));
         citylbl.setText("City:");
 
         citytxt.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +121,6 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         statelbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        statelbl.setForeground(new java.awt.Color(0, 0, 0));
         statelbl.setText("State:");
 
         state_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +135,6 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         ziplbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        ziplbl.setForeground(new java.awt.Color(0, 0, 0));
         ziplbl.setText("Zip Code:");
 
         lblzip.addActionListener(new java.awt.event.ActionListener() {
@@ -173,14 +165,12 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         genderlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         genderlbl.setText("Gender:");
 
         gender_cmb.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         gender_cmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
 
         telephnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        telephnum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         telephnum_lbl.setText("Phone no.:");
 
         telenum_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +185,6 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        dob_lbl.setForeground(new java.awt.Color(0, 0, 0));
         dob_lbl.setText("Date of Birth:");
 
         dob_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +199,6 @@ public class LabSignUp extends javax.swing.JPanel {
         });
 
         labname_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        labname_lbl.setForeground(new java.awt.Color(0, 0, 0));
         labname_lbl.setText("Lab Name:");
 
         labname_txt.addActionListener(new java.awt.event.ActionListener() {

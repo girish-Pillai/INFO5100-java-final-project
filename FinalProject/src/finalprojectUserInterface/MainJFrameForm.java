@@ -91,7 +91,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(0, 48, 73));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LogisticsPanel.setBackground(new java.awt.Color(252, 191, 73));
+        LogisticsPanel.setBackground(new java.awt.Color(0, 204, 204));
         LogisticsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LogisticsPaneljPanel4MouseClicked(evt);
@@ -128,7 +128,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         jPanel10.add(LogisticsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 370, 50));
 
-        donorPanel.setBackground(new java.awt.Color(252, 191, 73));
+        donorPanel.setBackground(new java.awt.Color(0, 204, 204));
         donorPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 donorPanelMouseClicked(evt);
@@ -165,7 +165,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         jPanel10.add(donorPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 370, -1));
 
-        LabPanel.setBackground(new java.awt.Color(252, 191, 73));
+        LabPanel.setBackground(new java.awt.Color(0, 204, 204));
         LabPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabPanelMouseClicked(evt);
@@ -202,7 +202,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         jPanel10.add(LabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 370, 50));
 
-        AdminPanel.setBackground(new java.awt.Color(252, 191, 73));
+        AdminPanel.setBackground(new java.awt.Color(0, 204, 204));
         AdminPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminPanelMouseClicked(evt);
@@ -237,7 +237,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         jPanel10.add(AdminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 370, 50));
 
-        HospitalPanel.setBackground(new java.awt.Color(252, 191, 73));
+        HospitalPanel.setBackground(new java.awt.Color(0, 204, 204));
         HospitalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HospitalPanelMouseClicked(evt);
@@ -277,7 +277,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         MainPageSplit.setLeftComponent(jPanel10);
 
-        jPanel3.setBackground(new java.awt.Color(252, 191, 73));
+        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         OrganTitle.setFont(new java.awt.Font("STSong", 1, 36)); // NOI18N

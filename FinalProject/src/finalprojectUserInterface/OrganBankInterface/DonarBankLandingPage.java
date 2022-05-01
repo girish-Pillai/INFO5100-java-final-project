@@ -53,13 +53,14 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         Signinbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(2000, 2000));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DonarjLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        DonarjLabel1.setBackground(new java.awt.Color(0, 0, 0));
         DonarjLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         DonarjLabel1.setForeground(new java.awt.Color(255, 255, 255));
         DonarjLabel1.setText("DONATION BANK");
-        jPanel1.add(DonarjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, -1, -1));
+        jPanel1.add(DonarjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));
 
         RoleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RoleLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,7 +90,6 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         jPanel1.add(PassTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 197, 30));
 
         Login_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Login_btn.setForeground(new java.awt.Color(0, 0, 0));
         Login_btn.setText("Login");
         Login_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,6 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         jPanel1.add(Login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 150, 30));
 
         Signinbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Signinbtn.setForeground(new java.awt.Color(0, 0, 0));
         Signinbtn.setText("Sign Up");
         Signinbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,11 +107,12 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         });
         jPanel1.add(Signinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 150, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/donarblood2.jpeg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/Blood-donation-one-more-time-scaled.jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jLabel2.setMaximumSize(new java.awt.Dimension(1200, 1080));
-        jLabel2.setMinimumSize(new java.awt.Dimension(1920, 1080));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 800));
+        jLabel2.setMaximumSize(new java.awt.Dimension(2500, 2000));
+        jLabel2.setMinimumSize(new java.awt.Dimension(2048, 1365));
+        jLabel2.setPreferredSize(new java.awt.Dimension(2500, 1700));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,15 +120,15 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

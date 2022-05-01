@@ -107,6 +107,7 @@ public class PatientLogin extends javax.swing.JPanel {
 
         txt_name.setEditable(false);
 
+        btnlogout.setBackground(new java.awt.Color(255, 204, 204));
         btnlogout.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnlogout.setText("Logout");
         btnlogout.addActionListener(new java.awt.event.ActionListener() {

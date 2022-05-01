@@ -108,6 +108,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         });
         jPanel2.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 274, 30));
 
+        BtnLogout.setBackground(new java.awt.Color(255, 204, 204));
         BtnLogout.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         BtnLogout.setText("Logout");
         BtnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +119,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         jPanel2.add(BtnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 170, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1227122387.jpg"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, 1500, 1050));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, -1, -1));
 
         jTabbedPane1.addTab("Patient List", jPanel2);
 
@@ -189,7 +190,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         jPanel3.add(statusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 290, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1227122387.jpg"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, 1490, 1050));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, -1, -1));
 
         jTabbedPane1.addTab("Transplant History", jPanel3);
 

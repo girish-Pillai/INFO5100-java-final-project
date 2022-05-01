@@ -66,10 +66,8 @@ public class ManageHospital extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(51, 204, 255));
 
         admintitle_lbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        admintitle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         admintitle_lbl.setText("Administration");
 
-        tb1.setBackground(new java.awt.Color(255, 255, 255));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -83,7 +81,6 @@ public class ManageHospital extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        tb2.setBackground(new java.awt.Color(255, 255, 255));
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -97,6 +94,7 @@ public class ManageHospital extends javax.swing.JPanel {
         ));
         jScrollPaneDoctor.setViewportView(tb2);
 
+        getdetails_btn.setBackground(new java.awt.Color(255, 255, 102));
         getdetails_btn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         getdetails_btn.setText("Get Details");
         getdetails_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +103,6 @@ public class ManageHospital extends javax.swing.JPanel {
             }
         });
 
-        tb3.setBackground(new java.awt.Color(255, 255, 255));
         tb3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -119,7 +116,6 @@ public class ManageHospital extends javax.swing.JPanel {
         ));
         jScrollPaneNurse.setViewportView(tb3);
 
-        tb4.setBackground(new java.awt.Color(255, 255, 255));
         tb4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -134,15 +130,12 @@ public class ManageHospital extends javax.swing.JPanel {
         jScrollPanePatient.setViewportView(tb4);
 
         DocDetails_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        DocDetails_lbl.setForeground(new java.awt.Color(0, 0, 0));
         DocDetails_lbl.setText("Doctor Details");
 
         Nursedet_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        Nursedet_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Nursedet_lbl.setText("Nurse Details");
 
         patientDet_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        patientDet_lbl.setForeground(new java.awt.Color(0, 0, 0));
         patientDet_lbl.setText("Patient Details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -151,13 +144,13 @@ public class ManageHospital extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPanePatient, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPaneNurse, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(208, 208, 208)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPanePatient, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPaneNurse, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(DocDetails_lbl)
@@ -166,9 +159,7 @@ public class ManageHospital extends javax.swing.JPanel {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(patientDet_lbl)
                                             .addComponent(Nursedet_lbl))
-                                        .addGap(360, 360, 360))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(208, 208, 208)
+                                        .addGap(360, 360, 360)))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(583, 583, 583)

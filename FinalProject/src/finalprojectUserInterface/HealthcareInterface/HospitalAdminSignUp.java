@@ -74,31 +74,26 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_admintitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_admintitle.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_admintitle.setText("Create Admin Profile");
-        jPanel1.add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
+        jPanel1.add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
 
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
         jPanel1.add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, -1));
         jPanel1.add(txtEnterpriseName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 210, -1));
 
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
         jPanel1.add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, -1, -1));
         jPanel1.add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 210, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, -1, -1));
         jPanel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 210, -1));
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
         jPanel1.add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, -1));
         jPanel1.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 210, -1));
@@ -113,7 +108,6 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
         jPanel1.add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, 87, -1));
 
         lbl_registeryNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_registeryNum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_registeryNum.setText("Registered No.:");
         jPanel1.add(lbl_registeryNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 110, -1));
 
@@ -128,25 +122,22 @@ public class HospitalAdminSignUp extends javax.swing.JPanel {
         jPanel1.add(txtNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 210, -1));
 
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
         jPanel1.add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, 210, -1));
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
         jPanel1.add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, -1, -1));
         jPanel1.add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 210, -1));
 
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
         jPanel1.add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, -1, -1));
         jPanel1.add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 440, 210, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 860));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

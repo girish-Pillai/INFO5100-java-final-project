@@ -56,10 +56,8 @@ public class ManageLogistics extends javax.swing.JPanel {
         handler_lbl = new javax.swing.JLabel();
         vehicle_lbl = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 255));
 
-        tb1.setBackground(new java.awt.Color(255, 255, 255));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -73,6 +71,7 @@ public class ManageLogistics extends javax.swing.JPanel {
         ));
         jScrollPaneHandler.setViewportView(tb1);
 
+        deleteBtn.setBackground(new java.awt.Color(255, 204, 204));
         deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +80,6 @@ public class ManageLogistics extends javax.swing.JPanel {
             }
         });
 
-        tb2.setBackground(new java.awt.Color(255, 255, 255));
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -95,6 +93,7 @@ public class ManageLogistics extends javax.swing.JPanel {
         ));
         jScrollPanevehicle.setViewportView(tb2);
 
+        deletebtn2.setBackground(new java.awt.Color(255, 204, 204));
         deletebtn2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deletebtn2.setText("Delete");
         deletebtn2.addActionListener(new java.awt.event.ActionListener() {
@@ -104,11 +103,9 @@ public class ManageLogistics extends javax.swing.JPanel {
         });
 
         handler_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        handler_lbl.setForeground(new java.awt.Color(0, 0, 0));
         handler_lbl.setText("Handler Details");
 
         vehicle_lbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        vehicle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         vehicle_lbl.setText("Vehicle Details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -158,7 +155,7 @@ public class ManageLogistics extends javax.swing.JPanel {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(

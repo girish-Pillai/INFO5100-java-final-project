@@ -98,42 +98,35 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
 
         Namelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Namelbl.setForeground(new java.awt.Color(0, 0, 0));
         Namelbl.setText("Name:");
         jPanel1.add(Namelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, 20));
 
         unamelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
         jPanel1.add(unamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
         jPanel1.add(FullNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 216, -1));
         jPanel1.add(UsrNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 216, -1));
 
         pswdlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        pswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         pswdlbl.setText("Password:");
         jPanel1.add(pswdlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 216, -1));
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
         jPanel1.add(addresslbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, -1));
         jPanel1.add(Add_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 216, -1));
 
         City_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        City_lbl.setForeground(new java.awt.Color(0, 0, 0));
         City_lbl.setText("City:");
         jPanel1.add(City_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 216, -1));
 
         State_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        State_lbl.setForeground(new java.awt.Color(0, 0, 0));
         State_lbl.setText("State:");
         jPanel1.add(State_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, -1, -1));
 
         Zip_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Zip_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Zip_lbl.setText("Zip Code:");
         jPanel1.add(Zip_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, -1, -1));
 
@@ -155,7 +148,6 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 659, 87, 40));
 
         Genderlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         Genderlbl.setText("Gender:");
         jPanel1.add(Genderlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, -1, 20));
 
@@ -169,7 +161,6 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(signupBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 659, 87, 40));
 
         telenum_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        telenum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         telenum_lbl.setText("Phone no.:");
         jPanel1.add(telenum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, -1, -1));
 
@@ -178,13 +169,11 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(genderCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 216, -1));
 
         dob_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        dob_lbl.setForeground(new java.awt.Color(0, 0, 0));
         dob_lbl.setText("Date of Birth:");
         jPanel1.add(dob_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 550, -1, 30));
         jPanel1.add(telenum_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 216, -1));
 
         vehnum_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        vehnum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         vehnum_lbl.setText("Vehicle:");
         jPanel1.add(vehnum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, -1, 20));
         jPanel1.add(dob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 216, 27));
@@ -193,26 +182,26 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(vehicle_cmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 600, 216, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -250, 2310, 1300));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1406, Short.MAX_VALUE)
+            .addGap(0, 1482, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 847, Short.MAX_VALUE)
+            .addGap(0, 742, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 835, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents

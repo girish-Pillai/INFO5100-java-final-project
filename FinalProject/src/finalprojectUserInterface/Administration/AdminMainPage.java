@@ -50,25 +50,25 @@ public class AdminMainPage extends javax.swing.JPanel {
         Loginbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(1080, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 1000));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Admintitle_lbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Admintitle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Admintitle_lbl.setText("Administration");
-        jPanel1.add(Admintitle_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 210, -1));
+        jPanel1.add(Admintitle_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 210, -1));
 
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        username_lbl.setForeground(new java.awt.Color(0, 0, 0));
         username_lbl.setText("Username:");
-        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, 20));
-        jPanel1.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 197, 30));
+        jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, 20));
+        jPanel1.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 197, 30));
 
         pass_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pass_lbl.setForeground(new java.awt.Color(0, 0, 0));
         pass_lbl.setText("Password:");
-        jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, 20));
-        jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 197, 30));
+        jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, 20));
+        jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 197, 30));
 
+        Loginbtn.setBackground(new java.awt.Color(255, 255, 102));
         Loginbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Loginbtn.setText("Login");
         Loginbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -76,10 +76,10 @@ public class AdminMainPage extends javax.swing.JPanel {
                 LoginbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, -1, 40));
+        jPanel1.add(Loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/admin-settings.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-290, -30, -1, 1280));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
