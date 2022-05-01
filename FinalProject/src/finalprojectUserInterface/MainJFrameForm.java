@@ -21,8 +21,6 @@ import javax.mail.Transport;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 /**
@@ -66,7 +64,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        MainPageSplit = new javax.swing.JSplitPane();
         jPanel10 = new javax.swing.JPanel();
         LogisticsPanel = new javax.swing.JPanel();
         Logicon_lbl = new javax.swing.JLabel();
@@ -277,7 +275,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
 
         jPanel10.add(HospitalPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 370, 50));
 
-        jSplitPane1.setLeftComponent(jPanel10);
+        MainPageSplit.setLeftComponent(jPanel10);
 
         jPanel3.setBackground(new java.awt.Color(252, 191, 73));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -299,17 +297,17 @@ public class MainJFrameForm extends javax.swing.JFrame {
         gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/image201.gif"))); // NOI18N
         jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 800, -1));
 
-        jSplitPane1.setRightComponent(jPanel3);
+        MainPageSplit.setRightComponent(jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(MainPageSplit)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(MainPageSplit)
         );
 
         pack();
@@ -337,8 +335,10 @@ public class MainJFrameForm extends javax.swing.JFrame {
             properties.setProperty("mail.smtp.socketFactory.fallback", "false");
             properties.setProperty("mail.smtp.port", "465");
             properties.setProperty("mail.smtp.socketFactory.port", "465");
-            String myAccountEmail = "harshaljaiswal25@gmail.com";
-            String password = "96655332139822204181jh";
+            String myAccountEmail = "girishpillai34@gmail.com";
+            String myAccountEmail2 = "prasadpathak4734@gmail.com";
+            String myAccountEmail3 = "supriyakommarraju@gmail.com";
+            String password = "798564516565468798498jk";
             Session session;
             session = Session.getInstance(properties, new javax.mail.Authenticator() {
                 @Override
@@ -346,8 +346,8 @@ public class MainJFrameForm extends javax.swing.JFrame {
                     return new javax.mail.PasswordAuthentication(myAccountEmail, password);
                 }
             });
-            Message message = prepareMessage(session, myAccountEmail, "obms018@gmail.com", "msg", "sub");
-            Transport.send(message);
+            Message mailmsg = prepareMessage(session, myAccountEmail, "huntin@gmail.com", "msg", "sub");
+            Transport.send(mailmsg);
 // System.out.println("Successful sent");
         } catch (MessagingException ex) {
             ex.printStackTrace();
@@ -359,14 +359,12 @@ public class MainJFrameForm extends javax.swing.JFrame {
     private static Message prepareMessage(Session session, String myAccountEmail, String toAddress, String emailmsg, String emailsubject) {
 
         try {
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(myAccountEmail));
-            message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
-            message.setSubject(emailsubject);
-            message.setText(emailmsg);
-            return message;
+            Message mailmsg = new MimeMessage(session);mailmsg.setFrom(new InternetAddress(myAccountEmail));mailmsg.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
+            mailmsg.setSubject(emailsubject);mailmsg.setText(emailmsg);
+            return mailmsg;
         } catch (MessagingException ex) {
             ex.printStackTrace();
+              //JOptionPane.showMessageDialog(this,"Error sending mail");
 //            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -377,35 +375,35 @@ public class MainJFrameForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         //logistics
         LogisticsFrontPage LogisticsFrontPage = new LogisticsFrontPage(this, dB4OUtility, operatingSystem);
-        jSplitPane1.setRightComponent(LogisticsFrontPage);
+        MainPageSplit.setRightComponent(LogisticsFrontPage);
     }//GEN-LAST:event_LogisticsPaneljPanel4MouseClicked
 
     private void donorPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_donorPanelMouseClicked
         // TODO add your handling code here:
         //Donor Bank
         DonarBankLandingPage DonorBankLandingPage = new DonarBankLandingPage(this, dB4OUtility, operatingSystem);
-        jSplitPane1.setRightComponent(DonorBankLandingPage);
+        MainPageSplit.setRightComponent(DonorBankLandingPage);
     }//GEN-LAST:event_donorPanelMouseClicked
 
     private void LabPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabPanelMouseClicked
         // TODO add your handling code here:
         //Laboratory
         MainLabCoverPage MainLabCoverPage = new MainLabCoverPage(this, dB4OUtility, operatingSystem);
-        jSplitPane1.setRightComponent(MainLabCoverPage);
+        MainPageSplit.setRightComponent(MainLabCoverPage);
     }//GEN-LAST:event_LabPanelMouseClicked
 
     private void AdminPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminPanelMouseClicked
         // TODO add your handling code here:
         //Admin
         AdminMainPage AdminPage = new AdminMainPage(this, dB4OUtility, operatingSystem);
-        jSplitPane1.setRightComponent(AdminPage);
+        MainPageSplit.setRightComponent(AdminPage);
     }//GEN-LAST:event_AdminPanelMouseClicked
 
     private void HospitalPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HospitalPanelMouseClicked
         // TODO add your handling code here:
         //Hospital
         HospitalLandingPage HospitalLandingPage = new HospitalLandingPage(this, dB4OUtility, operatingSystem);
-        jSplitPane1.setRightComponent(HospitalLandingPage);
+        MainPageSplit.setRightComponent(HospitalLandingPage);
     }//GEN-LAST:event_HospitalPanelMouseClicked
 
     private void closelblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closelblMouseClicked
@@ -465,13 +463,13 @@ public class MainJFrameForm extends javax.swing.JFrame {
     private javax.swing.JLabel Log_lbl;
     private javax.swing.JLabel Logicon_lbl;
     private javax.swing.JPanel LogisticsPanel;
+    private javax.swing.JSplitPane MainPageSplit;
     private javax.swing.JLabel OrganTitle;
     private javax.swing.JLabel closelbl;
     private javax.swing.JPanel donorPanel;
     private javax.swing.JLabel gifLbl;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel labicon_lbl;
     // End of variables declaration//GEN-END:variables
 }
