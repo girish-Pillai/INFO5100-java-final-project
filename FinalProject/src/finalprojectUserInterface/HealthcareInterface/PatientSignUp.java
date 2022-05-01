@@ -18,6 +18,7 @@ import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author supriyaa
@@ -29,7 +30,8 @@ public class PatientSignUp extends javax.swing.JPanel {
      */
     
     Random rand = new Random();
-    
+
+      
     boolean emptyValidationStatus = true;
     boolean validationCheck = true;
     
