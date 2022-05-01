@@ -201,7 +201,7 @@ public class DoctorSignUp extends javax.swing.JPanel {
                     String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
 
 
-                    Doc doctor = new Doc(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, "male", "telenum", new Date(),txt_spc.getText(),hospitalList.getSelectedItem().toString());
+                    Doc doctor = new Doc(txtUsrName.getText(), txtPass.getText(), txtUsrName.getText(), txtFullName.getText(), address, "male", "9762974948", new Date(),txt_spc.getText(),hospitalList.getSelectedItem().toString());
 
                     operatingSystem.addDoctor(doctor);
                     dB4OUtility.storeSystem(operatingSystem);
