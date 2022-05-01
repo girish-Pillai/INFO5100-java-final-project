@@ -159,8 +159,10 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
             }
         }catch(Exception e){
-
+            JOptionPane.showMessageDialog(this,"Hospital does not exist. Try again");
         }
+        
+        
         try {
             if (cmbxRole.getSelectedItem().toString() == "Patient") {
             System.out.println("selecteditem");
@@ -177,11 +179,11 @@ public class HospitalLandingPage extends javax.swing.JPanel {
         }
         } catch(Exception e) {
             JOptionPane.showMessageDialog(this,"Patient does not exist. Try again");
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
-
-        if (cmbxRole.getSelectedItem().toString() == "Doctor") {
+        try {
+            if (cmbxRole.getSelectedItem().toString() == "Doctor") {
             System.out.println("selecteditem");
             Doc dr = (Doc) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (dr == null) {
@@ -194,12 +196,21 @@ public class HospitalLandingPage extends javax.swing.JPanel {
                 return;
             }
         }
-
-        if (cmbxRole.getSelectedItem().toString() == "Nurse") {
-
-            JOptionPane.showMessageDialog(this, "Not allowed to login.");
-
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Doctor does not exist. Try again");
         }
+        
+        
+        try {
+            if (cmbxRole.getSelectedItem().toString() == "Nurse") {
+
+            JOptionPane.showMessageDialog(this, "Nurses not allowed to login, contact Administrator");
+
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Nurses not allowed to login, contact Administrator");
+        }
+        
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void btSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignUpActionPerformed
@@ -211,18 +222,12 @@ public class HospitalLandingPage extends javax.swing.JPanel {
             MainLPage.setContentPane(doc);
             MainLPage.invalidate();
             MainLPage.validate();
-
-            //            this.setContentPane(docsign);
-            //            this.invalidate();
-            //            this.validate();
             return;
 
         }
+        
         if (cmbxRole.getSelectedItem().toString() == "Nurse") {
 
-            //            this.setContentPane(nursesign);
-            //            this.invalidate();
-            //            this.validate();
             NurseSignUp n = new NurseSignUp(MainLPage, dB4OUtility, operatingSystem);
 
             //suc.setVisible(true);

@@ -145,7 +145,8 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
     private void Login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_btnActionPerformed
         // TODO add your handling code here:
         
-        if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
+        try {
+            if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
             DonorBank donbank = (DonorBank) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(donbank == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
@@ -157,8 +158,13 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 return;
             }
         }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Donor Bank does not exist. Try again");
+        }
+        
 
-        if (RoleCmb.getSelectedItem().toString() == "Donor") {
+        try {
+            if (RoleCmb.getSelectedItem().toString() == "Donor") {
             DonorUser don = (DonorUser) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(don == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
@@ -169,6 +175,9 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
                 MainLPage.validate();
                 return;
             }
+        }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Donor does not exist. Try again");
         }
     }//GEN-LAST:event_Login_btnActionPerformed
 
