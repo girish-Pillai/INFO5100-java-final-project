@@ -2,7 +2,7 @@
 
 ## NORTHEAST VALLEY LIFECARE
 
-![Lifecare](./FinalProject/src/Backgrounds/presentation.jpg)
+![Lifecare](./FinalProject/src/Backgrounds/presentation.png)
 
 ## PROBLEM STATEMENT
 
@@ -18,7 +18,7 @@
 
 ## ARCHITECTURE
 
-![Architecture](./FinalProject/src/Backgrounds/architechture.png)
+![Architecture](./FinalProject/src/Backgrounds/architecture.png)
 
 ## ENTERPRISES
 
