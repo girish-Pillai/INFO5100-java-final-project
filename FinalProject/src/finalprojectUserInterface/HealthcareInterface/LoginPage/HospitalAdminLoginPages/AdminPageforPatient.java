@@ -90,7 +90,6 @@ public class AdminPageforPatient extends javax.swing.JPanel {
 
         PatientTitle.setBackground(new java.awt.Color(255, 255, 255));
         PatientTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        PatientTitle.setForeground(new java.awt.Color(0, 0, 0));
         PatientTitle.setText("Manage Patient Records");
         jPanel1.add(PatientTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
@@ -104,7 +103,7 @@ public class AdminPageforPatient extends javax.swing.JPanel {
         jPanel1.add(deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 130, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -4, 1130, 750));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -4, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -116,7 +115,7 @@ public class AdminPageforPatient extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGap(0, 1361, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

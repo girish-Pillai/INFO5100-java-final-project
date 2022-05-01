@@ -74,13 +74,11 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         lbUsername.setBackground(new java.awt.Color(0, 0, 0));
         lbUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbUsername.setForeground(new java.awt.Color(0, 0, 0));
         lbUsername.setText("Username:");
         jPanel1.add(lbUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 90, 30));
 
         lbBostonHospital.setBackground(new java.awt.Color(0, 0, 0));
-        lbBostonHospital.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        lbBostonHospital.setForeground(new java.awt.Color(0, 0, 0));
+        lbBostonHospital.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbBostonHospital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbBostonHospital.setText("Boston Hospital");
         jPanel1.add(lbBostonHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 240, 60));
@@ -88,7 +86,6 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         lbPassword.setBackground(new java.awt.Color(0, 0, 0));
         lbPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbPassword.setForeground(new java.awt.Color(0, 0, 0));
         lbPassword.setText("Password:");
         jPanel1.add(lbPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 80, 30));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 220, 40));
@@ -113,12 +110,11 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         lbRoleName.setBackground(new java.awt.Color(0, 0, 0));
         lbRoleName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbRoleName.setForeground(new java.awt.Color(0, 0, 0));
         lbRoleName.setText("RoleName:");
         jPanel1.add(lbRoleName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 170, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1110));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -53,18 +53,15 @@ public class AdminMainPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Admintitle_lbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Admintitle_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Admintitle_lbl.setText("Administration");
         jPanel1.add(Admintitle_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 210, -1));
 
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        username_lbl.setForeground(new java.awt.Color(0, 0, 0));
         username_lbl.setText("Username:");
         jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, 20));
         jPanel1.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 197, 30));
 
         pass_lbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pass_lbl.setForeground(new java.awt.Color(0, 0, 0));
         pass_lbl.setText("Password:");
         jPanel1.add(pass_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 197, 30));
@@ -79,7 +76,7 @@ public class AdminMainPage extends javax.swing.JPanel {
         jPanel1.add(Loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, -1, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

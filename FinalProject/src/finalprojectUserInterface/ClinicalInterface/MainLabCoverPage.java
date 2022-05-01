@@ -57,13 +57,11 @@ public class MainLabCoverPage extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Laboratory");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 160, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_role.setForeground(new java.awt.Color(0, 0, 0));
         lbl_role.setText("Role:");
         jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
 
@@ -78,13 +76,11 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_username.setForeground(new java.awt.Color(0, 0, 0));
         lbl_username.setText("Username:");
         jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
         jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 197, -1));
@@ -108,7 +104,10 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 80, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1212896143.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 770));
+        jLabel2.setMaximumSize(new java.awt.Dimension(1900, 1000));
+        jLabel2.setMinimumSize(new java.awt.Dimension(1900, 1000));
+        jLabel2.setPreferredSize(new java.awt.Dimension(1900, 1000));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

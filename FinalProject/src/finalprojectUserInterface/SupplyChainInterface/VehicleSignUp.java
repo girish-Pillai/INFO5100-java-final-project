@@ -64,30 +64,25 @@ public class VehicleSignUp extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        admintitle.setForeground(new java.awt.Color(0, 0, 0));
         admintitle.setText("Create Vehicle Profile");
         jPanel1.add(admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
 
         NameLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        NameLbl.setForeground(new java.awt.Color(0, 0, 0));
         NameLbl.setText("Vehicle Name:");
         jPanel1.add(NameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
         jPanel1.add(VehicleTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 177, -1));
 
         VehNumlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        VehNumlbl.setForeground(new java.awt.Color(0, 0, 0));
         VehNumlbl.setText("Vehicle Number:");
         jPanel1.add(VehNumlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
         jPanel1.add(VehNumtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 177, -1));
 
         Address_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Address_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Address_lbl.setText("Vehicle Type:");
         jPanel1.add(Address_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, -1, -1));
         jPanel1.add(TypeVehtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 177, -1));
 
         DescLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        DescLbl.setForeground(new java.awt.Color(0, 0, 0));
         DescLbl.setText("Description:");
         jPanel1.add(DescLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
         jPanel1.add(Desctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 177, -1));
@@ -110,9 +105,8 @@ public class VehicleSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(SignUpbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 87, 40));
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -100, 2220, 1030));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -100, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

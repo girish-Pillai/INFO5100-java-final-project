@@ -83,7 +83,6 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         doctorlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        doctorlbl.setForeground(new java.awt.Color(0, 0, 0));
         doctorlbl.setText("Doctor:");
         jPanel1.add(doctorlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
 
@@ -91,7 +90,6 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         jPanel1.add(doctorList, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 190, -1));
 
         patientlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        patientlbl.setForeground(new java.awt.Color(0, 0, 0));
         patientlbl.setText("Patient:");
         jPanel1.add(patientlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
 
@@ -99,18 +97,15 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
         jPanel1.add(patList, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 190, -1));
 
         typelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        typelbl.setForeground(new java.awt.Color(0, 0, 0));
         typelbl.setText("Type:");
         jPanel1.add(typelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, -1, -1));
 
         Bldgrp_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Bldgrp_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Bldgrp_lbl.setText("Blood Group:");
         jPanel1.add(Bldgrp_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, -1, -1));
         jPanel1.add(txtType, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 190, -1));
 
         entitylbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        entitylbl.setForeground(new java.awt.Color(0, 0, 0));
         entitylbl.setText("Entity Name:");
         jPanel1.add(entitylbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, -1, 20));
         jPanel1.add(Bldgrp_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 190, -1));
@@ -127,13 +122,12 @@ public class AdminPageforOrganDonate extends javax.swing.JPanel {
 
         DonateTitle.setBackground(new java.awt.Color(255, 255, 255));
         DonateTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        DonateTitle.setForeground(new java.awt.Color(0, 0, 0));
         DonateTitle.setText("Addition to Organ Donation");
         jPanel1.add(DonateTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/413051.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, 1010));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -90,49 +90,41 @@ public class PatientSignUp extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lbl_admintitle.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_admintitle.setText("Create Patient Profile");
         jPanel1.add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
         jPanel1.add(txtEnterpriseName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 221, -1));
 
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
         jPanel1.add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, -1, -1));
 
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
         jPanel1.add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, -1, -1));
         jPanel1.add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 221, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
         jPanel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 212, 221, 30));
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
         jPanel1.add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
         jPanel1.add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 221, 30));
 
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
         jPanel1.add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 221, -1));
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
         jPanel1.add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
         jPanel1.add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 221, 30));
 
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
         jPanel1.add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, 10));
         jPanel1.add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 221, 27));
@@ -156,7 +148,6 @@ public class PatientSignUp extends javax.swing.JPanel {
         jPanel1.add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 600, 87, -1));
 
         lbl_gender.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_gender.setForeground(new java.awt.Color(0, 0, 0));
         lbl_gender.setText("Gender:");
         jPanel1.add(lbl_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, -1, -1));
 
@@ -165,19 +156,16 @@ public class PatientSignUp extends javax.swing.JPanel {
         jPanel1.add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 221, -1));
 
         lbl_telenum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_telenum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_telenum.setText("Phone no.:");
         jPanel1.add(lbl_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, -1, -1));
         jPanel1.add(txt_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 221, -1));
 
         lbl_dob.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_dob.setForeground(new java.awt.Color(0, 0, 0));
         lbl_dob.setText("Date of Birth:");
         jPanel1.add(lbl_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, -1, -1));
         jPanel1.add(txt_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 221, -1));
 
         lbl_diag.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_diag.setForeground(new java.awt.Color(0, 0, 0));
         lbl_diag.setText("Diagnosis:");
         jPanel1.add(lbl_diag, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, -1, -1));
         jPanel1.add(txt_diag, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 221, -1));
@@ -187,13 +175,11 @@ public class PatientSignUp extends javax.swing.JPanel {
         jPanel1.add(hospitalList, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 221, 30));
 
         lbl_hosplist.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_hosplist.setForeground(new java.awt.Color(0, 0, 0));
         lbl_hosplist.setText("Hospital:");
         jPanel1.add(lbl_hosplist, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, -1, -1));
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/AdobeStock_279753293.jpeg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 870));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
