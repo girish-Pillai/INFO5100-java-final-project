@@ -7,8 +7,8 @@ package finalprojectUserInterface.SupplyChainInterface;
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 
-import finalprojectBackend.Enterprise.Logistics.Handler;
-import finalprojectBackend.Enterprise.Logistics.Vehicle;
+import finalprojectBackend.Enterprise.SupplyChain.Handler;
+import finalprojectBackend.Enterprise.SupplyChain.Vehicle;
 
 import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
@@ -232,7 +232,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
             {
                 if(RegexValidation())
                 {
-                    String address = Add_txt.getText() + txtCity.getText() + Statetxt.getText() + Ziptxt.getText();
+                    String address = Add_txt.getText() + "," + txtCity.getText() + "," + Statetxt.getText() + "," + Ziptxt.getText();
                     int id = rand.nextInt(99);
                     
 

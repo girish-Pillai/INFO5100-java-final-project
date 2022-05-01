@@ -53,11 +53,11 @@ public class AdminSplitPage extends javax.swing.JPanel {
         graphsbtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
-        DonarbankBtn.setBackground(new java.awt.Color(255, 255, 255));
+        DonarbankBtn.setBackground(new java.awt.Color(0, 0, 102));
         DonarbankBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        DonarbankBtn.setForeground(new java.awt.Color(0, 0, 0));
+        DonarbankBtn.setForeground(new java.awt.Color(255, 255, 255));
         DonarbankBtn.setText("Manage Donor Bank");
         DonarbankBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,9 +65,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
-        hospBtn.setBackground(new java.awt.Color(255, 255, 255));
+        hospBtn.setBackground(new java.awt.Color(0, 0, 102));
         hospBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        hospBtn.setForeground(new java.awt.Color(0, 0, 0));
+        hospBtn.setForeground(new java.awt.Color(255, 255, 255));
         hospBtn.setText("Manage Hospital");
         hospBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,9 +75,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
-        transbtn.setBackground(new java.awt.Color(255, 255, 255));
+        transbtn.setBackground(new java.awt.Color(0, 0, 102));
         transbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        transbtn.setForeground(new java.awt.Color(0, 0, 0));
+        transbtn.setForeground(new java.awt.Color(255, 255, 255));
         transbtn.setText("Manage Transplants");
         transbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,9 +85,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
-        Logoutbtn.setBackground(new java.awt.Color(255, 255, 255));
+        Logoutbtn.setBackground(new java.awt.Color(0, 0, 102));
         Logoutbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Logoutbtn.setForeground(new java.awt.Color(0, 0, 0));
+        Logoutbtn.setForeground(new java.awt.Color(255, 255, 255));
         Logoutbtn.setText("Logout");
         Logoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,9 +95,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
-        LogBtn.setBackground(new java.awt.Color(255, 255, 255));
+        LogBtn.setBackground(new java.awt.Color(0, 0, 102));
         LogBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        LogBtn.setForeground(new java.awt.Color(0, 0, 0));
+        LogBtn.setForeground(new java.awt.Color(255, 255, 255));
         LogBtn.setText("Manage Logistics");
         LogBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,9 +105,9 @@ public class AdminSplitPage extends javax.swing.JPanel {
             }
         });
 
-        graphsbtn.setBackground(new java.awt.Color(255, 255, 255));
+        graphsbtn.setBackground(new java.awt.Color(0, 0, 102));
         graphsbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        graphsbtn.setForeground(new java.awt.Color(0, 0, 0));
+        graphsbtn.setForeground(new java.awt.Color(255, 255, 255));
         graphsbtn.setText("Graphs");
         graphsbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

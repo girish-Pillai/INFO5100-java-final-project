@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
-import finalprojectBackend.Enterprise.Logistics.Handler;
+import finalprojectBackend.Enterprise.SupplyChain.Handler;
 import finalprojectBackend.Organization.DonationAssignment;
 
 import finalprojectUserInterface.MainJFrameForm;

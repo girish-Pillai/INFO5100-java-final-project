@@ -424,7 +424,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
             {
                 if(RegexValidation())
                 {
-                    String address = Addtxt.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+                    String address = Addtxt.getText() + "," + txtCity.getText() + "," + txtState.getText() + "," + txtZip.getText();
 
                     DonorUser donor = new DonorUser(Usernametxt.getText(), txtPass.getText(), "idid", FullNametxt.getText(), address, gendercmb.getSelectedItem().toString(), telenumtxt.getText(), new Date(),donorbnknamecmb.getSelectedItem().toString());
 

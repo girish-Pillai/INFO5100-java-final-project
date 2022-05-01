@@ -62,68 +62,68 @@ public class Visualization extends javax.swing.JPanel {
     private ChartPanel chartPanelNameEntity() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
-            series.add(i, random.nextGaussian());
-        }
+                series.add(i, random.nextGaussian());
+            }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
         DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
         Map<String, Integer> hashMap = new HashMap();
         for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
-            String key = dasn.getDonationEntityName().toLowerCase();
-            
-            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
-           
-        }
+                String key = dasn.getDonationEntityName().toLowerCase();
+
+                hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
+
+            }
         for(String k:hashMap.keySet()){
-            System.out.println("key: "+k+": "+hashMap.get(k));
-            defaultCatDataset.addValue(hashMap.get(k), "", k);
-        }
+                System.out.println("key: "+k+": "+hashMap.get(k));
+                defaultCatDataset.addValue(hashMap.get(k), "", k);
+            }
         
         JFreeChart chart = ChartFactory.createBarChart("", "organ/blood",
             "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
-            @Override
-            public Dimension getPreferredSize() {
-                return new Dimension(N * 2, N * 2);
-            }
+                @Override
+                public Dimension getPreferredSize() {
+                    return new Dimension(N * 2, N * 2);
+                }
         };
     }
     
     private ChartPanel chartPanelBloodEntity() {
         final XYSeries series = new XYSeries("Data");
         for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
-            series.add(i, random.nextGaussian());
-        }
+                series.add(i, random.nextGaussian());
+            }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
         DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
         Map<String, Integer> hashMap = new HashMap();
         for(DonationAssignment dasn: operatingSystem.getDonationAssignmentList()){
-            String key = dasn.getbGroup().toLowerCase();
-            
-            hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
-           
-        }
+                String key = dasn.getbGroup().toLowerCase();
+
+                hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
+
+            }
         for(String k:hashMap.keySet()){
-            System.out.println("key: "+k+": "+hashMap.get(k));
-            defaultCatDataset.addValue(hashMap.get(k), "", k);
-        }
+                System.out.println("key: "+k+": "+hashMap.get(k));
+                defaultCatDataset.addValue(hashMap.get(k), "", k);
+            }
         
         JFreeChart chart = ChartFactory.createBarChart("", "blood",
             "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
-            @Override
-            public Dimension getPreferredSize() {
-                return new Dimension(N * 2, N * 2);
-            }
+                @Override
+                public Dimension getPreferredSize() {
+                    return new Dimension(N * 2, N * 2);
+                }
         };
     }
     
     private ChartPanel chartPanelEnterpriseEntity() {
         final XYSeries series = new XYSeries("Data");
-        for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
-            series.add(i, random.nextGaussian());
-        }
+            for (int i = 0; i < random.nextInt(N) + N / 2; i++) {
+                series.add(i, random.nextGaussian());
+            }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
         DefaultCategoryDataset defaultCatDataset = new DefaultCategoryDataset();
         
@@ -135,7 +135,7 @@ public class Visualization extends javax.swing.JPanel {
             hashMap.put(key,  hashMap.containsKey(key)? 1+hashMap.get(key):1);
             }
             catch (Exception e){
-                //e.printStackTrace();
+                //JOptionPane.showMessageDialog(this,"Visualization not able to show, Try again");
             }
            
         }
@@ -144,7 +144,7 @@ public class Visualization extends javax.swing.JPanel {
             defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
-        JFreeChart chart = ChartFactory.createBarChart("", "Donor Ent.",
+        JFreeChart chart = ChartFactory.createBarChart("", "Donor User Entity.",
             "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
@@ -179,7 +179,7 @@ public class Visualization extends javax.swing.JPanel {
             defaultCatDataset.addValue(hashMap.get(k), "", k);
         }
         
-        JFreeChart chart = ChartFactory.createBarChart("", "Receiver Ent.",
+        JFreeChart chart = ChartFactory.createBarChart("", "Receiver user Entity.",
             "Range", defaultCatDataset, PlotOrientation.VERTICAL, false, false, false);
         return new ChartPanel(chart) {
             @Override
@@ -215,7 +215,7 @@ public class Visualization extends javax.swing.JPanel {
             ds.setValue( k , Double.valueOf( hashMap.get(k) ) ); 
         }
         
-        JFreeChart chart = ChartFactory.createPieChart("Status", 
+        JFreeChart chart = ChartFactory.createPieChart("CurrentStatus", 
          ds,        
          true,            
          true, 
@@ -253,7 +253,7 @@ public class Visualization extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("Graphs");
+        jLabel1.setText("Visualizations");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -262,7 +262,7 @@ public class Visualization extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(483, 483, 483)
                 .addComponent(jLabel1)
-                .addContainerGap(510, Short.MAX_VALUE))
+                .addContainerGap(476, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

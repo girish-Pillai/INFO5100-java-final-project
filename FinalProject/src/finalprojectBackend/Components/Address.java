@@ -7,6 +7,7 @@ package finalprojectBackend.Components;
 /**
  *
  * @author girish
+ * This is the utility file used to take in inputs from the user(Organization) in ui.
  */
 public class Address {
     private String addressLine1;

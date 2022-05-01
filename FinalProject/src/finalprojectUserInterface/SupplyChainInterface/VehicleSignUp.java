@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
-import finalprojectBackend.Enterprise.Logistics.Vehicle;
+import finalprojectBackend.Enterprise.SupplyChain.Vehicle;
 
 import finalprojectUserInterface.MainJFrameForm;
 import java.awt.Color;
