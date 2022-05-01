@@ -161,8 +161,8 @@ public class HospitalLandingPage extends javax.swing.JPanel {
         }catch(Exception e){
 
         }
-
-        if (cmbxRole.getSelectedItem().toString() == "Patient") {
+        try {
+            if (cmbxRole.getSelectedItem().toString() == "Patient") {
             System.out.println("selecteditem");
             Patient pa = (Patient) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (pa == null) {
@@ -175,6 +175,11 @@ public class HospitalLandingPage extends javax.swing.JPanel {
                 return;
             }
         }
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient does not exist. Try again");
+            System.out.println(e.getMessage());
+        }
+
 
         if (cmbxRole.getSelectedItem().toString() == "Doctor") {
             System.out.println("selecteditem");
