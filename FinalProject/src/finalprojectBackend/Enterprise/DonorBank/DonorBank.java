@@ -15,7 +15,7 @@ public class DonorBank extends Enterprise {
     
     private ArrayList<DonorUser> donor;
     private ArrayList<BloodGroup> bloodgroup;
-    private ArrayList<Kidney> organ;
+    private ArrayList<OrganName> organ;
 
     public DonorBank(String address, String userName, String pwd, String enterpriseName, String regNumber) {
         super(address, userName, pwd, enterpriseName, regNumber);
@@ -41,11 +41,11 @@ public class DonorBank extends Enterprise {
         this.bloodgroup = bloodgroup;
     }
 
-    public ArrayList<Kidney> getOrgan() {
+    public ArrayList<OrganName> getOrgan() {
         return organ;
     }
 
-    public void setOrgan(ArrayList<Kidney> organ) {
+    public void setOrgan(ArrayList<OrganName> organ) {
         this.organ = organ;
     }
 
