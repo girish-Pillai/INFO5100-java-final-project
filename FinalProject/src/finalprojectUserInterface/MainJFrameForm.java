@@ -7,10 +7,10 @@ package finalprojectUserInterface;
 import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectUserInterface.Administration.AdminMainPage;
-import finalprojectUserInterface.DonarBankInterface.DonarBankLandingPage;
-import finalprojectUserInterface.HospitalInterface.HospitalLandingPage;
-import finalprojectUserInterface.LabInterfaceForUser.MainLabCoverPage;
-import finalprojectUserInterface.Logistics.LogisticsFrontPage;
+import finalprojectUserInterface.OrganBankInterface.DonarBankLandingPage;
+import finalprojectUserInterface.HealthcareInterface.HospitalLandingPage;
+import finalprojectUserInterface.ClinicalInterface.MainLabCoverPage;
+import finalprojectUserInterface.SupplyChainInterface.LogisticsFrontPage;
 
 
 
@@ -105,7 +105,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         Log_lbl.setBackground(new java.awt.Color(51, 51, 51));
         Log_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Log_lbl.setForeground(new java.awt.Color(51, 51, 51));
-        Log_lbl.setText("Logistics");
+        Log_lbl.setText("Supply Chain");
 
         javax.swing.GroupLayout LogisticsPanelLayout = new javax.swing.GroupLayout(LogisticsPanel);
         LogisticsPanel.setLayout(LogisticsPanelLayout);
@@ -114,8 +114,8 @@ public class MainJFrameForm extends javax.swing.JFrame {
             .addGroup(LogisticsPanelLayout.createSequentialGroup()
                 .addComponent(Logicon_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Log_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(Log_lbl)
+                .addGap(0, 217, Short.MAX_VALUE))
         );
         LogisticsPanelLayout.setVerticalGroup(
             LogisticsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,7 +142,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         DonorBank_lbl.setBackground(new java.awt.Color(51, 51, 51));
         DonorBank_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         DonorBank_lbl.setForeground(new java.awt.Color(51, 51, 51));
-        DonorBank_lbl.setText("Donor Bank");
+        DonorBank_lbl.setText("Organ Bank");
 
         javax.swing.GroupLayout donorPanelLayout = new javax.swing.GroupLayout(donorPanel);
         donorPanel.setLayout(donorPanelLayout);
@@ -179,7 +179,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         Lab_lbl.setBackground(new java.awt.Color(51, 51, 51));
         Lab_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Lab_lbl.setForeground(new java.awt.Color(51, 51, 51));
-        Lab_lbl.setText("Laboratory");
+        Lab_lbl.setText("Clinical");
 
         javax.swing.GroupLayout LabPanelLayout = new javax.swing.GroupLayout(LabPanel);
         LabPanel.setLayout(LabPanelLayout);
@@ -254,7 +254,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         Hospital_lbl.setBackground(new java.awt.Color(51, 51, 51));
         Hospital_lbl.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Hospital_lbl.setForeground(new java.awt.Color(51, 51, 51));
-        Hospital_lbl.setText("Hospital");
+        Hospital_lbl.setText("Healthcare");
 
         javax.swing.GroupLayout HospitalPanelLayout = new javax.swing.GroupLayout(HospitalPanel);
         HospitalPanel.setLayout(HospitalPanelLayout);
@@ -285,7 +285,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         OrganTitle.setFont(new java.awt.Font("STSong", 1, 36)); // NOI18N
         OrganTitle.setForeground(new java.awt.Color(51, 51, 51));
         OrganTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OrganTitle.setText("Organ Transplantation System");
+        OrganTitle.setText("NorthEast Valley LifeCare ");
         jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 530, 58));
 
         closelbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-close-50.png"))); // NOI18N

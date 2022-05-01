@@ -74,8 +74,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="Logicon_lbl" min="-2" pref="56" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Log_lbl" min="-2" pref="71" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="Log_lbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -112,7 +112,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Logistics"/>
+                    <Property name="text" type="java.lang.String" value="Supply Chain"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -176,7 +176,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Donor Bank"/>
+                    <Property name="text" type="java.lang.String" value="Organ Bank"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -240,7 +240,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Laboratory"/>
+                    <Property name="text" type="java.lang.String" value="Clinical"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -371,7 +371,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Hospital"/>
+                    <Property name="text" type="java.lang.String" value="Healthcare"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -403,7 +403,7 @@
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Organ Transplantation System"/>
+                <Property name="text" type="java.lang.String" value="NorthEast Valley LifeCare "/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

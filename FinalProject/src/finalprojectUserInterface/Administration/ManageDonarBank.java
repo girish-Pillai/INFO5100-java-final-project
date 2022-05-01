@@ -58,7 +58,7 @@ public class ManageDonarBank extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(0, 204, 255));
 
         tb1.setBackground(new java.awt.Color(255, 255, 255));
-        tb1.setForeground(new java.awt.Color(255, 255, 255));
+        tb1.setForeground(new java.awt.Color(0, 0, 0));
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -73,7 +73,7 @@ public class ManageDonarBank extends javax.swing.JPanel {
         jScrollPanebBankdetails.setViewportView(tb1);
 
         tb2.setBackground(new java.awt.Color(255, 255, 255));
-        tb2.setForeground(new java.awt.Color(255, 255, 255));
+        tb2.setForeground(new java.awt.Color(0, 0, 0));
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
