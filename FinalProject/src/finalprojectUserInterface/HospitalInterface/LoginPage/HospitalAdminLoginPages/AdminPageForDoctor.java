@@ -111,7 +111,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
                 Object[] row = new Object[5];
                 row[0] = d.getPersonName();
                 row[1] = d.getUserName();
-                row[2] = d.getDateOfBirth();
+                row[2] = d.getDocSpeciality();
                 row[3] = d.getAddress();
                 model.addRow(row);
 
