@@ -177,7 +177,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Backgrounds/wp3157508.jpg"/>
+              <Image iconType="3" name="/Backgrounds/06212021-37advance-problem-solving-decision-choice-direction-thinking-1252318414.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[2000, 1300]"/>
@@ -191,7 +191,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-660" y="-140" width="-1" height="-1"/>
+              <AbsoluteConstraints x="-620" y="-10" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

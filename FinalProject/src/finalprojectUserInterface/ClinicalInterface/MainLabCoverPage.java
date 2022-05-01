@@ -104,11 +104,11 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         });
         jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 80, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/wp3157508.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/06212021-37advance-problem-solving-decision-choice-direction-thinking-1252318414.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(2000, 1300));
         jLabel2.setMinimumSize(new java.awt.Dimension(2000, 1300));
         jLabel2.setPreferredSize(new java.awt.Dimension(2000, 1300));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-660, -140, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-620, -10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
