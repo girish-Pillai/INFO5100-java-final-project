@@ -84,7 +84,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         OrganTitle = new javax.swing.JLabel();
         closelbl = new javax.swing.JLabel();
-        gifLbl = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -284,7 +284,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
         OrganTitle.setForeground(new java.awt.Color(51, 51, 51));
         OrganTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         OrganTitle.setText("NorthEast Valley LifeCare ");
-        jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 530, 58));
+        jPanel3.add(OrganTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 530, 58));
 
         closelbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/icons8-close-50.png"))); // NOI18N
         closelbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -292,10 +292,10 @@ public class MainJFrameForm extends javax.swing.JFrame {
                 closelblMouseClicked(evt);
             }
         });
-        jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 58, 51));
+        jPanel3.add(closelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 40, 58, 51));
 
-        gifLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/organ_transplant.jpg"))); // NOI18N
-        jPanel3.add(gifLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 800, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/healthcare_politico.gif"))); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 133, 1160, 780));
 
         MainPageSplit.setRightComponent(jPanel3);
 
@@ -467,7 +467,7 @@ public class MainJFrameForm extends javax.swing.JFrame {
     private javax.swing.JLabel OrganTitle;
     private javax.swing.JLabel closelbl;
     private javax.swing.JPanel donorPanel;
-    private javax.swing.JLabel gifLbl;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labicon_lbl;
