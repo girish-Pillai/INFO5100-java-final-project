@@ -446,7 +446,7 @@ public class DonarBankSignUp extends javax.swing.JPanel {
                 emptyValidationStatus=true;
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            JOptionPane.showMessageDialog(this,"Donor not registered, Try again");
             emptyValidationStatus=true;
         }
         

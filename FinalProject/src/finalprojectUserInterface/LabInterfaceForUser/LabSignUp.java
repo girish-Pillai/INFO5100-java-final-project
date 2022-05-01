@@ -476,7 +476,7 @@ public class LabSignUp extends javax.swing.JPanel {
                 emptyValidationStatus=true;
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            JOptionPane.showMessageDialog(this,"Technician not registered, Try again");
             emptyValidationStatus=true;
         }
        

@@ -8,13 +8,12 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
-import finalprojectBackend.Enterprise.Lab.Technician;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.Logistics.Vehicle;
-import finalprojectBackend.Organization.DonationAssignment;
 
 import finalprojectUserInterface.MainJFrameForm;
-import java.util.Date;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,6 +25,8 @@ public class VehicleSignUp extends javax.swing.JPanel {
     /**
      * Creates new form VehicleSignUp
      */
+    boolean emptyValidationStatus = true;
+    
     MainJFrameForm MainLPage;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
@@ -144,17 +145,29 @@ public class VehicleSignUp extends javax.swing.JPanel {
 
     private void SignUpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpbtnActionPerformed
         // TODO add your handling code here:
-        //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-        //String vehname, String vehnum, String vtype, String description
-        //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-        Vehicle vehicle = new Vehicle(VehicleTxt.getText(),VehNumtxt.getText(),TypeVehtxt.getText(),Desctxt.getText());
+        try {
+            if(EmpytyFieldValidation())
+            {
+                Vehicle vehicle = new Vehicle(VehicleTxt.getText(),VehNumtxt.getText(),TypeVehtxt.getText(),Desctxt.getText());
 
-        operatingSystem.addVehicle(vehicle);
-        dB4OUtility.storeSystem(operatingSystem);
+                operatingSystem.addVehicle(vehicle);
+                dB4OUtility.storeSystem(operatingSystem);
 
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
+                MainJFrameForm suc = new MainJFrameForm();
+                ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                suc.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Vehicle not registered, Try again");
+            emptyValidationStatus=true;
+        }
+      
+        
+        
         
         /*
         try {
@@ -193,6 +206,52 @@ public class VehicleSignUp extends javax.swing.JPanel {
 
     }//GEN-LAST:event_SignUpbtnActionPerformed
 
+    private boolean EmpytyFieldValidation() {
+    if(VehicleTxt.getText().equals(null) || VehicleTxt.getText().trim().isEmpty() )
+    {
+        VehicleTxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        VehicleTxt.setToolTipText("This Field Cannot be empty");
+        emptyValidationStatus= false;
+    }
+    if(!VehicleTxt.getText().equals(null) && !VehicleTxt.getText().trim().isEmpty() )
+    {
+        VehicleTxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    }
+
+    if(VehNumtxt.getText().equals(null) || VehNumtxt.getText().trim().isEmpty() )
+    {
+        VehNumtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        VehNumtxt.setToolTipText("This Field Cannot be empty");
+        emptyValidationStatus= false;
+    }
+    if(!VehNumtxt.getText().equals(null) && !VehNumtxt.getText().trim().isEmpty() )
+    {
+        VehNumtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    }
+
+    if(TypeVehtxt.getText().equals(null) || TypeVehtxt.getText().trim().isEmpty() )
+    {
+        TypeVehtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        TypeVehtxt.setToolTipText("This Field Cannot be empty");
+        emptyValidationStatus= false;
+    }
+    if(!TypeVehtxt.getText().equals(null) && !TypeVehtxt.getText().trim().isEmpty() )
+    {
+        TypeVehtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    }
+
+    if(Desctxt.getText().equals(null) || Desctxt.getText().trim().isEmpty() )
+    {
+        Desctxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        Desctxt.setToolTipText("This Field Cannot be empty");
+        emptyValidationStatus= false;
+    }
+    if(!Desctxt.getText().equals(null) && !Desctxt.getText().trim().isEmpty() )
+    {
+        Desctxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+    }
+    return emptyValidationStatus;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Address_lbl;
