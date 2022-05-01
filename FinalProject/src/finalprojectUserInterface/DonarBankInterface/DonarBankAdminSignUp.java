@@ -8,7 +8,10 @@ import finalprojectBackend.DB4OUtility.DB4OUtility;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.DonorBank.DonorBank;
 import finalprojectUserInterface.MainJFrameForm;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -20,6 +23,9 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
     /**
      * Creates new form DonarBankAdminSignUp
      */
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     private OperatingSystem operatingSystem;
     private DB4OUtility dB4OUtility;
@@ -227,14 +233,34 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
-        String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
-        operatingSystem.addDonorBank(donbank);
-        System.out.println("Adding Donor Admin User: " + txtUsrName.getText());
-        dB4OUtility.storeSystem(operatingSystem);
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
+                    DonorBank donbank = new DonorBank(address,txtUsrName.getText(),txtPass.getText(),txtFullName.getText(), txtNo.getText());
+                    operatingSystem.addDonorBank(donbank);
+                    System.out.println("Adding Donor Admin User: " + txtUsrName.getText());
+                    dB4OUtility.storeSystem(operatingSystem);
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        
     }//GEN-LAST:event_btn_signupActionPerformed
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
@@ -244,6 +270,144 @@ public class DonarBankAdminSignUp extends javax.swing.JPanel {
         suc.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
 
+    private boolean RegexValidation() {
+    if(!txtFullName.getText().matches("^[a-zA-Z ]+$"))
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtFullName.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!txtNo.getText().matches("^[0-9]{10}$"))
+        {
+            txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtNo.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
+
+
+        if(!txtZip.getText().matches("^[0-9]{5}$"))
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtZip.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
+
+        // if(!txt_spc.getText().matches("^[0-9]{5}$"))
+        // {
+        //     txt_spc.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //     txt_spc.setToolTipText("Please enter a 5 digit number");
+        //     validationCheck=false;
+        // }
+
+        return validationCheck;
+
+
+    }   
+
+
+    private boolean EmpytyFieldValidation() {
+        if(txtAdd.getText().equals(null) || txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtAdd.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtAdd.getText().equals(null) && !txtAdd.getText().trim().isEmpty() )
+        {
+            txtAdd.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtCity.getText().equals(null) || txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtCity.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtCity.getText().equals(null) && !txtCity.getText().trim().isEmpty() )
+        {
+            txtCity.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtFullName.getText().equals(null) || txtFullName.getText().trim().isEmpty() )
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtFullName.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtFullName.getText().equals(null) && !txtFullName.getText().trim().isEmpty() )
+        {
+            txtFullName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtPass.getText().equals(null) || txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtPass.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtPass.getText().equals(null) && !txtPass.getText().trim().isEmpty() )
+        {
+            txtPass.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtState.getText().equals(null) || txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            txtState.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!txtState.getText().equals(null) && !txtState.getText().trim().isEmpty() )
+        {
+            txtState.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtUsrName.getText().equals(null) || txtUsrName.getText().trim().isEmpty() )
+            {
+                txtUsrName.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtUsrName.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtUsrName.getText().equals(null) && !txtUsrName.getText().trim().isEmpty() )
+        {
+            txtUsrName.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(txtZip.getText().equals(null) || txtZip.getText().trim().isEmpty() )
+            {
+                txtZip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                txtZip.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!txtZip.getText().equals(null) && !txtZip.getText().trim().isEmpty() )
+        {
+            txtZip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        // if(txt_spc.getText().equals(null) || txt_spc.getText().trim().isEmpty() )
+        //     {
+        //         txt_spc.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         txt_spc.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!txt_spc.getText().equals(null) && !txt_spc.getText().trim().isEmpty() )
+        // {
+        //     txt_spc.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+
+        // if(txtNo.getText().equals(null) || txtNo.getText().trim().isEmpty() )
+        //     {
+        //         txtNo.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //         txtNo.setToolTipText("This Field Cannot be empty");
+        //         emptyValidationStatus= false;
+        //     }
+        // if(!txtNo.getText().equals(null) && !txtNo.getText().trim().isEmpty() )
+        // {
+        //     txtNo.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        // }
+        
+        return emptyValidationStatus;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;
