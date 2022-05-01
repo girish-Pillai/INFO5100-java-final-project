@@ -55,15 +55,16 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         btnSignin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(2000, 1000));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Laboratory");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+        jLabel1.setText("Clinical Laboratory");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 220, -1));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_role.setText("Role:");
-        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+        jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, -1));
 
         cmb_Role.setEditable(true);
         cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -73,17 +74,17 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 197, -1));
+        jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_username.setText("Username:");
-        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 197, -1));
+        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setText("Password:");
-        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 197, -1));
+        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btn_login.setText("Login");
@@ -92,7 +93,7 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, 40));
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, 40));
 
         btnSignin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -101,13 +102,13 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 80, 40));
+        jPanel1.add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 80, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/iStock-1212896143.jpg"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(1900, 1000));
-        jLabel2.setMinimumSize(new java.awt.Dimension(1900, 1000));
-        jLabel2.setPreferredSize(new java.awt.Dimension(1900, 1000));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/wp3157508.jpg"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(2000, 1300));
+        jLabel2.setMinimumSize(new java.awt.Dimension(2000, 1300));
+        jLabel2.setPreferredSize(new java.awt.Dimension(2000, 1300));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-660, -140, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -115,19 +116,19 @@ public class MainLabCoverPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1451, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(122, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 772, Short.MAX_VALUE)
+            .addGap(0, 744, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 772, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
