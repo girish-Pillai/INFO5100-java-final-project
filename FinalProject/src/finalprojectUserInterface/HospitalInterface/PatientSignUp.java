@@ -397,6 +397,41 @@ public class PatientSignUp extends javax.swing.JPanel {
         return emptyValidationStatus;
     }
     
+    /*
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
+                    //uname, pswd, id, name, add, gender, telenum, dob
+                    //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+
+                    Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
+
+                    operatingSystem.addTechnician(tech);
+                    dB4OUtility.storeSystem(operatingSystem);
+
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        */
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;
     private javax.swing.JButton btn_signup;

@@ -8,11 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import finalprojectBackend.DB4OUtility.DB4OUtility;
+import finalprojectBackend.Enterprise.Lab.Technician;
 import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.Logistics.Vehicle;
 import finalprojectBackend.Organization.DonationAssignment;
 
 import finalprojectUserInterface.MainJFrameForm;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -60,25 +63,30 @@ public class VehicleSignUp extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        admintitle.setForeground(new java.awt.Color(0, 0, 0));
         admintitle.setText("Create Vehicle Profile");
         jPanel1.add(admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
 
         NameLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        NameLbl.setForeground(new java.awt.Color(0, 0, 0));
         NameLbl.setText("Vehicle Name:");
         jPanel1.add(NameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
         jPanel1.add(VehicleTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 177, -1));
 
         VehNumlbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        VehNumlbl.setForeground(new java.awt.Color(0, 0, 0));
         VehNumlbl.setText("Vehicle Number:");
         jPanel1.add(VehNumlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
         jPanel1.add(VehNumtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 177, -1));
 
         Address_lbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Address_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Address_lbl.setText("Vehicle Type:");
         jPanel1.add(Address_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, -1, -1));
         jPanel1.add(TypeVehtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 177, -1));
 
         DescLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        DescLbl.setForeground(new java.awt.Color(0, 0, 0));
         DescLbl.setText("Description:");
         jPanel1.add(DescLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
         jPanel1.add(Desctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 177, -1));
@@ -101,6 +109,7 @@ public class VehicleSignUp extends javax.swing.JPanel {
         });
         jPanel1.add(SignUpbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 87, 40));
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/delivery.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -100, 2220, 1030));
 
@@ -146,32 +155,41 @@ public class VehicleSignUp extends javax.swing.JPanel {
         MainJFrameForm suc = new MainJFrameForm();
         ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
         suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //String vehname, String vehnum, String vtype, String description
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String vehname, String vehnum, String vtype, String description
-            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String vehname, String vehnum, String vtype, String description
-            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String vehname, String vehnum, String vtype, String description
-            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            //        } else if (!name_chk.getText().equals("") || //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();!telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String vehname, String vehnum, String vtype, String description
-            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            //String address = txtType.getText() + txtDesc.getText() + txtState.getText() + txtZip.getText();
-            //String vehname, String vehnum, String vtype, String description
-            //SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
+        
+        /*
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
+                    //uname, pswd, id, name, add, gender, telenum, dob
+                    //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+
+                    Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
+
+                    operatingSystem.addTechnician(tech);
+                    dB4OUtility.storeSystem(operatingSystem);
+
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            emptyValidationStatus=true;
+        }
+        */
 
     }//GEN-LAST:event_SignUpbtnActionPerformed
 

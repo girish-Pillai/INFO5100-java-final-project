@@ -9,9 +9,12 @@ import finalprojectBackend.OperatingSystem.OperatingSystem;
 import finalprojectBackend.Enterprise.Lab.Technician;
 
 import finalprojectUserInterface.MainJFrameForm;
+import java.awt.Color;
 import java.util.Date;
+import javax.swing.BorderFactory;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -23,6 +26,10 @@ public class LabSignUp extends javax.swing.JPanel {
     /**
      * Creates new form LabSignUp
      */
+    
+    boolean emptyValidationStatus = true;
+    boolean validationCheck = true;
+    
     MainJFrameForm MainLPage;
     private DB4OUtility dB4OUtility;
     private OperatingSystem operatingSystem;
@@ -276,15 +283,13 @@ public class LabSignUp extends javax.swing.JPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(telenum_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(namelbl)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(fullname_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(unamelbl)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(usrnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(namelbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(unamelbl))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(usrnametxt)
+                                            .addComponent(fullname_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE))
                                         .addGap(1, 1, 1))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(dob_lbl)
@@ -304,7 +309,7 @@ public class LabSignUp extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(289, 289, 289)
                         .addComponent(admintitle)))
-                .addContainerGap(429, Short.MAX_VALUE))
+                .addContainerGap(431, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,16 +391,7 @@ public class LabSignUp extends javax.swing.JPanel {
     }//GEN-LAST:event_fullname_txtActionPerformed
 
     private void fullname_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fullname_txtKeyReleased
-        // TODO add your handling code here:
-        //        String nameconv = "^[a-zA-Z ]{1,17}$";
-        //        Pattern pat = Pattern.compile(nameconv);
-        //        Matcher mat = pat.matcher(txtFullName.getText());
-        //
-        //        if (!mat.matches()) {
-            //            name_chk.setText("Name is incorrect");
-            //        } else {
-            //            name_chk.setText("");
-            //        }
+        
     }//GEN-LAST:event_fullname_txtKeyReleased
 
     private void usrnametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrnametxtActionPerformed
@@ -413,15 +409,6 @@ public class LabSignUp extends javax.swing.JPanel {
     private void addresstxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addresstxtKeyReleased
         // TODO add your handling code here:
 
-        //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
-        //        Pattern pat = Pattern.compile(addrconv);
-        //        Matcher mat = pat.matcher(txtAdd.getText());
-        //
-        //        if (!mat.matches()) {
-            //            add_chk.setText("Address is incorrect");
-            //        } else {
-            //            add_chk.setText("");
-            //        }
     }//GEN-LAST:event_addresstxtKeyReleased
 
     private void citytxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_citytxtActionPerformed
@@ -430,15 +417,7 @@ public class LabSignUp extends javax.swing.JPanel {
 
     private void citytxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_citytxtKeyReleased
         // TODO add your handling code here:
-        //        String cityconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(cityconv);
-        //        Matcher mat = pat.matcher(txtCity.getText());
-        //
-        //        if (!mat.matches()) {
-            //            city_chk.setText("City is incorrect");
-            //        } else {
-            //            city_chk.setText("");
-            //        }
+        
     }//GEN-LAST:event_citytxtKeyReleased
 
     private void state_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_state_txtActionPerformed
@@ -448,15 +427,6 @@ public class LabSignUp extends javax.swing.JPanel {
     private void state_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_state_txtKeyReleased
         // TODO add your handling code here:
 
-        //        String stateconv = "^[a-zA-Z ]{0,30}$";
-        //        Pattern pat = Pattern.compile(stateconv);
-        //        Matcher mat = pat.matcher(txtState.getText());
-        //
-        //        if (!mat.matches()) {
-            //            state_chk.setText("State is incorrect");
-            //        } else {
-            //            state_chk.setText("");
-            //        }
     }//GEN-LAST:event_state_txtKeyReleased
 
     private void lblzipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblzipActionPerformed
@@ -465,15 +435,7 @@ public class LabSignUp extends javax.swing.JPanel {
 
     private void lblzipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblzipKeyReleased
         // TODO add your handling code here:
-        //        String zipconv = "^[0-9]{5}$";
-        //        Pattern pat = Pattern.compile(zipconv);
-        //        Matcher mat = pat.matcher(txtZip.getText());
-        //
-        //        if (!mat.matches()) {
-            //            zip_chk.setText("Zipcode is incorrect");
-            //        } else {
-            //            zip_chk.setText("");
-            //        }
+      
     }//GEN-LAST:event_lblzipKeyReleased
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
@@ -485,41 +447,189 @@ public class LabSignUp extends javax.swing.JPanel {
 
     private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
         // TODO add your handling code here:
-        String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
-        //uname, pswd, id, name, add, gender, telenum, dob
-        //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
+        try {
+            if(EmpytyFieldValidation())
+            {
+                if(RegexValidation())
+                {
+                    String address = addresstxt.getText() + citytxt.getText() + state_txt.getText() + lblzip.getText();
+                    //uname, pswd, id, name, add, gender, telenum, dob
+                    //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
 
-        Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
+                    Technician tech = new Technician(usrnametxt.getText(), passtxt.getText(), "idid", fullname_txt.getText(), address, gender_cmb.getSelectedItem().toString(), telenum_txt.getText(), new Date(),labname_txt.getText());
 
-        operatingSystem.addTechnician(tech);
-        dB4OUtility.storeSystem(operatingSystem);
+                    operatingSystem.addTechnician(tech);
+                    dB4OUtility.storeSystem(operatingSystem);
 
-        MainJFrameForm suc = new MainJFrameForm();
-        ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-        suc.setVisible(true);
-        //        if (txtFullName.getText().equals("") || txtUsrName.getText().equals("") || txtPass.getText().equals("") || txtNo.getText().equals("")
-            //            || txtAdd.getText().equals("") || txtCity.getText().equals("") || txtState.getText().equals("") || txtZip.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            //        } else if (!name_chk.getText().equals("") || !telenum_chk.getText().equals("") || !add_chk.getText().equals("") || !city_chk.getText().equals("")
-            //            || !state_chk.getText().equals("") || !zip_chk.getText().equals("")) {
-            //
-            //            JOptionPane.showMessageDialog(this, "Invalid value(s) entered.");
-            //        }
-        //        else{
-            //            Address add = new Address(txtAdd.getText(), txtCity.getText(), txtState.getText(), Integer.parseInt(txtZip.getText()));
-            //
-            //            Customer cus =new Customer(txtUsrName.getText(), txtPass.getText(), new CustomerRole(),txtNo.getText(), txtFullName.getText(), add);
-            //            system.addCustomer(cus);
-            //
-            //            dB4OUtility.storeSystem(system);
-            //            JOptionPane.showMessageDialog(this, "Customer information saved.");
-            //            MainJFrame cust = new MainJFrame();
-            //            ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
-            //            cust.setVisible(true);
-            //        }
+                    MainJFrameForm suc = new MainJFrameForm();
+                    ((JFrame) SwingUtilities.getWindowAncestor(this)).dispose();
+                    suc.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,"Some Error in entered data.Please check over the red fields to know more.");
+                    validationCheck=true;
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Data Cant be empty. Please check over the red fields to know more.");
+                emptyValidationStatus=true;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Patient not registered, Try again");
+            emptyValidationStatus=true;
+        }
+       
     }//GEN-LAST:event_signupbtnActionPerformed
 
+    private boolean RegexValidation() {
+    if(!fullname_txt.getText().matches("^[a-zA-Z ]+$"))
+        {
+            fullname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            fullname_txt.setToolTipText("Please enter only characters and space.");
+            validationCheck=false;
+        }
+        
+        if(!telenum_txt.getText().matches("^[0-9]{10}$"))
+        {
+            telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            telenum_txt.setToolTipText("Please enter a 10 digit number");
+            validationCheck=false;
+        }
+
+
+        if(!lblzip.getText().matches("^[0-9]{5}$"))
+        {
+            lblzip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            lblzip.setToolTipText("Please enter a 5 digit number");
+            validationCheck=false;
+        }
+
+        // if(!labname_txt.getText().matches("^[0-9]{5}$"))
+        // {
+        //     labname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        //     labname_txt.setToolTipText("Please enter a 5 digit number");
+        //     validationCheck=false;
+        // }
+
+        return validationCheck;
+    }   
+
+
+    private boolean EmpytyFieldValidation() {
+        if(addresstxt.getText().equals(null) || addresstxt.getText().trim().isEmpty() )
+        {
+            addresstxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            addresstxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!addresstxt.getText().equals(null) && !addresstxt.getText().trim().isEmpty() )
+        {
+            addresstxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(citytxt.getText().equals(null) || citytxt.getText().trim().isEmpty() )
+        {
+            citytxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            citytxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!citytxt.getText().equals(null) && !citytxt.getText().trim().isEmpty() )
+        {
+            citytxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(fullname_txt.getText().equals(null) || fullname_txt.getText().trim().isEmpty() )
+        {
+            fullname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            fullname_txt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!fullname_txt.getText().equals(null) && !fullname_txt.getText().trim().isEmpty() )
+        {
+            fullname_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(passtxt.getText().equals(null) || passtxt.getText().trim().isEmpty() )
+        {
+            passtxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            passtxt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!passtxt.getText().equals(null) && !passtxt.getText().trim().isEmpty() )
+        {
+            passtxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(state_txt.getText().equals(null) || state_txt.getText().trim().isEmpty() )
+        {
+            state_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            state_txt.setToolTipText("This Field Cannot be empty");
+            emptyValidationStatus= false;
+        }
+        if(!state_txt.getText().equals(null) && !state_txt.getText().trim().isEmpty() )
+        {
+            state_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(usrnametxt.getText().equals(null) || usrnametxt.getText().trim().isEmpty() )
+            {
+                usrnametxt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                usrnametxt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!usrnametxt.getText().equals(null) && !usrnametxt.getText().trim().isEmpty() )
+        {
+            usrnametxt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(lblzip.getText().equals(null) || lblzip.getText().trim().isEmpty() )
+            {
+                lblzip.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                lblzip.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!lblzip.getText().equals(null) && !lblzip.getText().trim().isEmpty() )
+        {
+            lblzip.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(labname_txt.getText().equals(null) || labname_txt.getText().trim().isEmpty() )
+            {
+                labname_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                labname_txt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!labname_txt.getText().equals(null) && !labname_txt.getText().trim().isEmpty() )
+        {
+            labname_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(telenum_txt.getText().equals(null) || telenum_txt.getText().trim().isEmpty() )
+            {
+                telenum_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                telenum_txt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!telenum_txt.getText().equals(null) && !telenum_txt.getText().trim().isEmpty() )
+        {
+            telenum_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+
+        if(dob_txt.getText().equals(null) || dob_txt.getText().trim().isEmpty() )
+            {
+                dob_txt.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                dob_txt.setToolTipText("This Field Cannot be empty");
+                emptyValidationStatus= false;
+            }
+        if(!dob_txt.getText().equals(null) && !dob_txt.getText().trim().isEmpty() )
+        {
+            dob_txt.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+        }
+        
+        return emptyValidationStatus;
+    }
+    
     private void telenum_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telenum_txtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telenum_txtActionPerformed
