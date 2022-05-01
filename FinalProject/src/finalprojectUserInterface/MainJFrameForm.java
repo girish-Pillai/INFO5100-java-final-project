@@ -336,8 +336,8 @@ public class MainJFrameForm extends javax.swing.JFrame {
             properties.setProperty("mail.smtp.port", "465");
             properties.setProperty("mail.smtp.socketFactory.port", "465");
             String myAccountEmail = "girishpillai34@gmail.com";
-            String myAccountEmail2 = "prasadpathak4734@gmail.com";
-            String myAccountEmail3 = "supriyakommarraju@gmail.com";
+            //tring myAccountEmail2 = "prasadpathak4734@gmail.com";
+            //String myAccountEmail3 = "supriyakommarraju@gmail.com";
             String password = "798564516565468798498jk";
             Session session;
             session = Session.getInstance(properties, new javax.mail.Authenticator() {

@@ -145,8 +145,9 @@ public class MainLabCoverPage extends javax.swing.JPanel {
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         // TODO add your handling code here:
-
-        if (cmb_Role.getSelectedItem().toString() == "Technician") {
+        
+        try {
+            if (cmb_Role.getSelectedItem().toString() == "Technician") {
             Technician ho = (Technician) operatingSystem.loginAuthentication(txtUsername.getText(), txtPassword.getText());
             if (ho == null) {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
@@ -157,8 +158,12 @@ public class MainLabCoverPage extends javax.swing.JPanel {
                 MainLPage.validate();
                 return;
             }
-
         }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Technician does not exist. Please Sign up");
+        }
+
+        
     }//GEN-LAST:event_btn_loginActionPerformed
 
     private void btnSigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSigninActionPerformed
