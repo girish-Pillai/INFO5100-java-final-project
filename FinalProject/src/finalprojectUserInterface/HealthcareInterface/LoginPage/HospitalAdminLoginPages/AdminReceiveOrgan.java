@@ -256,18 +256,43 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
     private void reqbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reqbtnActionPerformed
         // TODO add your handling code here:
+        int selectedRow1 = tb1.getSelectedRow();
+        int selectedRow2 = tb2.getSelectedRow();
+        int selectedRow3 = tb3.getSelectedRow();
+
+        if (selectedRow1 < 0 || selectedRow2 < 0 || selectedRow3 < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to generate a request.");
+            return;
+        }
+        DefaultTableModel organAvailable = (DefaultTableModel) tb1.getModel();
+        String donateEntity = organAvailable.getValueAt(selectedRow1, 4).toString();
+
+        DefaultTableModel handlerList = (DefaultTableModel) tb2.getModel();
+        String handler = handlerList.getValueAt(selectedRow2, 0).toString();
+        System.out.println("print: " + handler);
+
+        DefaultTableModel technicianList = (DefaultTableModel) tb3.getModel();
+        String tech = technicianList.getValueAt(selectedRow3, 0).toString();
+        System.out.println(" " + donateEntity + " " + handler + " " + tech);
+
+        operatingSystem.generateRequesting(donateEntity, handler, tech, hospital, DocCmb.getSelectedItem().toString(), Patcmb.getSelectedItem().toString());
+        dB4OUtility.storeSystem(operatingSystem);
+        JOptionPane.showMessageDialog(this, "Request generated & Mail sent successfully.");
     }//GEN-LAST:event_reqbtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        populateTableName(name.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        populateTableBlood(blood.getText());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        populateTableDual(blood.getText(),name.getText() );
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void populateTable() {
@@ -295,7 +320,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         System.out.println("populatetable");
         for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
 
-            if (d.getbGroup().toLowerCase().contains(blood) && d.getDonationEntityName().toLowerCase().contains(name)) {
+            if (d.getbGroup().contains(blood) && d.getDonationEntityName().contains(name)) {
                 Object[] row = new Object[5];
                 row[0] = d.getType();
                 row[1] = d.getbGroup();
@@ -352,7 +377,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         System.out.println("populatetable");
         for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
 
-            if (d.getbGroup().toLowerCase().contains(name)) {
+            if (d.getbGroup().contains(name)) {
                 Object[] row = new Object[5];
                 row[0] = d.getType();
                 try {
@@ -375,8 +400,8 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         model.setRowCount(0);
         System.out.println("populatetable");
         for (DonationAssignment d : operatingSystem.getDonationAssignmentList()) {
-
-            if (d.getDonationEntityName().toLowerCase().contains(name)) {
+//            System.log.println(d.getDonationEntityName().toLowerCase());
+            if (d.getDonationEntityName().contains(name)) {
                 Object[] row = new Object[5];
                 row[0] = d.getType();
                 row[1] = d.getbGroup();
@@ -389,64 +414,6 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         }
 
     }
-
-    public void sendMail(String mail) {
-
-        try {
-            Properties properties = new Properties();
-//            properties.put("mail.smtp.auth", "true");
-//            properties.put("mail.smtp.starttls.enable", "true");
-//            properties.put("mail.smtp.host", "smtp.gmail.com");
-//            properties.put("mail.smtp.port", "587");
-            properties.put("mail.smtp.user", "username");
-
-            properties.put("mail.smtp.host", "smtp.gmail.com");
-            properties.put("mail.smtp.port", "25");
-            properties.put("mail.debug", "true");
-            properties.put("mail.smtp.auth", "true");
-            properties.put("mail.smtp.starttls.enable", "true");
-            properties.put("mail.smtp.EnableSSL.enable", "true");
-
-            properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-            properties.setProperty("mail.smtp.socketFactory.fallback", "false");
-            properties.setProperty("mail.smtp.port", "465");
-            properties.setProperty("mail.smtp.socketFactory.port", "465");
-            String myAccountEmail = "xyz@gmail.com";
-            String password = "";
-            Session session;
-            session = Session.getInstance(properties, new javax.mail.Authenticator() {
-                @Override
-                protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-                    return new javax.mail.PasswordAuthentication(myAccountEmail, password);
-                }
-            });
-            Message message = prepareMessage(mail,session, myAccountEmail, "abc@gmail.com", "msg", "sub");
-            Transport.send(message);
-// System.out.println("Successful sent");
-        } catch (MessagingException ex) {
-            ex.printStackTrace();
-//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
-
-    private static Message prepareMessage(String mail,Session session, String myAccountEmail, String toAddress, String emailmsg, String emailsubject) {
-
-        try {
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(myAccountEmail));
-            message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
-            message.setSubject("Organ & Blood Transplantation System");
-            message.setText(mail);
-            return message;
-        } catch (MessagingException ex) {
-            ex.printStackTrace();
-//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-
-    }
-
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> DocCmb;
