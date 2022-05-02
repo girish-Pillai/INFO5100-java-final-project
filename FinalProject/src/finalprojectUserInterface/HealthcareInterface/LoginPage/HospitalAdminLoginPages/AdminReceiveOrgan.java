@@ -277,7 +277,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
         operatingSystem.generateRequesting(donateEntity, handler, tech, hospital, DocCmb.getSelectedItem().toString(), Patcmb.getSelectedItem().toString());
         dB4OUtility.storeSystem(operatingSystem);
-        JOptionPane.showMessageDialog(this, "Request generated & Mail sent successfully.");
+        JOptionPane.showMessageDialog(this, "Request generated");
     }//GEN-LAST:event_reqbtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
