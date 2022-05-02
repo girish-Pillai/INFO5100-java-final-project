@@ -239,12 +239,14 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         add(DocCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 649, 118, -1));
 
         Doclbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Doclbl.setForeground(new java.awt.Color(0, 0, 0));
         Doclbl.setText("Doctor:");
         add(Doclbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 653, -1, -1));
 
         add(Patcmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 689, 118, -1));
 
         patlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        patlbl.setForeground(new java.awt.Color(0, 0, 0));
         patlbl.setText("Patient:");
         add(patlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 693, -1, -1));
 

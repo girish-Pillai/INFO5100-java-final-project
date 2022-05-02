@@ -63,10 +63,12 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logisticstitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        Logisticstitle.setForeground(new java.awt.Color(0, 0, 0));
         Logisticstitle.setText("Logistics");
         jPanel1.add(Logisticstitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, -1, -1));
 
         Rolelbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Rolelbl.setForeground(new java.awt.Color(0, 0, 0));
         Rolelbl.setText("Role:");
         jPanel1.add(Rolelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
 
@@ -81,6 +83,7 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
         jPanel1.add(cmb_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 197, -1));
 
         username_lbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        username_lbl.setForeground(new java.awt.Color(0, 0, 0));
         username_lbl.setText("Username:");
         jPanel1.add(username_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
 
@@ -88,6 +91,7 @@ public class LogisticsFrontPage extends javax.swing.JPanel {
         jPanel1.add(usrname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 197, -1));
 
         pswd_lbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        pswd_lbl.setForeground(new java.awt.Color(0, 0, 0));
         pswd_lbl.setText("Password:");
         jPanel1.add(pswd_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 

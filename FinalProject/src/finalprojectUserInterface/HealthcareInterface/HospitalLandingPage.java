@@ -50,7 +50,7 @@ public class HospitalLandingPage extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         cmbxRole = new javax.swing.JComboBox<>();
         lbUsername = new javax.swing.JLabel();
-        lbBostonHospital = new javax.swing.JLabel();
+        lbHealthcare = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         lbPassword = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
@@ -74,18 +74,21 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         lbUsername.setBackground(new java.awt.Color(0, 0, 0));
         lbUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbUsername.setForeground(new java.awt.Color(0, 0, 0));
         lbUsername.setText("Username:");
         jPanel1.add(lbUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 90, 30));
 
-        lbBostonHospital.setBackground(new java.awt.Color(0, 0, 0));
-        lbBostonHospital.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lbBostonHospital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbBostonHospital.setText("Boston Hospital");
-        jPanel1.add(lbBostonHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 240, 60));
+        lbHealthcare.setBackground(new java.awt.Color(0, 0, 0));
+        lbHealthcare.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lbHealthcare.setForeground(new java.awt.Color(0, 0, 0));
+        lbHealthcare.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbHealthcare.setText("Healthcare");
+        jPanel1.add(lbHealthcare, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 240, 60));
         jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 220, 40));
 
         lbPassword.setBackground(new java.awt.Color(0, 0, 0));
         lbPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbPassword.setForeground(new java.awt.Color(0, 0, 0));
         lbPassword.setText("Password:");
         jPanel1.add(lbPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 80, 30));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 220, 40));
@@ -110,6 +113,7 @@ public class HospitalLandingPage extends javax.swing.JPanel {
 
         lbRoleName.setBackground(new java.awt.Color(0, 0, 0));
         lbRoleName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbRoleName.setForeground(new java.awt.Color(0, 0, 0));
         lbRoleName.setText("RoleName:");
         jPanel1.add(lbRoleName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 170, 30));
 
@@ -269,7 +273,7 @@ public class HospitalLandingPage extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmbxRole;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lbBostonHospital;
+    private javax.swing.JLabel lbHealthcare;
     private javax.swing.JLabel lbPassword;
     private javax.swing.JLabel lbRoleName;
     private javax.swing.JLabel lbUsername;

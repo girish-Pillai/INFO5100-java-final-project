@@ -98,35 +98,42 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
 
         Namelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Namelbl.setForeground(new java.awt.Color(0, 0, 0));
         Namelbl.setText("Name:");
         jPanel1.add(Namelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, 20));
 
         unamelbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        unamelbl.setForeground(new java.awt.Color(0, 0, 0));
         unamelbl.setText("Username:");
         jPanel1.add(unamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
         jPanel1.add(FullNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 216, -1));
         jPanel1.add(UsrNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 216, -1));
 
         pswdlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pswdlbl.setForeground(new java.awt.Color(0, 0, 0));
         pswdlbl.setText("Password:");
         jPanel1.add(pswdlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 20));
         jPanel1.add(Passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 216, -1));
 
         addresslbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addresslbl.setForeground(new java.awt.Color(0, 0, 0));
         addresslbl.setText("Address:");
         jPanel1.add(addresslbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, -1));
         jPanel1.add(Add_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 216, -1));
 
         City_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        City_lbl.setForeground(new java.awt.Color(0, 0, 0));
         City_lbl.setText("City:");
         jPanel1.add(City_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 216, -1));
 
         State_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        State_lbl.setForeground(new java.awt.Color(0, 0, 0));
         State_lbl.setText("State:");
         jPanel1.add(State_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, -1, -1));
 
         Zip_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Zip_lbl.setForeground(new java.awt.Color(0, 0, 0));
         Zip_lbl.setText("Zip Code:");
         jPanel1.add(Zip_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, -1, -1));
 
@@ -148,6 +155,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 659, 87, 40));
 
         Genderlbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Genderlbl.setForeground(new java.awt.Color(0, 0, 0));
         Genderlbl.setText("Gender:");
         jPanel1.add(Genderlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, -1, 20));
 
@@ -161,6 +169,7 @@ public class HandlerSignUp extends javax.swing.JPanel {
         jPanel1.add(signupBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 659, 87, 40));
 
         telenum_lbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        telenum_lbl.setForeground(new java.awt.Color(0, 0, 0));
         telenum_lbl.setText("Phone no.:");
         jPanel1.add(telenum_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, -1, -1));
 

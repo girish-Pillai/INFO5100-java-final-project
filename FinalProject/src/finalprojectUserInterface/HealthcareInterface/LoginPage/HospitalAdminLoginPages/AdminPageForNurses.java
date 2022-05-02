@@ -75,6 +75,7 @@ public class AdminPageForNurses extends javax.swing.JPanel {
 
         deletebtn.setBackground(new java.awt.Color(255, 204, 204));
         deletebtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        deletebtn.setForeground(new java.awt.Color(0, 0, 0));
         deletebtn.setText("Delete");
         deletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

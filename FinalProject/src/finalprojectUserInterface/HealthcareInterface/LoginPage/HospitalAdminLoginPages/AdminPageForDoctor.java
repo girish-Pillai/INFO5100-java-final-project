@@ -74,6 +74,7 @@ public class AdminPageForDoctor extends javax.swing.JPanel {
 
         btDelete.setBackground(new java.awt.Color(255, 204, 204));
         btDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btDelete.setForeground(new java.awt.Color(0, 0, 0));
         btDelete.setText("Delete");
         btDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
