@@ -38,7 +38,7 @@ public class HandlerLogin extends javax.swing.JPanel {
         this.dB4OUtility = dB4OUtility;
         this.operatingSystem = operatingSystem;
         this.ho = ho;
-        populateTable(ho.getUserName().toLowerCase());
+        populateTable(ho.getUserName());
     }
 
     /**
