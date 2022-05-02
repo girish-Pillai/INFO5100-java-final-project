@@ -66,6 +66,7 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
         LabTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LabTitle.setForeground(new java.awt.Color(0, 0, 0));
         LabTitle.setText("Lab Technician Login");
 
         nametxt.addActionListener(new java.awt.event.ActionListener() {
@@ -100,16 +101,20 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tb1);
 
         Reportlbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Reportlbl.setForeground(new java.awt.Color(0, 0, 0));
         Reportlbl.setText("Report:");
 
         namelbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        namelbl.setForeground(new java.awt.Color(0, 0, 0));
         namelbl.setText("Name:");
 
         Bloodlbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Bloodlbl.setForeground(new java.awt.Color(0, 0, 0));
         Bloodlbl.setText("Blood:");
 
         reportbtn.setBackground(new java.awt.Color(255, 255, 102));
         reportbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reportbtn.setForeground(new java.awt.Color(0, 0, 0));
         reportbtn.setText("Add Report");
         reportbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +124,7 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
 
         logoutbtn.setBackground(new java.awt.Color(255, 204, 204));
         logoutbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        logoutbtn.setForeground(new java.awt.Color(0, 0, 0));
         logoutbtn.setText("Logout");
         logoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +134,7 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
 
         commbtn.setBackground(new java.awt.Color(255, 255, 102));
         commbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        commbtn.setForeground(new java.awt.Color(0, 0, 0));
         commbtn.setText("Search by Entity Name");
         commbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +144,7 @@ public class LabTechnicianSignin extends javax.swing.JPanel {
 
         bldgrpbtn.setBackground(new java.awt.Color(255, 255, 102));
         bldgrpbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        bldgrpbtn.setForeground(new java.awt.Color(0, 0, 0));
         bldgrpbtn.setText("Search by Blood Group");
         bldgrpbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

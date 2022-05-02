@@ -59,10 +59,12 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Clinical Laboratory");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 220, -1));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_role.setForeground(new java.awt.Color(0, 0, 0));
         lbl_role.setText("Role:");
         jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, -1));
 
@@ -77,11 +79,13 @@ public class MainLabCoverPage extends javax.swing.JPanel {
         jPanel1.add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_username.setForeground(new java.awt.Color(0, 0, 0));
         lbl_username.setText("Username:");
         jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
         jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 197, -1));

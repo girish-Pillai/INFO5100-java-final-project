@@ -90,31 +90,37 @@ public class NurseSignUp extends javax.swing.JPanel {
         jPanel1.add(txtNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 287, 216, -1));
 
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_City.setForeground(new java.awt.Color(0, 0, 0));
         txt_City.setText("City:");
         jPanel1.add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 382, -1, -1));
         jPanel1.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 80, 216, -1));
 
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_uname.setForeground(new java.awt.Color(0, 0, 0));
         lbl_uname.setText("Username:");
         jPanel1.add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 125, -1, -1));
         jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 375, 216, -1));
         jPanel1.add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 118, 216, -1));
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_state.setForeground(new java.awt.Color(0, 0, 0));
         txt_state.setText("State:");
         jPanel1.add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 426, -1, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(0, 0, 0));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 157, -1, -1));
         jPanel1.add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 419, 216, -1));
         jPanel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 150, 216, -1));
 
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txt_Zip.setForeground(new java.awt.Color(0, 0, 0));
         txt_Zip.setText("Zip Code:");
         jPanel1.add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 471, -1, -1));
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_address.setForeground(new java.awt.Color(0, 0, 0));
         lbl_address.setText("Address:");
         jPanel1.add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 343, -1, -1));
         jPanel1.add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 464, 216, -1));
@@ -130,6 +136,7 @@ public class NurseSignUp extends javax.swing.JPanel {
         jPanel1.add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 522, 87, -1));
 
         lbl_admintitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lbl_admintitle.setForeground(new java.awt.Color(0, 0, 0));
         lbl_admintitle.setText("Create Nurse Profile");
         jPanel1.add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 29, -1, -1));
 
@@ -143,10 +150,12 @@ public class NurseSignUp extends javax.swing.JPanel {
         jPanel1.add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 522, 87, -1));
 
         lbl_registeryNum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_registeryNum.setForeground(new java.awt.Color(0, 0, 0));
         lbl_registeryNum.setText("Registered No.:");
         jPanel1.add(lbl_registeryNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 294, -1, -1));
 
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_name.setForeground(new java.awt.Color(0, 0, 0));
         lbl_name.setText("Name:");
         jPanel1.add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 87, -1, -1));
 
@@ -154,16 +163,19 @@ public class NurseSignUp extends javax.swing.JPanel {
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 216, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gender:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 188, -1, -1));
         jPanel1.add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 182, 84, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("DOB:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 188, -1, -1));
         jPanel1.add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 182, 90, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Contact:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 222, -1, -1));
         jPanel1.add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 216, 216, -1));

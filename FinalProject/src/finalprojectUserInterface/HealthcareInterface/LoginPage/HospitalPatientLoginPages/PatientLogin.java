@@ -83,19 +83,23 @@ public class PatientLogin extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         Namelbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Namelbl.setForeground(new java.awt.Color(0, 0, 0));
         Namelbl.setText("Name:");
 
         usernameLbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        usernameLbl.setForeground(new java.awt.Color(0, 0, 0));
         usernameLbl.setText("Username:");
 
         Usernametxt.setEditable(false);
 
         Diaglbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        Diaglbl.setForeground(new java.awt.Color(0, 0, 0));
         Diaglbl.setText("Diagnosis:");
 
         Diagtxt.setEditable(false);
 
         HospitalLbl.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        HospitalLbl.setForeground(new java.awt.Color(0, 0, 0));
         HospitalLbl.setText("Hospital:");
 
         Hospiatltxt.setEditable(false);
@@ -109,6 +113,7 @@ public class PatientLogin extends javax.swing.JPanel {
 
         btnlogout.setBackground(new java.awt.Color(255, 204, 204));
         btnlogout.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnlogout.setForeground(new java.awt.Color(0, 0, 0));
         btnlogout.setText("Logout");
         btnlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

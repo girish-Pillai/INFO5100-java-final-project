@@ -141,6 +141,7 @@ public class AdminTransplant extends javax.swing.JPanel {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 871, 249));
 
         TransplantTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        TransplantTitle.setForeground(new java.awt.Color(0, 0, 0));
         TransplantTitle.setText("Manage Transplants");
         jPanel1.add(TransplantTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, 40));
 
